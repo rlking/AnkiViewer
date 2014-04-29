@@ -17,8 +17,15 @@
 		802FA073190FD5B700127976 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA072190FD5B700127976 /* XCTest.framework */; };
 		802FA074190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
 		802FA075190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
-		802FA07D190FD5B700127976 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 802FA07B190FD5B700127976 /* InfoPlist.strings */; };
-		802FA07F190FD5B700127976 /* MUW_SIP_TrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */; };
+		802FA08A190FD68B00127976 /* collection.anki2 in Resources */ = {isa = PBXBuildFile; fileRef = 802FA089190FD68B00127976 /* collection.anki2 */; };
+		802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802FA08B190FD73C00127976 /* Storyboard.storyboard */; };
+		802FA099190FD8CC00127976 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA08F190FD8CC00127976 /* FMDatabase.m */; };
+		802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA091190FD8CC00127976 /* FMDatabaseAdditions.m */; };
+		802FA09B190FD8CC00127976 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA093190FD8CC00127976 /* FMDatabasePool.m */; };
+		802FA09C190FD8CC00127976 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA095190FD8CC00127976 /* FMDatabaseQueue.m */; };
+		802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA098190FD8CC00127976 /* FMResultSet.m */; };
+		802FA0A3190FDA8200127976 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0A2190FDA8200127976 /* MainViewController.m */; };
+		802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA0A4190FDC3900127976 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +52,21 @@
 		802FA06B190FD5B700127976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		802FA071190FD5B700127976 /* MUW SIP TrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MUW SIP TrainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA072190FD5B700127976 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		802FA07A190FD5B700127976 /* MUW SIP TrainerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MUW SIP TrainerTests-Info.plist"; sourceTree = "<group>"; };
-		802FA07C190FD5B700127976 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUW_SIP_TrainerTests.m; sourceTree = "<group>"; };
+		802FA089190FD68B00127976 /* collection.anki2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = collection.anki2; sourceTree = "<group>"; };
+		802FA08B190FD73C00127976 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		802FA08E190FD8CC00127976 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		802FA08F190FD8CC00127976 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		802FA090190FD8CC00127976 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		802FA091190FD8CC00127976 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		802FA092190FD8CC00127976 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		802FA093190FD8CC00127976 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		802FA094190FD8CC00127976 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		802FA095190FD8CC00127976 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		802FA097190FD8CC00127976 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		802FA098190FD8CC00127976 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		802FA0A1190FDA8200127976 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		802FA0A2190FDA8200127976 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		802FA0A4190FDC3900127976 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */,
 				802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */,
 				802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */,
 				802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */,
@@ -77,8 +97,8 @@
 		802FA04D190FD5B700127976 = {
 			isa = PBXGroup;
 			children = (
-				802FA05F190FD5B700127976 /* MUW SIP Trainer */,
-				802FA078190FD5B700127976 /* MUW SIP TrainerTests */,
+				802FA088190FD68B00127976 /* resources */,
+				802FA05F190FD5B700127976 /* project */,
 				802FA058190FD5B700127976 /* Frameworks */,
 				802FA057190FD5B700127976 /* Products */,
 			);
@@ -96,6 +116,7 @@
 		802FA058190FD5B700127976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				802FA0A4190FDC3900127976 /* libsqlite3.dylib */,
 				802FA059190FD5B700127976 /* Foundation.framework */,
 				802FA05B190FD5B700127976 /* CoreGraphics.framework */,
 				802FA05D190FD5B700127976 /* UIKit.framework */,
@@ -104,14 +125,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		802FA05F190FD5B700127976 /* MUW SIP Trainer */ = {
+		802FA05F190FD5B700127976 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				802FA08D190FD8CC00127976 /* FMDB */,
 				802FA068190FD5B700127976 /* AppDelegate.h */,
 				802FA069190FD5B700127976 /* AppDelegate.m */,
 				802FA06B190FD5B700127976 /* Images.xcassets */,
 				802FA060190FD5B700127976 /* Supporting Files */,
+				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
+				802FA0A1190FDA8200127976 /* MainViewController.h */,
+				802FA0A2190FDA8200127976 /* MainViewController.m */,
 			);
+			name = project;
 			path = "MUW SIP Trainer";
 			sourceTree = "<group>";
 		};
@@ -126,22 +152,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		802FA078190FD5B700127976 /* MUW SIP TrainerTests */ = {
+		802FA088190FD68B00127976 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */,
-				802FA079190FD5B700127976 /* Supporting Files */,
+				802FA089190FD68B00127976 /* collection.anki2 */,
 			);
-			path = "MUW SIP TrainerTests";
+			path = resources;
 			sourceTree = "<group>";
 		};
-		802FA079190FD5B700127976 /* Supporting Files */ = {
+		802FA08D190FD8CC00127976 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				802FA07A190FD5B700127976 /* MUW SIP TrainerTests-Info.plist */,
-				802FA07B190FD5B700127976 /* InfoPlist.strings */,
+				802FA08E190FD8CC00127976 /* FMDatabase.h */,
+				802FA08F190FD8CC00127976 /* FMDatabase.m */,
+				802FA090190FD8CC00127976 /* FMDatabaseAdditions.h */,
+				802FA091190FD8CC00127976 /* FMDatabaseAdditions.m */,
+				802FA092190FD8CC00127976 /* FMDatabasePool.h */,
+				802FA093190FD8CC00127976 /* FMDatabasePool.m */,
+				802FA094190FD8CC00127976 /* FMDatabaseQueue.h */,
+				802FA095190FD8CC00127976 /* FMDatabaseQueue.m */,
+				802FA097190FD8CC00127976 /* FMResultSet.h */,
+				802FA098190FD8CC00127976 /* FMResultSet.m */,
 			);
-			name = "Supporting Files";
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802FA08A190FD68B00127976 /* collection.anki2 in Resources */,
+				802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */,
 				802FA064190FD5B700127976 /* InfoPlist.strings in Resources */,
 				802FA06C190FD5B700127976 /* Images.xcassets in Resources */,
 			);
@@ -228,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802FA07D190FD5B700127976 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802FA099190FD8CC00127976 /* FMDatabase.m in Sources */,
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
+				802FA09B190FD8CC00127976 /* FMDatabasePool.m in Sources */,
+				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
+				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,
+				802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */,
+				802FA09C190FD8CC00127976 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802FA07F190FD5B700127976 /* MUW_SIP_TrainerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,14 +306,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				802FA063190FD5B700127976 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		802FA07B190FD5B700127976 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				802FA07C190FD5B700127976 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
