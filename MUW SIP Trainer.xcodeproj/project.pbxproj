@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
+		802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05B190FD5B700127976 /* CoreGraphics.framework */; };
+		802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
+		802FA064190FD5B700127976 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 802FA062190FD5B700127976 /* InfoPlist.strings */; };
+		802FA066190FD5B700127976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA065190FD5B700127976 /* main.m */; };
+		802FA06A190FD5B700127976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA069190FD5B700127976 /* AppDelegate.m */; };
+		802FA06C190FD5B700127976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802FA06B190FD5B700127976 /* Images.xcassets */; };
+		802FA073190FD5B700127976 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA072190FD5B700127976 /* XCTest.framework */; };
+		802FA074190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
+		802FA075190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
+		802FA07D190FD5B700127976 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 802FA07B190FD5B700127976 /* InfoPlist.strings */; };
+		802FA07F190FD5B700127976 /* MUW_SIP_TrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		802FA076190FD5B700127976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 802FA04E190FD5B700127976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 802FA055190FD5B700127976;
+			remoteInfo = "MUW SIP Trainer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		802FA056190FD5B700127976 /* MUW SIP Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MUW SIP Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA059190FD5B700127976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		802FA05B190FD5B700127976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		802FA05D190FD5B700127976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		802FA061190FD5B700127976 /* MUW SIP Trainer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MUW SIP Trainer-Info.plist"; sourceTree = "<group>"; };
+		802FA063190FD5B700127976 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		802FA065190FD5B700127976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		802FA067190FD5B700127976 /* MUW SIP Trainer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MUW SIP Trainer-Prefix.pch"; sourceTree = "<group>"; };
+		802FA068190FD5B700127976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		802FA069190FD5B700127976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		802FA06B190FD5B700127976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		802FA071190FD5B700127976 /* MUW SIP TrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MUW SIP TrainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA072190FD5B700127976 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		802FA07A190FD5B700127976 /* MUW SIP TrainerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MUW SIP TrainerTests-Info.plist"; sourceTree = "<group>"; };
+		802FA07C190FD5B700127976 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUW_SIP_TrainerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		802FA053190FD5B700127976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */,
+				802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */,
+				802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06E190FD5B700127976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA073190FD5B700127976 /* XCTest.framework in Frameworks */,
+				802FA075190FD5B700127976 /* UIKit.framework in Frameworks */,
+				802FA074190FD5B700127976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		802FA04D190FD5B700127976 = {
+			isa = PBXGroup;
+			children = (
+				802FA05F190FD5B700127976 /* MUW SIP Trainer */,
+				802FA078190FD5B700127976 /* MUW SIP TrainerTests */,
+				802FA058190FD5B700127976 /* Frameworks */,
+				802FA057190FD5B700127976 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		802FA057190FD5B700127976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				802FA056190FD5B700127976 /* MUW SIP Trainer.app */,
+				802FA071190FD5B700127976 /* MUW SIP TrainerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		802FA058190FD5B700127976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				802FA059190FD5B700127976 /* Foundation.framework */,
+				802FA05B190FD5B700127976 /* CoreGraphics.framework */,
+				802FA05D190FD5B700127976 /* UIKit.framework */,
+				802FA072190FD5B700127976 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		802FA05F190FD5B700127976 /* MUW SIP Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				802FA068190FD5B700127976 /* AppDelegate.h */,
+				802FA069190FD5B700127976 /* AppDelegate.m */,
+				802FA06B190FD5B700127976 /* Images.xcassets */,
+				802FA060190FD5B700127976 /* Supporting Files */,
+			);
+			path = "MUW SIP Trainer";
+			sourceTree = "<group>";
+		};
+		802FA060190FD5B700127976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				802FA061190FD5B700127976 /* MUW SIP Trainer-Info.plist */,
+				802FA062190FD5B700127976 /* InfoPlist.strings */,
+				802FA065190FD5B700127976 /* main.m */,
+				802FA067190FD5B700127976 /* MUW SIP Trainer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		802FA078190FD5B700127976 /* MUW SIP TrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				802FA07E190FD5B700127976 /* MUW_SIP_TrainerTests.m */,
+				802FA079190FD5B700127976 /* Supporting Files */,
+			);
+			path = "MUW SIP TrainerTests";
+			sourceTree = "<group>";
+		};
+		802FA079190FD5B700127976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				802FA07A190FD5B700127976 /* MUW SIP TrainerTests-Info.plist */,
+				802FA07B190FD5B700127976 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		802FA055190FD5B700127976 /* MUW SIP Trainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "MUW SIP Trainer" */;
+			buildPhases = (
+				802FA052190FD5B700127976 /* Sources */,
+				802FA053190FD5B700127976 /* Frameworks */,
+				802FA054190FD5B700127976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MUW SIP Trainer";
+			productName = "MUW SIP Trainer";
+			productReference = 802FA056190FD5B700127976 /* MUW SIP Trainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		802FA070190FD5B700127976 /* MUW SIP TrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "MUW SIP TrainerTests" */;
+			buildPhases = (
+				802FA06D190FD5B700127976 /* Sources */,
+				802FA06E190FD5B700127976 /* Frameworks */,
+				802FA06F190FD5B700127976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				802FA077190FD5B700127976 /* PBXTargetDependency */,
+			);
+			name = "MUW SIP TrainerTests";
+			productName = "MUW SIP TrainerTests";
+			productReference = 802FA071190FD5B700127976 /* MUW SIP TrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		802FA04E190FD5B700127976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Philipp König";
+				TargetAttributes = {
+					802FA070190FD5B700127976 = {
+						TestTargetID = 802FA055190FD5B700127976;
+					};
+				};
+			};
+			buildConfigurationList = 802FA051190FD5B700127976 /* Build configuration list for PBXProject "MUW SIP Trainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 802FA04D190FD5B700127976;
+			productRefGroup = 802FA057190FD5B700127976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				802FA055190FD5B700127976 /* MUW SIP Trainer */,
+				802FA070190FD5B700127976 /* MUW SIP TrainerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		802FA054190FD5B700127976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA064190FD5B700127976 /* InfoPlist.strings in Resources */,
+				802FA06C190FD5B700127976 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06F190FD5B700127976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA07D190FD5B700127976 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		802FA052190FD5B700127976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
+				802FA066190FD5B700127976 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06D190FD5B700127976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA07F190FD5B700127976 /* MUW_SIP_TrainerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		802FA077190FD5B700127976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 802FA055190FD5B700127976 /* MUW SIP Trainer */;
+			targetProxy = 802FA076190FD5B700127976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		802FA062190FD5B700127976 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				802FA063190FD5B700127976 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		802FA07B190FD5B700127976 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				802FA07C190FD5B700127976 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		802FA080190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		802FA081190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		802FA083190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
+				INFOPLIST_FILE = "MUW SIP Trainer/MUW SIP Trainer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		802FA084190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
+				INFOPLIST_FILE = "MUW SIP Trainer/MUW SIP Trainer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		802FA086190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		802FA087190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
+				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		802FA051190FD5B700127976 /* Build configuration list for PBXProject "MUW SIP Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA080190FD5B700127976 /* Debug */,
+				802FA081190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "MUW SIP Trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA083190FD5B700127976 /* Debug */,
+				802FA084190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "MUW SIP TrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA086190FD5B700127976 /* Debug */,
+				802FA087190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 802FA04E190FD5B700127976 /* Project object */;
+}
