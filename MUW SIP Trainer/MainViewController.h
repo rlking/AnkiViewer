@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController <UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDelegate>
+@interface MainViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIWebView *webViewCardBack;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerTag;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
+@property (nonatomic) NSInteger currentCardIndex;
+@property (weak, nonatomic) NSString *currentTag;
+@property (nonatomic) NSInteger cardMax;
+
+-(void)setCard;
 
 @end

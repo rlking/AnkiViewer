@@ -26,6 +26,9 @@
 		802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA098190FD8CC00127976 /* FMResultSet.m */; };
 		802FA0A3190FDA8200127976 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0A2190FDA8200127976 /* MainViewController.m */; };
 		802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA0A4190FDC3900127976 /* libsqlite3.dylib */; };
+		802FA0A819105BB300127976 /* media in Resources */ = {isa = PBXBuildFile; fileRef = 802FA0A619105BB300127976 /* media */; };
+		802FA0AB19105C0C00127976 /* 44 in Resources */ = {isa = PBXBuildFile; fileRef = 802FA0AA19105C0C00127976 /* 44 */; };
+		802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0AD1910D5E100127976 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,10 @@
 		802FA0A1190FDA8200127976 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		802FA0A2190FDA8200127976 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		802FA0A4190FDC3900127976 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		802FA0A619105BB300127976 /* media */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media; sourceTree = "<group>"; };
+		802FA0AA19105C0C00127976 /* 44 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 44; sourceTree = "<group>"; };
+		802FA0AC1910D5E100127976 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		802FA0AD1910D5E100127976 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +143,8 @@
 				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
 				802FA0A1190FDA8200127976 /* MainViewController.h */,
 				802FA0A2190FDA8200127976 /* MainViewController.m */,
+				802FA0AC1910D5E100127976 /* SettingsViewController.h */,
+				802FA0AD1910D5E100127976 /* SettingsViewController.m */,
 			);
 			name = project;
 			path = "MUW SIP Trainer";
@@ -155,6 +164,8 @@
 		802FA088190FD68B00127976 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				802FA0AA19105C0C00127976 /* 44 */,
+				802FA0A619105BB300127976 /* media */,
 				802FA089190FD68B00127976 /* collection.anki2 */,
 			);
 			path = resources;
@@ -254,7 +265,9 @@
 			files = (
 				802FA08A190FD68B00127976 /* collection.anki2 in Resources */,
 				802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */,
+				802FA0A819105BB300127976 /* media in Resources */,
 				802FA064190FD5B700127976 /* InfoPlist.strings in Resources */,
+				802FA0AB19105C0C00127976 /* 44 in Resources */,
 				802FA06C190FD5B700127976 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +289,7 @@
 				802FA099190FD8CC00127976 /* FMDatabase.m in Sources */,
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
 				802FA09B190FD8CC00127976 /* FMDatabasePool.m in Sources */,
+				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,

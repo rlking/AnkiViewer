@@ -13,13 +13,13 @@
 
 @end
 
-FMDatabase *database;
-NSInteger currentCardIndex = 0;
-NSString *currentTag;
-NSInteger cardMax;
-NSArray *tags;
-
 @implementation MainViewController
+
+
+@synthesize currentCardIndex;
+@synthesize currentTag;
+@synthesize cardMax;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,9 +34,6 @@ NSArray *tags;
 {
     [super viewDidLoad];
     
-    
-    tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
-    
     UISwipeGestureRecognizer *swipeRecognizerLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromLeft:)];
     [swipeRecognizerLeft setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     [[self view] addGestureRecognizer:swipeRecognizerLeft];
@@ -44,17 +41,12 @@ NSArray *tags;
     UISwipeGestureRecognizer *swipeRecognizerRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromRight:)];
     [swipeRecognizerRight setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [[self view] addGestureRecognizer:swipeRecognizerRight];
-
     
-    database = [self openDatabase];
-    [database open];
-    
-    [self pickerView:nil didSelectRow:0 inComponent:0];
+    currentCardIndex = 0;
+    currentTag = @"Block01";
+    [self setCard];
 }
 
--(void)dealloc {
-    [database close];
-}
 
 -(void)setCard {
     NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select * from notes where tags like '%"];
@@ -62,12 +54,13 @@ NSArray *tags;
     [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
     [queryCard appendFormat:@"%d", (int)currentCardIndex];
     
-    NSLog(@"%@", queryCard);
+    //NSLog(@"%@", queryCard);
     
     NSMutableString *queryCardCount = [[NSMutableString alloc] initWithString:@"select count(*) as cnt from notes where tags like '%"];
     [queryCardCount appendString:(NSString *)currentTag];
     [queryCardCount appendString:@"%' order by sfld desc"];
     
+    FMDatabase *database = [self openDatabase];
     FMResultSet *resultCount;
     FMResultSet *resultCard;
     
@@ -91,8 +84,20 @@ NSArray *tags;
         // magic ascii separator used by anki for front and back of the card
         NSArray *frontAndBack = [[resultCard stringForColumn:@"flds"]componentsSeparatedByString:[NSString stringWithFormat:@"%c", 31]];
         
-        [_webView loadHTMLString:frontAndBack[0] baseURL:nil];
-        [_webViewCardBack loadHTMLString:frontAndBack[1] baseURL:nil];
+        
+        //paste-115130893336577.png
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentDirectory = [paths objectAtIndex:0];
+        NSString* file= [documentDirectory stringByAppendingPathComponent:@"paste-115130893336577.png"];
+        NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"44" ofType: nil]];
+        [data writeToFile:file atomically:YES];
+        NSURL *url = [NSURL fileURLWithPath:documentDirectory];
+        
+        NSString *front = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", frontAndBack[0]];
+        NSString *back = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", frontAndBack[1]];
+        
+        [_webView loadHTMLString:front baseURL:url];
+        [_webViewCardBack loadHTMLString:back baseURL:url];
     }
     @catch (NSException *exception)
     {
@@ -101,6 +106,7 @@ NSArray *tags;
     @finally {
         [resultCard close];
         [resultCount close];
+        [database close];
     }
 }
 
@@ -144,35 +150,6 @@ NSArray *tags;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Picker View Data
-
-- (NSInteger)numberOfComponentsInPickerView:
-(UIPickerView *)pickerView
-{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
-    return tags.count;
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
-    return tags[row];
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
-    currentTag = tags[row];
-    currentCardIndex = 0;
-    [self setCard];
 }
 
 @end
