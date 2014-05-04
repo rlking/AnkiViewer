@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "MainViewController.h"
+#import "Deck.h"
 
 @interface SettingsViewController ()
 
@@ -72,6 +73,7 @@ numberOfRowsInComponent:(NSInteger)component
     
     mainVC.currentTag = tags[row];
     mainVC.currentCardIndex = 0;
+    mainVC.cardMax = [Deck getMaxCardForCategory:tags[row]];
     [mainVC setCard];
     
     [_tableView reloadData];
@@ -96,6 +98,7 @@ numberOfRowsInComponent:(NSInteger)component
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
+    
     
     //cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1];

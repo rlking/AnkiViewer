@@ -36,7 +36,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="gcY-Id-nEi"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="page_empty.png" id="gcY-Id-nEi"/>
                     <connections>
                         <outlet property="label" destination="sJS-5y-owd" id="0DO-QR-Ryw"/>
                         <outlet property="webView" destination="rr7-ZP-egz" id="pBt-4D-Vl1"/>
@@ -108,7 +108,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="lo6-Ok-bVv"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="cog_02.png" id="lo6-Ok-bVv"/>
                     <connections>
                         <outlet property="pickerTag" destination="gsn-Zy-b8k" id="koD-J7-DfX"/>
                         <outlet property="tableView" destination="SME-Zk-Z1m" id="xaU-BG-Wzo"/>
@@ -119,6 +119,10 @@
             <point key="canvasLocation" x="604" y="-90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cog_02.png" width="26" height="26"/>
+        <image name="page_empty.png" width="26" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

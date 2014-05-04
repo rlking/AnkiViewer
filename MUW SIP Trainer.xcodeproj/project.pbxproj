@@ -490,6 +490,12 @@
 		802FA44919158EC900127976 /* 97 in Resources */ = {isa = PBXBuildFile; fileRef = 802FA27B19158EC900127976 /* 97 */; };
 		802FA44A19158EC900127976 /* 98 in Resources */ = {isa = PBXBuildFile; fileRef = 802FA27C19158EC900127976 /* 98 */; };
 		802FA44B19158EC900127976 /* 99 in Resources */ = {isa = PBXBuildFile; fileRef = 802FA27D19158EC900127976 /* 99 */; };
+		802FA44E1915A6E500127976 /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA44C1915A6E500127976 /* cog_02@2x.png */; };
+		802FA44F1915A6E500127976 /* cog_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA44D1915A6E500127976 /* cog_02.png */; };
+		802FA4521915A81800127976 /* page_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4501915A81800127976 /* page_empty@2x.png */; };
+		802FA4531915A81800127976 /* page_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4511915A81800127976 /* page_empty.png */; };
+		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
+		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -996,6 +1002,14 @@
 		802FA27B19158EC900127976 /* 97 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 97; sourceTree = "<group>"; };
 		802FA27C19158EC900127976 /* 98 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 98; sourceTree = "<group>"; };
 		802FA27D19158EC900127976 /* 99 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 99; sourceTree = "<group>"; };
+		802FA44C1915A6E500127976 /* cog_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog_02@2x.png"; path = "resources/cog_02@2x.png"; sourceTree = SOURCE_ROOT; };
+		802FA44D1915A6E500127976 /* cog_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cog_02.png; path = resources/cog_02.png; sourceTree = SOURCE_ROOT; };
+		802FA4501915A81800127976 /* page_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "page_empty@2x.png"; path = "resources/page_empty@2x.png"; sourceTree = SOURCE_ROOT; };
+		802FA4511915A81800127976 /* page_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page_empty.png; path = resources/page_empty.png; sourceTree = SOURCE_ROOT; };
+		802FA45519167FC700127976 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		802FA45619167FC700127976 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1057,6 +1071,7 @@
 		802FA05F190FD5B700127976 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				802FA45419167F9300127976 /* data */,
 				802FA08D190FD8CC00127976 /* FMDB */,
 				802FA068190FD5B700127976 /* AppDelegate.h */,
 				802FA069190FD5B700127976 /* AppDelegate.m */,
@@ -1113,6 +1128,10 @@
 		802FA0AF19158EC700127976 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				802FA4501915A81800127976 /* page_empty@2x.png */,
+				802FA4511915A81800127976 /* page_empty.png */,
+				802FA44C1915A6E500127976 /* cog_02@2x.png */,
+				802FA44D1915A6E500127976 /* cog_02.png */,
 				802FA0B019158EC700127976 /* 0 */,
 				802FA0B119158EC700127976 /* 1 */,
 				802FA0B219158EC700127976 /* 10 */,
@@ -1579,6 +1598,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		802FA45419167F9300127976 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				802FA45519167FC700127976 /* Card.h */,
+				802FA45619167FC700127976 /* Card.m */,
+				802FA45B19168E3900127976 /* Deck.h */,
+				802FA45C19168E3900127976 /* Deck.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1705,6 +1735,7 @@
 				802FA30E19158EC900127976 /* 228 in Resources */,
 				802FA42F19158EC900127976 /* 73 in Resources */,
 				802FA43619158EC900127976 /* 8 in Resources */,
+				802FA4521915A81800127976 /* page_empty@2x.png in Resources */,
 				802FA43319158EC900127976 /* 77 in Resources */,
 				802FA3E119158EC900127976 /* 418 in Resources */,
 				802FA39A19158EC900127976 /* 354 in Resources */,
@@ -1724,6 +1755,7 @@
 				802FA27F19158EC900127976 /* 1 in Resources */,
 				802FA28419158EC900127976 /* 103 in Resources */,
 				802FA31719158EC900127976 /* 236 in Resources */,
+				802FA4531915A81800127976 /* page_empty.png in Resources */,
 				802FA35A19158EC900127976 /* 297 in Resources */,
 				802FA36819158EC900127976 /* 309 in Resources */,
 				802FA36319158EC900127976 /* 304 in Resources */,
@@ -1759,6 +1791,7 @@
 				802FA35019158EC900127976 /* 288 in Resources */,
 				802FA3A419158EC900127976 /* 363 in Resources */,
 				802FA3D619158EC900127976 /* 408 in Resources */,
+				802FA44F1915A6E500127976 /* cog_02.png in Resources */,
 				802FA30B19158EC900127976 /* 225 in Resources */,
 				802FA3D519158EC900127976 /* 407 in Resources */,
 				802FA2A319158EC900127976 /* 131 in Resources */,
@@ -1890,6 +1923,7 @@
 				802FA40C19158EC900127976 /* 457 in Resources */,
 				802FA38119158EC900127976 /* 331 in Resources */,
 				802FA2AC19158EC900127976 /* 14 in Resources */,
+				802FA44E1915A6E500127976 /* cog_02@2x.png in Resources */,
 				802FA2CF19158EC900127976 /* 171 in Resources */,
 				802FA3C719158EC900127976 /* 395 in Resources */,
 				802FA29519158EC900127976 /* 119 in Resources */,
@@ -2143,8 +2177,10 @@
 				802FA09B190FD8CC00127976 /* FMDatabasePool.m in Sources */,
 				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
+				802FA45719167FC700127976 /* Card.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,
+				802FA45D19168E3900127976 /* Deck.m in Sources */,
 				802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */,
 				802FA09C190FD8CC00127976 /* FMDatabaseQueue.m in Sources */,
 			);

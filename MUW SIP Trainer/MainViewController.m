@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "FMDatabase.h"
+#import "Deck.h"
 
 @interface MainViewController ()
 
@@ -44,6 +45,7 @@
     
     currentCardIndex = 0;
     currentTag = @"Block01";
+    cardMax = [Deck getMaxCardForCategory:currentTag];
     [self setCard];
     
     [[_webView scrollView] setBounces:NO];
@@ -53,76 +55,44 @@
 
 
 -(void)setCard {
-    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select * from notes where tags like '%"];
-    [queryCard appendString:(NSString *)currentTag];
-    [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
-    [queryCard appendFormat:@"%d", (int)currentCardIndex];
-    
-    //NSLog(@"%@", queryCard);
-    
-    NSMutableString *queryCardCount = [[NSMutableString alloc] initWithString:@"select count(*) as cnt from notes where tags like '%"];
-    [queryCardCount appendString:(NSString *)currentTag];
-    [queryCardCount appendString:@"%' order by sfld desc"];
-    
-    FMDatabase *database = [self openDatabase];
-    FMResultSet *resultCount;
-    FMResultSet *resultCard;
-    
-    @try
-    {
-        resultCount = [database executeQuery:queryCardCount];
-        [resultCount next];
-        
-        resultCard = [database executeQuery:queryCard];
-        [resultCard next];
+    Card *card = [Deck getCardForIndex:currentCardIndex inCategory:currentTag];
+
         
         NSMutableString *cardOfCards = [[NSMutableString alloc] initWithString:@""];
         [cardOfCards appendFormat:@"%d", (int)currentCardIndex + 1];
         [cardOfCards appendString:@" / "];
-        [cardOfCards appendString:[resultCount stringForColumn:@"cnt"]];
-        
-        cardMax = [resultCount intForColumn:@"cnt"];
+        [cardOfCards appendFormat:@"%d", (int)cardMax];
         
         [_label setText:cardOfCards];
-        
-        // magic ascii separator used by anki for front and back of the card
-        NSArray *frontAndBack = [[resultCard stringForColumn:@"flds"]componentsSeparatedByString:[NSString stringWithFormat:@"%c", 31]];
-        
-        NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"media" ofType: nil]];
-        NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:mediaJsonData options:0 error:nil];
-        
-        
+    
+    
         __block NSURL *url;
-        [parsedObject enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            if ([frontAndBack[0] rangeOfString:obj].location != NSNotFound) {
-                NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: key ofType: nil]];
+        [[Deck getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            if ([card.front rangeOfString:obj].location != NSNotFound) {
                 
+                //load image data from resources
+                NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: key ofType: nil]];
                 NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
                 NSString *documentDirectory = [paths objectAtIndex:0];
-                NSString* file= [documentDirectory stringByAppendingPathComponent:obj];
-                
                 UIImage *image = [UIImage imageWithData:data];
-                
+
+                // resize image to somehow fit the screen
                 //CGRect screenBounds = [[UIScreen mainScreen] bounds];
                 CGSize screenSize = CGSizeMake(150, 150);
-                
                 image = [self scaleImage:image toSize:screenSize];
-                
                 data = UIImagePNGRepresentation(image);
                 
-                
-                [data writeToFile:file atomically:YES];
+                //translate the path to what´s expected by the html img src
+                NSString* pathForWebView= [documentDirectory stringByAppendingPathComponent:obj];
+                [data writeToFile:pathForWebView atomically:YES];
                 url = [NSURL fileURLWithPath:documentDirectory];
                 
                 *stop = YES;
             }
         }];
         
-        
-
-        
-        NSString *front = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", frontAndBack[0]];
-        NSString *back = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", frontAndBack[1]];
+        NSString *front = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", card.front];
+        NSString *back = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", card.back];
         
         [_webView loadHTMLString:front baseURL:url];
         [_webViewCardBack loadHTMLString:back baseURL:url];
@@ -130,16 +100,6 @@
         [_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('img')[0].style.width = '280px'"];
         [_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('img')[0].style.height = '280px'"];
 
-    }
-    @catch (NSException *exception)
-    {
-        [NSException raise:@"could not execute query" format:nil];
-    }
-    @finally {
-        [resultCard close];
-        [resultCount close];
-        [database close];
-    }
 }
 
 -(void)handleSwipeFromLeft:(UISwipeGestureRecognizer *)recognizer {
@@ -157,25 +117,6 @@
         currentCardIndex = cardMax - 1;
     }
     [self setCard];
-}
-
-- (FMDatabase*)openDatabase
-{
-    FMDatabase *database;
-    @try
-    {
-        database = [FMDatabase databaseWithPath:[[NSBundle mainBundle] pathForResource:@"collection" ofType:@".anki2"]];
-        if (![database open])
-        {
-            [NSException raise:@"could not open db" format:nil];
-        }
-    }
-    @catch (NSException *e)
-    {
-        // #!
-        return nil;
-    }
-    return database;
 }
 
 - (void)didReceiveMemoryWarning
