@@ -99,9 +99,11 @@ numberOfRowsInComponent:(NSInteger)component
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    MainViewController *mainVC =
+    [self.tabBarController viewControllers][0];
     
-    //cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1];
+    Card* card = [Deck getCardSimpleForIndex:indexPath.row inCategory:mainVC.currentTag];
+    cell.textLabel.text = card.front;
     return cell;
 }
 

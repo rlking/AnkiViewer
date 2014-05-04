@@ -13,6 +13,7 @@
 @interface Deck : NSObject
 
 + (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
++ (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
 + (NSInteger) getMaxCardForCategory: (NSString *) category;
 + (NSDictionary *) getMediaMapping;
 + (FMDatabase*)openDatabase;

@@ -11,14 +11,13 @@
 @implementation Deck
 
 + (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category {
-    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select * from notes where tags like '%"];
+    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select flds from notes where tags like '%"];
     [queryCard appendString:category];
     [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
     [queryCard appendFormat:@"%d", (int)index];
     
     FMDatabase *database = [Deck openDatabase];
     FMResultSet *resultCard;
-    
     Card* card;
     
     @try
@@ -32,6 +31,40 @@
         card = [Card alloc];
         card.front = frontAndBack[0];
         card.back = frontAndBack[1];
+        
+    }
+    @catch (NSException *exception)
+    {
+        [NSException raise:@"could not execute query" format:nil];
+    }
+    @finally {
+        [resultCard close];
+        [database close];
+    }
+    
+    return card;
+}
+
+
++ (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category {
+    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select sfld from notes where tags like '%"];
+    [queryCard appendString:category];
+    [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
+    [queryCard appendFormat:@"%d", (int)index];
+    
+    FMDatabase *database = [Deck openDatabase];
+    FMResultSet *resultCard;
+    Card* card;
+    
+    @try
+    {
+        resultCard = [database executeQuery:queryCard];
+        [resultCard next];
+        
+        NSString *sfld = [resultCard stringForColumn:@"sfld"];
+        
+        card = [Card alloc];
+        card.front = sfld;
         
     }
     @catch (NSException *exception)
