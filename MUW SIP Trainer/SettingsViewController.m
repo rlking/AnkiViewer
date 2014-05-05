@@ -34,10 +34,11 @@ NSArray *tags;
     
     tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
     
-    [self pickerView:nil didSelectRow:0 inComponent:0];
+    MainViewController *mainVC =
+    [self.tabBarController viewControllers][0];
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
     
     [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,6 +90,7 @@ numberOfRowsInComponent:(NSInteger)component
     [mainVC setCard];
     
     [_tableView reloadData];
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 
@@ -123,7 +125,7 @@ numberOfRowsInComponent:(NSInteger)component
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MainViewController *mainVC =
     [self.tabBarController viewControllers][0];
-
+    
     mainVC.currentCardIndex = indexPath.row;
     [mainVC setCard];
 }

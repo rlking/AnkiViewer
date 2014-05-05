@@ -103,6 +103,11 @@
     [_webViewCardBack loadHTMLString:back baseURL:url];
     
     [self handleShowAnswer];
+    
+    // select element in settings list
+    SettingsViewController *settingsVC =
+    [self.tabBarController viewControllers][1];
+    [settingsVC.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 -(void) handleShowAnswer {
