@@ -20,5 +20,6 @@
 @property (nonatomic) NSInteger cardMax;
 
 -(void)setCard;
+-(void) handleShowAnswer;
 
 @end

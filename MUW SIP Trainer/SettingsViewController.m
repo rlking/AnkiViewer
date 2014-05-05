@@ -35,12 +35,24 @@ NSArray *tags;
     tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
     
     [self pickerView:nil didSelectRow:0 inComponent:0];
+    
+    [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setState:(id)sender {
+    if(sender == _switchAnswer) {
+        MainViewController *mainVC =
+        [self.tabBarController viewControllers][0];
+        
+        [mainVC handleShowAnswer];
+        }
 }
 
 

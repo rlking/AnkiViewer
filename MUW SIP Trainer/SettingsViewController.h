@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerTag;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISwitch *switchAnswer;
 
 @end
