@@ -91,7 +91,7 @@
             [data writeToFile:pathForWebView atomically:YES];
             url = [NSURL fileURLWithPath:documentDirectory];
             
-            *stop = YES;
+            //*stop = YES;
         }
     }];
     
@@ -107,7 +107,7 @@
     // select element in settings list
     SettingsViewController *settingsVC =
     [self.tabBarController viewControllers][1];
-    [settingsVC.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    [settingsVC.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 -(void) handleShowAnswer {

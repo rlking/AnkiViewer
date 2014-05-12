@@ -14,6 +14,7 @@
 
 + (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
 + (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
++ (NSArray *) getCardsSimpleInCategory:(NSString *) category;
 + (NSInteger) getMaxCardForCategory: (NSString *) category;
 + (NSDictionary *) getMediaMapping;
 + (FMDatabase*)openDatabase;

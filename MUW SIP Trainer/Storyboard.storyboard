@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller - Card-->
+        <!--Main View Controller - Karte-->
         <scene sceneID="HJQ-2m-afa">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="KGc-OR-PUh" customClass="MainViewController" sceneMemberID="viewController">
@@ -16,53 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-ZP-egz">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-ZP-egz">
                                 <rect key="frame" x="0.0" y="26" width="320" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUK-J5-SxQ">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUK-J5-SxQ">
                                 <rect key="frame" x="0.0" y="317" width="320" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="154" id="dmF-5J-8y5"/>
-                                </constraints>
                             </webView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-5y-owd">
-                                <rect key="frame" x="242" y="500" width="70" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-5y-owd">
+                                <rect key="frame" x="224" y="500" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="5FW-7y-lli"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtO-Rc-wzm">
-                                <rect key="frame" x="16" y="479" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtO-Rc-wzm">
+                                <rect key="frame" x="16" y="479" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="previous">
+                                <state key="normal" title="zurück">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="previous:" destination="KGc-OR-PUh" eventType="touchDown" id="GJ4-3l-A2t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-NF-C2d">
-                                <rect key="frame" x="213" y="479" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-NF-C2d">
+                                <rect key="frame" x="195" y="479" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="next">
+                                <state key="normal" title="weiter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="KGc-OR-PUh" eventType="touchDown" id="7Xl-5w-mJg"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-9O-wGD">
-                                <rect key="frame" x="115" y="479" width="90" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-9O-wGD">
+                                <rect key="frame" x="133" y="479" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show answer">
+                                <state key="normal" title="Antwort">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -71,29 +65,8 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rr7-ZP-egz" firstAttribute="leading" secondItem="PBd-rT-YjI" secondAttribute="leading" id="0iE-tx-IzC"/>
-                            <constraint firstItem="5cE-AK-tXb" firstAttribute="top" secondItem="mtO-Rc-wzm" secondAttribute="bottom" constant="10" id="IZo-mg-z6P"/>
-                            <constraint firstAttribute="trailing" secondItem="sJS-5y-owd" secondAttribute="trailing" constant="8" id="JfP-6p-hl7"/>
-                            <constraint firstItem="Ob8-9O-wGD" firstAttribute="baseline" secondItem="mtO-Rc-wzm" secondAttribute="baseline" id="MXZ-FQ-u5e"/>
-                            <constraint firstItem="sJS-5y-owd" firstAttribute="leading" secondItem="Ob8-9O-wGD" secondAttribute="trailing" constant="37" id="RKd-Ei-0bR"/>
-                            <constraint firstAttribute="trailing" secondItem="rr7-ZP-egz" secondAttribute="trailing" id="S16-sF-z50"/>
-                            <constraint firstItem="mtO-Rc-wzm" firstAttribute="leading" secondItem="PBd-rT-YjI" secondAttribute="leading" constant="16" id="SFB-oW-OWZ"/>
-                            <constraint firstItem="cAS-NF-C2d" firstAttribute="leading" secondItem="Ob8-9O-wGD" secondAttribute="trailing" constant="8" symbolic="YES" id="Tyc-eK-fN0"/>
-                            <constraint firstItem="sJS-5y-owd" firstAttribute="top" secondItem="PUK-J5-SxQ" secondAttribute="bottom" constant="29" id="VWM-mK-asm"/>
-                            <constraint firstItem="PUK-J5-SxQ" firstAttribute="trailing" secondItem="rr7-ZP-egz" secondAttribute="trailing" id="VkO-It-rvs"/>
-                            <constraint firstItem="rr7-ZP-egz" firstAttribute="top" secondItem="R64-ls-Aiu" secondAttribute="bottom" constant="6" id="Yig-xB-rWe"/>
-                            <constraint firstItem="Ob8-9O-wGD" firstAttribute="centerX" secondItem="PUK-J5-SxQ" secondAttribute="centerX" id="aUq-a4-dH5"/>
-                            <constraint firstAttribute="trailing" secondItem="cAS-NF-C2d" secondAttribute="trailing" constant="20" symbolic="YES" id="g5M-cq-mvV"/>
-                            <constraint firstItem="Ob8-9O-wGD" firstAttribute="leading" secondItem="mtO-Rc-wzm" secondAttribute="trailing" constant="8" symbolic="YES" id="hQV-nF-Vht"/>
-                            <constraint firstItem="mtO-Rc-wzm" firstAttribute="top" secondItem="PUK-J5-SxQ" secondAttribute="bottom" constant="8" symbolic="YES" id="oM4-Fr-MFC"/>
-                            <constraint firstItem="cAS-NF-C2d" firstAttribute="baseline" secondItem="Ob8-9O-wGD" secondAttribute="baseline" id="pDN-8t-n77"/>
-                            <constraint firstAttribute="bottom" secondItem="sJS-5y-owd" secondAttribute="bottom" constant="47" id="qII-RG-ewI"/>
-                            <constraint firstItem="PUK-J5-SxQ" firstAttribute="top" secondItem="rr7-ZP-egz" secondAttribute="bottom" constant="19" id="sof-5u-U92"/>
-                            <constraint firstItem="PUK-J5-SxQ" firstAttribute="leading" secondItem="rr7-ZP-egz" secondAttribute="leading" id="wj9-07-uGT"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Card" image="page_empty.png" id="gcY-Id-nEi"/>
+                    <tabBarItem key="tabBarItem" title="Karte" image="page_empty.png" id="gcY-Id-nEi"/>
                     <connections>
                         <outlet property="buttonShowAnswer" destination="Ob8-9O-wGD" id="gxk-OQ-LRK"/>
                         <outlet property="label" destination="sJS-5y-owd" id="0DO-QR-Ryw"/>
@@ -124,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="-292" y="-284"/>
         </scene>
-        <!--Settings View Controller - Settings-->
+        <!--Settings View Controller - Optionen-->
         <scene sceneID="2Lo-rY-0ow">
             <objects>
                 <viewController id="Gqe-PB-2i7" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -167,8 +140,8 @@
                                 <rect key="frame" x="251" y="190" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hide answer (card back)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-ct-IQP">
-                                <rect key="frame" x="14" y="195" width="186" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antwort verstecken" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-ct-IQP">
+                                <rect key="frame" x="14" y="195" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -176,7 +149,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="cog_02.png" id="lo6-Ok-bVv"/>
+                    <tabBarItem key="tabBarItem" title="Optionen" image="cog_02.png" id="lo6-Ok-bVv"/>
                     <connections>
                         <outlet property="pickerTag" destination="gsn-Zy-b8k" id="koD-J7-DfX"/>
                         <outlet property="switchAnswer" destination="MgP-3o-IpZ" id="nAB-Hd-mgZ"/>

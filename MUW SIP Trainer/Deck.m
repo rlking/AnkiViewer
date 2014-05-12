@@ -47,7 +47,7 @@
 
 
 + (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category {
-    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select sfld from notes where tags like '%"];
+    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
     [queryCard appendString:category];
     [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
     [queryCard appendFormat:@"%d", (int)index];
@@ -78,6 +78,38 @@
     
     return card;
 }
+
++ (NSArray *) getCardsSimpleInCategory:(NSString *) category {
+    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
+    [queryCard appendString:category];
+    [queryCard appendString:@"%' order by sfld desc"];
+    
+    FMDatabase *database = [Deck openDatabase];
+    FMResultSet *resultCard;
+    NSMutableArray *cards = [NSMutableArray array];
+    
+    @try
+    {
+        resultCard = [database executeQuery:queryCard];
+        [resultCard next];
+        while([resultCard hasAnotherRow]) {
+            NSString *sfld = [resultCard stringForColumn:@"sfld"];
+            [cards addObject:sfld];
+            [resultCard next];
+        }
+    }
+    @catch (NSException *exception)
+    {
+        [NSException raise:@"could not execute query" format:nil];
+    }
+    @finally {
+        [resultCard close];
+        [database close];
+    }
+    
+    return cards;
+}
+
 
 + (NSInteger) getMaxCardForCategory: (NSString *) category {
     NSMutableString *queryCardCount = [[NSMutableString alloc] initWithString:@"select count(*) as cnt from notes where tags like '%"];

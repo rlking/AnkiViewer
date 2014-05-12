@@ -15,6 +15,7 @@
 @end
 
 NSArray *tags;
+NSArray *cards;
 
 
 @implementation SettingsViewController
@@ -33,6 +34,8 @@ NSArray *tags;
     [super viewDidLoad];
     
     tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
+    
+    cards = [Deck getCardsSimpleInCategory:@"Block01"];
     
     MainViewController *mainVC =
     [self.tabBarController viewControllers][0];
@@ -89,19 +92,16 @@ numberOfRowsInComponent:(NSInteger)component
     mainVC.cardMax = [Deck getMaxCardForCategory:tags[row]];
     [mainVC setCard];
     
+    cards = [Deck getCardsSimpleInCategory:tags[row]];
     [_tableView reloadData];
-    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 
 #pragma mark - Table View Data
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    MainViewController *mainVC =
-    [self.tabBarController viewControllers][0];
-    
-    return mainVC.cardMax;
+    return [cards count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -113,11 +113,8 @@ numberOfRowsInComponent:(NSInteger)component
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    MainViewController *mainVC =
-    [self.tabBarController viewControllers][0];
-    
-    Card* card = [Deck getCardSimpleForIndex:indexPath.row inCategory:mainVC.currentTag];
-    cell.textLabel.text = card.front;
+    NSString* card = [cards objectAtIndex:indexPath.row];
+    cell.textLabel.text = card;
     return cell;
 }
 
