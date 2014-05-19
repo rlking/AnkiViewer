@@ -51,8 +51,9 @@
     
     currentCardIndex = 0;
     currentTag = @"Block01";
-    cardMax = [Deck getMaxCardForCategory:currentTag];
-    [self setCard];
+//    cardMax = [Deck getMaxCardForCategory:currentTag];
+//    [self setCard];
+    [Deck getDecks];
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];

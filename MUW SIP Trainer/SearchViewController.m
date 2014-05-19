@@ -14,6 +14,7 @@
 @property (nonatomic) NSURLConnection *clickedLink;
 @property (nonatomic) NSURLConnection *download;
 @property (nonatomic) NSOutputStream *streamAPKG;
+@property (nonatomic) NSString *apkgPath;
 @property (nonatomic) NSUInteger totalBytes;
 @property (nonatomic) NSUInteger receivedBytes;
 
@@ -70,12 +71,12 @@
             
             // create path in Document dir with filename
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString *path = [paths objectAtIndex:0];
-            path = [path stringByAppendingString:@"/"];
-            path = [path stringByAppendingString: response.suggestedFilename];
+            self.apkgPath = [paths objectAtIndex:0];
+            self.apkgPath = [self.apkgPath stringByAppendingString:@"/"];
+            self.apkgPath = [self.apkgPath stringByAppendingString: response.suggestedFilename];
             
             // open stream
-            self.streamAPKG = [[NSOutputStream alloc] initToFileAtPath:path append:YES];
+            self.streamAPKG = [[NSOutputStream alloc] initToFileAtPath:self.apkgPath append:NO];
             [self.streamAPKG open];
             
             // start download
@@ -84,8 +85,8 @@
             [self.download start];
             
             // display progress with cancel button
-            self.alertView =[[UIAlertView alloc ] initWithTitle:@"Download"
-                                                             message:@""
+            self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
+                                                             message:@"Warte auf Server"
                                                             delegate:self
                                                    cancelButtonTitle:@"Cancel"
                                                    otherButtonTitles: nil];
@@ -106,7 +107,7 @@
         
         self.alertView.message = progress;
         
-        NSLog(@"%lu / %lu kB   progress: %.2f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes);
+        NSLog(@"%lu / %lu kB   progress: %2.0f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) (self.receivedBytes / self.totalBytes) * 100);
     }
 }
 
@@ -114,6 +115,9 @@
 {
     if(connection == self.download) {
         [self.streamAPKG close];
+        self.receivedBytes = 0;
+        self.totalBytes = 0;
+        [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
     }
 }
 
@@ -121,4 +125,15 @@
 {
     //handle error
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.download cancel];
+    [self.streamAPKG close];
+    if([[NSFileManager defaultManager] removeItemAtPath: self.apkgPath error: nil]) {
+        NSLog(@"deleted incomplete file successfully");
+    }
+    self.receivedBytes = 0;
+    self.totalBytes = 0;
+}
+
 @end

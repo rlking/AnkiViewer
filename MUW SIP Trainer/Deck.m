@@ -169,4 +169,21 @@
     return database;
 }
 
++ (NSArray *) getDecks {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [paths objectAtIndex:0];
+    
+    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentPath error:NULL];
+    NSMutableArray *apkgs = [NSMutableArray array];
+    for (int count = 0; count < (int)[directoryContent count]; count++)
+    {
+        if([[directoryContent objectAtIndex:count] rangeOfString:@".apkg"].location != NSNotFound) {
+            [apkgs addObject:[NSString stringWithFormat:@"%@/%@",documentPath ,[directoryContent objectAtIndex:count]]];
+        }
+        //NSLog(@"File %d: %@", (count + 1), [directoryContent objectAtIndex:count]);
+    }
+    
+    return apkgs;
+}
+
 @end

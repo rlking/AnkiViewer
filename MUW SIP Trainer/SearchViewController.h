@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDataDelegate>
+@interface SearchViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

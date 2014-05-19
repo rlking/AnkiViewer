@@ -12,6 +12,7 @@
 
 @interface Deck : NSObject
 
++ (NSArray *) getDecks;
 + (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
 + (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
 + (NSArray *) getCardsSimpleInCategory:(NSString *) category;
