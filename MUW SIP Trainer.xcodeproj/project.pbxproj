@@ -496,6 +496,7 @@
 		802FA4531915A81800127976 /* page_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4511915A81800127976 /* page_empty.png */; };
 		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
 		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
+		808220EF192A22E600543300 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchViewController.m */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -1026,6 +1027,8 @@
 		802FA45619167FC700127976 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		808220ED192A22E600543300 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		808220EE192A22E600543300 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -1112,6 +1115,8 @@
 				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
 				802FA0A1190FDA8200127976 /* MainViewController.h */,
 				802FA0A2190FDA8200127976 /* MainViewController.m */,
+				808220ED192A22E600543300 /* SearchViewController.h */,
+				808220EE192A22E600543300 /* SearchViewController.m */,
 				802FA0AC1910D5E100127976 /* SettingsViewController.h */,
 				802FA0AD1910D5E100127976 /* SettingsViewController.m */,
 			);
@@ -2262,6 +2267,7 @@
 				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,
 				802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */,
+				808220EF192A22E600543300 /* SearchViewController.m in Sources */,
 				802FA09C190FD8CC00127976 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
