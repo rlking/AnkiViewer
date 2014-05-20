@@ -33,6 +33,13 @@
 		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
 		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
 		808220EF192A22E600543300 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchViewController.m */; };
+		808220F1192AC41100543300 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 808220F0192AC41100543300 /* libz.dylib */; };
+		80822112192AC46500543300 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 808220F8192AC46400543300 /* ioapi.c */; };
+		80822113192AC46500543300 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 808220FA192AC46400543300 /* mztools.c */; };
+		80822114192AC46500543300 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 808220FC192AC46400543300 /* unzip.c */; };
+		80822115192AC46500543300 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 808220FE192AC46400543300 /* zip.c */; };
+		80822117192AC46500543300 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822102192AC46400543300 /* SSZipArchive.m */; };
+		80822118192AC46500543300 /* SSZipArchive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 80822103192AC46400543300 /* SSZipArchive.podspec */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -101,6 +108,19 @@
 		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		808220ED192A22E600543300 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		808220EE192A22E600543300 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		808220F0192AC41100543300 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		808220F7192AC46400543300 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		808220F8192AC46400543300 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		808220F9192AC46400543300 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		808220FA192AC46400543300 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		808220FB192AC46400543300 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		808220FC192AC46400543300 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		808220FD192AC46400543300 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		808220FE192AC46400543300 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		808220FF192AC46400543300 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		80822101192AC46400543300 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		80822102192AC46400543300 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		80822103192AC46400543300 /* SSZipArchive.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSZipArchive.podspec; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -124,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808220F1192AC41100543300 /* libz.dylib in Frameworks */,
 				802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */,
 				802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */,
 				802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */,
@@ -166,6 +187,7 @@
 		802FA058190FD5B700127976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				808220F0192AC41100543300 /* libz.dylib */,
 				802FA0A4190FDC3900127976 /* libsqlite3.dylib */,
 				802FA059190FD5B700127976 /* Foundation.framework */,
 				802FA05B190FD5B700127976 /* CoreGraphics.framework */,
@@ -178,6 +200,7 @@
 		802FA05F190FD5B700127976 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				808220F2192AC46400543300 /* ssziparchive-master */,
 				802FA45419167F9300127976 /* data */,
 				802FA08D190FD8CC00127976 /* FMDB */,
 				802FA068190FD5B700127976 /* AppDelegate.h */,
@@ -253,6 +276,33 @@
 				802FA45C19168E3900127976 /* Deck.m */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		808220F2192AC46400543300 /* ssziparchive-master */ = {
+			isa = PBXGroup;
+			children = (
+				808220F6192AC46400543300 /* minizip */,
+				80822101192AC46400543300 /* SSZipArchive.h */,
+				80822102192AC46400543300 /* SSZipArchive.m */,
+				80822103192AC46400543300 /* SSZipArchive.podspec */,
+			);
+			path = "ssziparchive-master";
+			sourceTree = "<group>";
+		};
+		808220F6192AC46400543300 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				808220F7192AC46400543300 /* crypt.h */,
+				808220F8192AC46400543300 /* ioapi.c */,
+				808220F9192AC46400543300 /* ioapi.h */,
+				808220FA192AC46400543300 /* mztools.c */,
+				808220FB192AC46400543300 /* mztools.h */,
+				808220FC192AC46400543300 /* unzip.c */,
+				808220FD192AC46400543300 /* unzip.h */,
+				808220FE192AC46400543300 /* zip.c */,
+				808220FF192AC46400543300 /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 		809C3E5819217CF900552B21 /* icon */ = {
@@ -369,6 +419,7 @@
 				802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */,
 				809C3E9F19217CF900552B21 /* iTunesArtwork.png in Resources */,
 				809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */,
+				80822118192AC46500543300 /* SSZipArchive.podspec in Resources */,
 				809C3E9319217CF900552B21 /* Icon-60.png in Resources */,
 				809C3E9B19217CF900552B21 /* Icon-Small.png in Resources */,
 				809C3EA019217CF900552B21 /* iTunesArtwork@2x.png in Resources */,
@@ -402,11 +453,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				802FA099190FD8CC00127976 /* FMDatabase.m in Sources */,
+				80822112192AC46500543300 /* ioapi.c in Sources */,
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
+				80822117192AC46500543300 /* SSZipArchive.m in Sources */,
 				802FA09B190FD8CC00127976 /* FMDatabasePool.m in Sources */,
+				80822113192AC46500543300 /* mztools.c in Sources */,
 				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
+				80822114192AC46500543300 /* unzip.c in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
 				802FA45719167FC700127976 /* Card.m in Sources */,
+				80822115192AC46500543300 /* zip.c in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,

@@ -33,9 +33,10 @@ NSArray *cards;
 {
     [super viewDidLoad];
     
-    tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
+    //tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
+    tags = [[Deck getTags] allObjects];
     
-    cards = [Deck getCardsSimpleInCategory:@"Block01"];
+    cards = [Deck getCardsSimpleInCategory:@""];
     
     MainViewController *mainVC =
     [self.tabBarController viewControllers][0];

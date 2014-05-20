@@ -49,11 +49,12 @@
     [swipeRecognizerRight setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [[self view] addGestureRecognizer:swipeRecognizerRight];
     
+    [Deck setDeck:[[Deck getDecks] objectAtIndex:0]];
+    
     currentCardIndex = 0;
-    currentTag = @"Block01";
-//    cardMax = [Deck getMaxCardForCategory:currentTag];
-//    [self setCard];
-    [Deck getDecks];
+    currentTag = @"";
+    cardMax = [Deck getMaxCardForCategory:currentTag];
+    [self setCard];
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];

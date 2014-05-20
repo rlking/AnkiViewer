@@ -7,6 +7,9 @@
 //
 
 #import "Deck.h"
+#import "SSZipArchive.h"
+
+NSString *deckPath;
 
 @implementation Deck
 
@@ -136,13 +139,12 @@
     }
     
     return 0;
-
 }
 
 + (NSDictionary *) getMediaMapping {
     if(!mediaMapping) {
         // get json data to map image files to html img src name
-        NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"media" ofType: nil]];
+        NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [deckPath stringByAppendingString: @"media"]];
         mediaMapping = [NSJSONSerialization JSONObjectWithData:mediaJsonData options:0 error:nil];
     }
     
@@ -155,7 +157,7 @@
     FMDatabase *database;
     @try
     {
-        database = [FMDatabase databaseWithPath:[[NSBundle mainBundle] pathForResource:@"collection" ofType:@".anki2"]];
+        database = [FMDatabase databaseWithPath:[deckPath stringByAppendingString: @"collection.anki2"]];
         if (![database open])
         {
             [NSException raise:@"could not open db" format:nil];
@@ -184,6 +186,52 @@
     }
     
     return apkgs;
+}
+
++ (void) setDeck:(NSString *) deck {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [paths objectAtIndex:0];
+    
+    deckPath = [NSString stringWithFormat:@"%@/deck/",documentPath];
+    
+    [SSZipArchive unzipFileAtPath:deck toDestination:deckPath];
+    
+    
+}
+
++ (NSSet *) getTags {
+    NSMutableSet *ret = [NSMutableSet set];
+    NSMutableString *queryTags = [[NSMutableString alloc] initWithString:@"select tags from notes"];
+    
+    FMDatabase *database = [Deck openDatabase];
+    FMResultSet *result;
+    
+    @try
+    {
+        result = [database executeQuery:queryTags];
+        [result next];
+        while([result hasAnotherRow]) {
+            NSString *tags = [result stringForColumn:@"tags"];
+           
+            NSArray *split = [tags componentsSeparatedByString:@" "];
+            for (NSString *str in split) {
+                [ret addObject:[str stringByTrimmingCharactersInSet:
+                                [NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+            }
+            
+            [result next];
+        }
+    }
+    @catch (NSException *exception)
+    {
+        [NSException raise:@"could not execute query tags" format:nil];
+    }
+    @finally {
+        [result close];
+        [database close];
+    }
+    
+    return ret;
 }
 
 @end
