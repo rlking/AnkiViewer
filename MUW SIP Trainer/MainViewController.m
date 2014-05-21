@@ -99,8 +99,8 @@
     }];
     
     //set more readable font than the default webview font
-    NSString *front = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", card.front];
-    NSString *back = [NSString stringWithFormat:@"<font face='Sans-Serif' size='3'>%@", card.back];
+    NSString *front = [NSString stringWithFormat:@"<style type='text/css'>img { max-width: 100%%; width: auto; height: auto; }</style><font face='Sans-Serif' size='3'>%@", card.front];
+    NSString *back = [NSString stringWithFormat:@"<style type='text/css'>img { max-width: 100%%; width: auto; height: auto; }</style><font face='Sans-Serif' size='3'>%@", card.back];
     
     [_webView loadHTMLString:front baseURL:url];
     [_webViewCardBack loadHTMLString:back baseURL:url];
