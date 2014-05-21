@@ -13,7 +13,7 @@
 @interface Deck : NSObject
 
 + (NSArray *) getDecks;
-+ (NSSet *) getTags;
++ (NSArray *) getTags;
 + (void) setDeck:(NSString *) deck;
 + (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
 + (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;

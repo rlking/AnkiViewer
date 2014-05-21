@@ -34,7 +34,8 @@ NSArray *cards;
     [super viewDidLoad];
     
     //tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
-    tags = [[Deck getTags] allObjects];
+    tags = [Deck getTags];
+
     
     cards = [Deck getCardsSimpleInCategory:@""];
     

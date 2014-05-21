@@ -40,6 +40,7 @@
 		80822115192AC46500543300 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 808220FE192AC46400543300 /* zip.c */; };
 		80822117192AC46500543300 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822102192AC46400543300 /* SSZipArchive.m */; };
 		80822118192AC46500543300 /* SSZipArchive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 80822103192AC46400543300 /* SSZipArchive.podspec */; };
+		80822125192B7C9A00543300 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822124192B7C9A00543300 /* DeckViewController.m */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -121,6 +122,8 @@
 		80822101192AC46400543300 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		80822102192AC46400543300 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		80822103192AC46400543300 /* SSZipArchive.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSZipArchive.podspec; sourceTree = "<group>"; };
+		80822123192B7C9A00543300 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		80822124192B7C9A00543300 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				802FA06B190FD5B700127976 /* Images.xcassets */,
 				802FA060190FD5B700127976 /* Supporting Files */,
 				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
+				80822123192B7C9A00543300 /* DeckViewController.h */,
+				80822124192B7C9A00543300 /* DeckViewController.m */,
 				802FA0A1190FDA8200127976 /* MainViewController.h */,
 				802FA0A2190FDA8200127976 /* MainViewController.m */,
 				808220ED192A22E600543300 /* SearchViewController.h */,
@@ -461,6 +466,7 @@
 				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
 				80822114192AC46500543300 /* unzip.c in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
+				80822125192B7C9A00543300 /* DeckViewController.m in Sources */,
 				802FA45719167FC700127976 /* Card.m in Sources */,
 				80822115192AC46500543300 /* zip.c in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,

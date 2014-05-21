@@ -52,7 +52,7 @@
     [Deck setDeck:[[Deck getDecks] objectAtIndex:0]];
     
     currentCardIndex = 0;
-    currentTag = @"";
+    currentTag = @"Block02";
     cardMax = [Deck getMaxCardForCategory:currentTag];
     [self setCard];
     
@@ -73,28 +73,29 @@
     Card *card = [Deck getCardForIndex:currentCardIndex inCategory:currentTag];
     __block NSURL *url;
     [[Deck getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        if ([card.front rangeOfString:obj].location != NSNotFound ||
-            [card.back rangeOfString:obj].location != NSNotFound) {
-            
-            //load image data from resources
-            NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: key ofType: nil]];
+//        if ([card.front rangeOfString:obj].location != NSNotFound ||
+//            [card.back rangeOfString:obj].location != NSNotFound) {
+//            
+//            //load image data from resources
+//            NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: key ofType: nil]];
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             NSString *documentDirectory = [paths objectAtIndex:0];
-            UIImage *image = [UIImage imageWithData:data];
-            
-            // resize image to somehow fit the screen
-            //CGRect screenBounds = [[UIScreen mainScreen] bounds];
-            CGSize screenSize = CGSizeMake(150, 150);
-            image = [self scaleImage:image toSize:screenSize];
-            data = UIImagePNGRepresentation(image);
-            
-            //translate the path to what´s expected by the html img src
-            NSString* pathForWebView= [documentDirectory stringByAppendingPathComponent:obj];
-            [data writeToFile:pathForWebView atomically:YES];
+        documentDirectory = [documentDirectory stringByAppendingString:@"/deck"];
+//            UIImage *image = [UIImage imageWithData:data];
+//            
+//            // resize image to somehow fit the screen
+//            //CGRect screenBounds = [[UIScreen mainScreen] bounds];
+//            CGSize screenSize = CGSizeMake(150, 150);
+//            image = [self scaleImage:image toSize:screenSize];
+//            data = UIImagePNGRepresentation(image);
+//            
+//            //translate the path to what´s expected by the html img src
+//            NSString* pathForWebView= [documentDirectory stringByAppendingPathComponent:obj];
+//            [data writeToFile:pathForWebView atomically:YES];
             url = [NSURL fileURLWithPath:documentDirectory];
             
             //*stop = YES;
-        }
+//        }
     }];
     
     //set more readable font than the default webview font
