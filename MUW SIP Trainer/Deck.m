@@ -193,28 +193,12 @@ NSString *deckPath;
     NSString *documentPath = [paths objectAtIndex:0];
     
     deckPath = [NSString stringWithFormat:@"%@/deck/",documentPath];
+    [[NSFileManager defaultManager] removeItemAtPath:deckPath error:nil];
     
     [SSZipArchive unzipFileAtPath:deck toDestination:deckPath];
     
-    
     [[Deck getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        NSFileManager * fm = [[NSFileManager alloc] init];
-        [fm moveItemAtPath:[deckPath stringByAppendingString: key] toPath:[deckPath stringByAppendingString: obj] error:nil];
-
-        
-//            //load image data from resources
-//            NSData *data = [[NSData alloc] initWithContentsOfFile: [deckPath stringByAppendingString: key]];
-//            UIImage *image = [UIImage imageWithData:data];
-//            
-//            // resize image to somehow fit the screen
-//            //CGRect screenBounds = [[UIScreen mainScreen] bounds];
-//            CGSize screenSize = CGSizeMake(150, 150);
-//            image = [self scaleImage:image toSize:screenSize];
-//            data = UIImagePNGRepresentation(image);
-//            
-//            //translate the path to what´s expected by the html img src
-//            NSString* pathForWebView= [deckPath stringByAppendingPathComponent:obj];
-//            [data writeToFile:pathForWebView atomically:YES];
+        [[NSFileManager defaultManager] moveItemAtPath:[deckPath stringByAppendingString: key] toPath:[deckPath stringByAppendingString: obj] error:nil];
     }];
 }
 

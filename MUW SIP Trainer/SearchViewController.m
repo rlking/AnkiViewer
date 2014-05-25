@@ -17,6 +17,7 @@
 @property (nonatomic) NSString *apkgPath;
 @property (nonatomic) NSUInteger totalBytes;
 @property (nonatomic) NSUInteger receivedBytes;
+- (IBAction)goClicked:(id)sender;
 
 @end
 
@@ -36,6 +37,7 @@
     [super viewDidLoad];
     
     NSString *urlString = @"https://ankiweb.net/shared/decks/sip";
+    [self.textFieldWeb setText:urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
@@ -136,4 +138,7 @@
     self.totalBytes = 0;
 }
 
+- (IBAction)goClicked:(id)sender {
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.textFieldWeb.text]]];
+}
 @end

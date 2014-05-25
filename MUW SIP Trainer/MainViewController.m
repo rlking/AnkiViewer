@@ -50,15 +50,17 @@
     [[self view] addGestureRecognizer:swipeRecognizerRight];
     
     [Deck setDeck:[[Deck getDecks] objectAtIndex:0]];
-    
-    currentCardIndex = 0;
-    currentTag = @"Block02";
-    cardMax = [Deck getMaxCardForCategory:currentTag];
-    [self setCard];
+    [self resetView];
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];
-    
+}
+
+-(void) resetView {
+    currentCardIndex = 0;
+    currentTag = @"";
+    cardMax = [Deck getMaxCardForCategory:currentTag];
+    [self setCard];
 }
 
 
@@ -71,32 +73,12 @@
     [_label setText:cardOfCards];
     
     Card *card = [Deck getCardForIndex:currentCardIndex inCategory:currentTag];
-    __block NSURL *url;
-    [[Deck getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-//        if ([card.front rangeOfString:obj].location != NSNotFound ||
-//            [card.back rangeOfString:obj].location != NSNotFound) {
-//            
-//            //load image data from resources
-//            NSData *data = [[NSData alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: key ofType: nil]];
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString *documentDirectory = [paths objectAtIndex:0];
-        documentDirectory = [documentDirectory stringByAppendingString:@"/deck"];
-//            UIImage *image = [UIImage imageWithData:data];
-//            
-//            // resize image to somehow fit the screen
-//            //CGRect screenBounds = [[UIScreen mainScreen] bounds];
-//            CGSize screenSize = CGSizeMake(150, 150);
-//            image = [self scaleImage:image toSize:screenSize];
-//            data = UIImagePNGRepresentation(image);
-//            
-//            //translate the path to what´s expected by the html img src
-//            NSString* pathForWebView= [documentDirectory stringByAppendingPathComponent:obj];
-//            [data writeToFile:pathForWebView atomically:YES];
-            url = [NSURL fileURLWithPath:documentDirectory];
-            
-            //*stop = YES;
-//        }
-    }];
+    
+    // get base url for images
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    documentDirectory = [documentDirectory stringByAppendingString:@"/deck"];
+    NSURL *url = [NSURL fileURLWithPath:documentDirectory];
     
     //set more readable font than the default webview font
     NSString *front = [NSString stringWithFormat:@"<style type='text/css'>img { max-width: 100%%; width: auto; height: auto; }</style><font face='Sans-Serif' size='3'>%@", card.front];
@@ -118,7 +100,7 @@
     SettingsViewController *settingsVC =
     [self.tabBarController viewControllers][1];
     
-    if([settingsVC.switchAnswer isOn]) {
+    if(!settingsVC.switchAnswer || [settingsVC.switchAnswer isOn]) {
         [_buttonShowAnswer setHidden:NO];
         [_webViewCardBack setHidden:YES];
     } else {

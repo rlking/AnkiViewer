@@ -33,23 +33,21 @@ NSArray *cards;
 {
     [super viewDidLoad];
     
-    //tags = @[@"Block01", @"Block02", @"Block03", @"Block04", @"Block05", @"Block06"];
-    tags = [Deck getTags];
-
+    [self resetView];
     
+    [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void) resetView {
+    tags = [Deck getTags];
     cards = [Deck getCardsSimpleInCategory:@""];
     
     MainViewController *mainVC =
     [self.tabBarController viewControllers][0];
     [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
     
-    [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [_tableViewTags reloadData];
+    [_tableView reloadData];
 }
 
 - (void)setState:(id)sender {
@@ -70,40 +68,15 @@ NSArray *cards;
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
-    return tags.count;
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
-    return tags[row];
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
-    MainViewController *mainVC =
-    [self.tabBarController viewControllers][0];
-    
-    mainVC.currentTag = tags[row];
-    mainVC.currentCardIndex = 0;
-    mainVC.cardMax = [Deck getMaxCardForCategory:tags[row]];
-    [mainVC setCard];
-    
-    cards = [Deck getCardsSimpleInCategory:tags[row]];
-    [_tableView reloadData];
-    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-}
-
-
 #pragma mark - Table View Data
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [cards count];
+    if(tableView == self.tableView) {
+        return [cards count];
+    } else if(tableView == self.tableViewTags) {
+        return tags.count;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -115,18 +88,37 @@ numberOfRowsInComponent:(NSInteger)component
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSString* card = [cards objectAtIndex:indexPath.row];
-    cell.textLabel.text = card;
+    if(tableView == self.tableView) {
+        NSString* card = [cards objectAtIndex:indexPath.row];
+        cell.textLabel.text = card;
+    } else if(tableView == self.tableViewTags) {
+        cell.textLabel.text = tags[indexPath.row];
+    }
+    
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MainViewController *mainVC =
-    [self.tabBarController viewControllers][0];
-    
-    mainVC.currentCardIndex = indexPath.row;
-    [mainVC setCard];
+    if(tableView == self.tableView) {
+        MainViewController *mainVC =
+        [self.tabBarController viewControllers][0];
+        
+        mainVC.currentCardIndex = indexPath.row;
+        [mainVC setCard];
+    } else if(tableView == self.tableViewTags) {
+        MainViewController *mainVC =
+        [self.tabBarController viewControllers][0];
+        
+        mainVC.currentTag = tags[indexPath.row];
+        mainVC.currentCardIndex = 0;
+        mainVC.cardMax = [Deck getMaxCardForCategory:tags[indexPath.row]];
+        [mainVC setCard];
+        
+        cards = [Deck getCardsSimpleInCategory:tags[indexPath.row]];
+        [_tableView reloadData];
+        [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:mainVC.currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    }
 }
 
 @end

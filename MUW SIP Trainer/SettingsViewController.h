@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface SettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerTag;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewTags;
 @property (weak, nonatomic) IBOutlet UISwitch *switchAnswer;
+
+- (void) resetView ;
 
 @end

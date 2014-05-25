@@ -8,6 +8,8 @@
 
 #import "DeckViewController.h"
 #import "Deck.h"
+#import "MainViewController.h"
+#import "SettingsViewController.h"
 
 @interface DeckViewController ()
 
@@ -54,6 +56,18 @@ NSArray *decks;
     cell.textLabel.text = [[NSURL fileURLWithPath:[decks objectAtIndex:indexPath.row]] lastPathComponent];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [Deck setDeck:[decks objectAtIndex:indexPath.row]];
+    
+    MainViewController *mainVC =
+    [self.tabBarController viewControllers][0];
+    [mainVC resetView];
+    
+    SettingsViewController *settingsVC =
+    [self.tabBarController viewControllers][1];
+    [settingsVC resetView];
 }
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DeckViewController : UIViewController <UITableViewDataSource>
+@interface DeckViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

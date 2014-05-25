@@ -10,5 +10,7 @@
 
 @interface SearchViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldWeb;
+@property (weak, nonatomic) IBOutlet UIButton *buttonGo;
 
 @end
