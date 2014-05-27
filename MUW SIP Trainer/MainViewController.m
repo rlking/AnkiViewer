@@ -23,11 +23,6 @@
 @implementation MainViewController
 
 
-@synthesize currentCardIndex;
-@synthesize currentTag;
-@synthesize cardMax;
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,30 +44,25 @@
     [swipeRecognizerRight setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [[self view] addGestureRecognizer:swipeRecognizerRight];
     
-    [Deck setDeck:[[Deck getDecks] objectAtIndex:0]];
-    [self resetView];
+    [[Deck getInstance] setDeck:[[Deck getDecks] objectAtIndex:0]];
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];
 }
 
--(void) resetView {
-    currentCardIndex = 0;
-    currentTag = @"";
-    cardMax = [Deck getMaxCardForCategory:currentTag];
+-(void) viewDidAppear:(BOOL)animated {
     [self setCard];
 }
-
 
 -(void)setCard {
     // set label cards i.e. 5 / 433
     NSMutableString *cardOfCards = [[NSMutableString alloc] initWithString:@""];
-    [cardOfCards appendFormat:@"%d", (int)currentCardIndex + 1];
+    [cardOfCards appendFormat:@"%d", (int)[Deck getInstance].currentCardIndex + 1];
     [cardOfCards appendString:@" / "];
-    [cardOfCards appendFormat:@"%d", (int)cardMax];
+    [cardOfCards appendFormat:@"%d", (int)[Deck getInstance].cardMax];
     [_label setText:cardOfCards];
     
-    Card *card = [Deck getCardForIndex:currentCardIndex inCategory:currentTag];
+    Card *card = [[Deck getInstance] getCardForIndex:[Deck getInstance].currentCardIndex inCategory:[Deck getInstance].currentTag];
     
     // get base url for images
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -88,41 +78,29 @@
     [_webViewCardBack loadHTMLString:back baseURL:url];
     
     [self handleShowAnswer];
-    
-    // select element in settings list
-    SettingsViewController *settingsVC =
-    [self.tabBarController viewControllers][1];
-    [settingsVC.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:currentCardIndex inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 -(void) handleShowAnswer {
-    // hide/show answer button
-    SettingsViewController *settingsVC =
-    [self.tabBarController viewControllers][1];
-    
-    if(!settingsVC.switchAnswer || [settingsVC.switchAnswer isOn]) {
-        [_buttonShowAnswer setHidden:NO];
-        [_webViewCardBack setHidden:YES];
-    } else {
-        [_buttonShowAnswer setHidden:YES];
-        [_webViewCardBack setHidden:NO];
-    }
+//    // hide/show answer button
+//    SettingsViewController *settingsVC =
+//    [self.tabBarController viewControllers][1];
+//    
+//    if(!settingsVC.switchAnswer || [settingsVC.switchAnswer isOn]) {
+//        [_buttonShowAnswer setHidden:NO];
+//        [_webViewCardBack setHidden:YES];
+//    } else {
+//        [_buttonShowAnswer setHidden:YES];
+//        [_webViewCardBack setHidden:NO];
+//    }
 }
 
 -(void)handleSwipeFromLeft:(UISwipeGestureRecognizer *)recognizer {
-    currentCardIndex++;
-    if(currentCardIndex == cardMax) {
-        currentCardIndex = 0;
-    }
-    
+    [[Deck getInstance] setNextCard];
     [self setCard];
 }
 
 -(void)handleSwipeFromRight:(UISwipeGestureRecognizer *)recognizer {
-    currentCardIndex--;
-    if(currentCardIndex == -1) {
-        currentCardIndex = cardMax - 1;
-    }
+    [[Deck getInstance] setPreviousCard];
     [self setCard];
 }
 

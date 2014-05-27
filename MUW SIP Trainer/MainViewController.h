@@ -15,12 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webViewCardBack;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
-@property (nonatomic) NSInteger currentCardIndex;
-@property (weak, nonatomic) NSString *currentTag;
-@property (nonatomic) NSInteger cardMax;
-
 -(void)setCard;
--(void) resetView;
 -(void) handleShowAnswer;
 
 @end

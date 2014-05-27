@@ -12,15 +12,23 @@
 
 @interface Deck : NSObject
 
+@property (nonatomic) NSInteger currentCardIndex;
+@property (nonatomic) NSString *currentTag;
+@property (nonatomic) NSInteger cardMax;
+
++ (Deck *)getInstance;
 + (NSArray *) getDecks;
-+ (NSArray *) getTags;
-+ (void) setDeck:(NSString *) deck;
-+ (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
-+ (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
-+ (NSArray *) getCardsSimpleInCategory:(NSString *) category;
-+ (NSInteger) getMaxCardForCategory: (NSString *) category;
-+ (NSDictionary *) getMediaMapping;
-+ (FMDatabase*)openDatabase;
+- (void) setDeck:(NSString *) deck;
+- (NSArray *) getTags;
+- (void) setTag:(NSString *) tag;
+- (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
+- (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
+- (NSArray *) getCardsSimpleInCategory:(NSString *) category;
+- (NSInteger) getMaxCardForCategory: (NSString *) category;
+// - (NSDictionary *) getMediaMapping;
+- (void)setNextCard;
+- (void)setPreviousCard;
+// + (FMDatabase*)openDatabase;
 
 @end
 

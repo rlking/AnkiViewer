@@ -59,15 +59,7 @@ NSArray *decks;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [Deck setDeck:[decks objectAtIndex:indexPath.row]];
-    
-    MainViewController *mainVC =
-    [self.tabBarController viewControllers][0];
-    [mainVC resetView];
-    
-    SettingsViewController *settingsVC =
-    [self.tabBarController viewControllers][1];
-    [settingsVC resetView];
+    [[Deck getInstance] setDeck:[decks objectAtIndex:indexPath.row]];
 }
 
 @end

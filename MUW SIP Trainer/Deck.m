@@ -9,11 +9,34 @@
 #import "Deck.h"
 #import "SSZipArchive.h"
 
+static Deck *instance = nil;
 NSString *deckPath;
 
 @implementation Deck
 
-+ (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category {
+@synthesize currentCardIndex;
+@synthesize currentTag;
+@synthesize  cardMax;
+
+// get singelton
++ (Deck *)getInstance {
+    if (instance == nil) {
+        instance = [[super allocWithZone:NULL] init];
+    }
+    return instance;
+}
+
+- (id)init {
+    if (self = [super init]) {
+        currentCardIndex = 0;
+        currentTag = @"";
+        cardMax = 0;
+    }
+    return self;
+}
+
+
+- (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category {
     NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select flds from notes where tags like '%"];
     [queryCard appendString:category];
     [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
@@ -49,7 +72,7 @@ NSString *deckPath;
 }
 
 
-+ (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category {
+- (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category {
     NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
     [queryCard appendString:category];
     [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
@@ -82,7 +105,7 @@ NSString *deckPath;
     return card;
 }
 
-+ (NSArray *) getCardsSimpleInCategory:(NSString *) category {
+- (NSArray *) getCardsSimpleInCategory:(NSString *) category {
     NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
     [queryCard appendString:category];
     [queryCard appendString:@"%' order by sfld desc"];
@@ -114,7 +137,7 @@ NSString *deckPath;
 }
 
 
-+ (NSInteger) getMaxCardForCategory: (NSString *) category {
+- (NSInteger) getMaxCardForCategory: (NSString *) category {
     NSMutableString *queryCardCount = [[NSMutableString alloc] initWithString:@"select count(*) as cnt from notes where tags like '%"];
     [queryCardCount appendString:(NSString *)category];
     [queryCardCount appendString:@"%' order by sfld desc"];
@@ -141,7 +164,7 @@ NSString *deckPath;
     return 0;
 }
 
-+ (NSDictionary *) getMediaMapping {
+- (NSDictionary *) getMediaMapping {
     if(!mediaMapping) {
         // get json data to map image files to html img src name
         NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [deckPath stringByAppendingString: @"media"]];
@@ -188,21 +211,29 @@ NSString *deckPath;
     return apkgs;
 }
 
-+ (void) setDeck:(NSString *) deck {
+- (void) setDeck:(NSString *) deck {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath = [paths objectAtIndex:0];
-    
     deckPath = [NSString stringWithFormat:@"%@/deck/",documentPath];
+    
+    // delete old files
     [[NSFileManager defaultManager] removeItemAtPath:deckPath error:nil];
     
+    // unzip deck
     [SSZipArchive unzipFileAtPath:deck toDestination:deckPath];
     
-    [[Deck getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    // rename image files to correct names so the webview can find them
+    [[[Deck getInstance] getMediaMapping] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [[NSFileManager defaultManager] moveItemAtPath:[deckPath stringByAppendingString: key] toPath:[deckPath stringByAppendingString: obj] error:nil];
     }];
+    
+    // reset cards
+    currentTag = @"";
+    currentCardIndex = 0;
+    cardMax = [self getMaxCardForCategory:currentTag];
 }
 
-+ (NSArray *) getTags {
+- (NSArray *) getTags {
     NSMutableSet *ret = [NSMutableSet set];
     NSMutableString *queryTags = [[NSMutableString alloc] initWithString:@"select tags from notes"];
     
@@ -238,6 +269,26 @@ NSString *deckPath;
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     return [[ret allObjects] sortedArrayUsingDescriptors:sortDescriptors];
+}
+
+- (void) setTag:(NSString *) tag {
+    currentTag = tag;
+    currentCardIndex = 0;
+    cardMax = [self getMaxCardForCategory:tag];
+}
+
+-(void)setNextCard {
+    currentCardIndex++;
+    if(currentCardIndex == cardMax) {
+        currentCardIndex = 0;
+    }
+}
+
+-(void)setPreviousCard {
+    currentCardIndex--;
+    if(currentCardIndex == -1) {
+        currentCardIndex = cardMax - 1;
+    }
 }
 
 @end

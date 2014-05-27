@@ -47,6 +47,8 @@
 		8082212F192EA76800543300 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 80822129192EA76800543300 /* folder.png */; };
 		80822130192EA76800543300 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 8082212A192EA76800543300 /* globe.png */; };
 		80822131192EA76800543300 /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 8082212B192EA76800543300 /* magnifying_glass.png */; };
+		808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221331931F67E00543300 /* TagsTableTableViewController.m */; };
+		808221371931FAA400543300 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221361931FAA400543300 /* CardsTableViewController.m */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -136,6 +138,10 @@
 		80822129192EA76800543300 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder.png; path = resources/folder.png; sourceTree = SOURCE_ROOT; };
 		8082212A192EA76800543300 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe.png; path = resources/globe.png; sourceTree = SOURCE_ROOT; };
 		8082212B192EA76800543300 /* magnifying_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magnifying_glass.png; path = resources/magnifying_glass.png; sourceTree = SOURCE_ROOT; };
+		808221321931F67E00543300 /* TagsTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTableTableViewController.h; sourceTree = "<group>"; };
+		808221331931F67E00543300 /* TagsTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTableTableViewController.m; sourceTree = "<group>"; };
+		808221351931FAA400543300 /* CardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsTableViewController.h; sourceTree = "<group>"; };
+		808221361931FAA400543300 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 				802FA06B190FD5B700127976 /* Images.xcassets */,
 				802FA060190FD5B700127976 /* Supporting Files */,
 				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
+				808221351931FAA400543300 /* CardsTableViewController.h */,
+				808221361931FAA400543300 /* CardsTableViewController.m */,
+				808221321931F67E00543300 /* TagsTableTableViewController.h */,
+				808221331931F67E00543300 /* TagsTableTableViewController.m */,
 				80822123192B7C9A00543300 /* DeckViewController.h */,
 				80822124192B7C9A00543300 /* DeckViewController.m */,
 				802FA0A1190FDA8200127976 /* MainViewController.h */,
@@ -482,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				802FA099190FD8CC00127976 /* FMDatabase.m in Sources */,
+				808221371931FAA400543300 /* CardsTableViewController.m in Sources */,
 				80822112192AC46500543300 /* ioapi.c in Sources */,
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
 				80822117192AC46500543300 /* SSZipArchive.m in Sources */,
@@ -495,6 +506,7 @@
 				80822115192AC46500543300 /* zip.c in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				802FA09A190FD8CC00127976 /* FMDatabaseAdditions.m in Sources */,
+				808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,
 				802FA09E190FD8CC00127976 /* FMResultSet.m in Sources */,
 				808220EF192A22E600543300 /* SearchViewController.m in Sources */,
