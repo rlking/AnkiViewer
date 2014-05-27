@@ -165,11 +165,9 @@ NSString *deckPath;
 }
 
 - (NSDictionary *) getMediaMapping {
-    if(!mediaMapping) {
-        // get json data to map image files to html img src name
-        NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [deckPath stringByAppendingString: @"media"]];
-        mediaMapping = [NSJSONSerialization JSONObjectWithData:mediaJsonData options:0 error:nil];
-    }
+    // get json data to map image files to html img src name
+    NSData *mediaJsonData = [[NSData alloc] initWithContentsOfFile: [deckPath stringByAppendingString: @"media"]];
+    mediaMapping = [NSJSONSerialization JSONObjectWithData:mediaJsonData options:0 error:nil];
     
     return mediaMapping;
 }
