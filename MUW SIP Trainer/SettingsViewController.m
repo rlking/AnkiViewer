@@ -26,6 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    bool hideAnswer = YES;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:keyHideAnswer]) {
+        hideAnswer = [[NSUserDefaults standardUserDefaults]
+                      boolForKey:keyHideAnswer];
+    }
+    [_switchAnswer setOn:hideAnswer];
+    
     [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
 }
 

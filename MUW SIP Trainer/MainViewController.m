@@ -56,8 +56,11 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
 }
 
 -(void) handleHideAnswer {
-    bool hideAnswer = [[NSUserDefaults standardUserDefaults]
-                       boolForKey:keyHideAnswer];
+    bool hideAnswer = YES;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:keyHideAnswer]) {
+        hideAnswer = [[NSUserDefaults standardUserDefaults]
+                      boolForKey:keyHideAnswer];
+    }
     
     // hide/show answer button
     if(hideAnswer) {
