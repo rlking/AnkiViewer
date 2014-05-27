@@ -143,6 +143,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Decks" image="folder.png" id="FaI-j8-1wQ"/>
+                    <connections>
+                        <outlet property="tableViewDecks" destination="TQW-Ql-jah" id="4NG-Ri-bES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-5v-cVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

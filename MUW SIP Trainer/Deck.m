@@ -229,6 +229,8 @@ NSString *deckPath;
     currentTag = @"";
     currentCardIndex = 0;
     cardMax = [self getMaxCardForCategory:currentTag];
+    
+    [self saveData];
 }
 
 - (NSArray *) getTags {
@@ -273,6 +275,8 @@ NSString *deckPath;
     currentTag = tag;
     currentCardIndex = 0;
     cardMax = [self getMaxCardForCategory:tag];
+    
+    [self saveData];
 }
 
 -(void)setNextCard {
@@ -280,6 +284,8 @@ NSString *deckPath;
     if(currentCardIndex == cardMax) {
         currentCardIndex = 0;
     }
+    
+    [self saveData];
 }
 
 -(void)setPreviousCard {
@@ -287,6 +293,50 @@ NSString *deckPath;
     if(currentCardIndex == -1) {
         currentCardIndex = cardMax - 1;
     }
+    
+    [self saveData];
+}
+
+NSString * const keyCurrentDeck = @"keyCurrentDeck";
+NSString * const keyCurrentCardIndex = @"keyCurrentCardIndex";
+NSString * const keyCurrentTag = @"keyCurrentTag";
+NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
+
+-(void)saveData
+{
+    [[NSUserDefaults standardUserDefaults]
+     setObject:deckPath forKey:keyCurrentDeck];
+    
+    [[NSUserDefaults standardUserDefaults]
+     setObject:currentTag forKey:keyCurrentTag];
+    
+    [[NSUserDefaults standardUserDefaults]
+     setObject:[NSNumber numberWithInt:(int)currentCardIndex] forKey:keyCurrentCardIndex];
+    
+    [[NSUserDefaults standardUserDefaults]
+     setObject:[NSNumber numberWithInt:(int)cardMax] forKey:keyCurrentCardMax];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)loadData
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:keyCurrentDeck])
+    {
+        deckPath = [[NSUserDefaults standardUserDefaults]
+                    objectForKey:keyCurrentDeck];
+        currentTag = [[NSUserDefaults standardUserDefaults]
+                     objectForKey:keyCurrentTag];
+        currentCardIndex = [(NSNumber *)[[NSUserDefaults standardUserDefaults]
+                                   objectForKey:keyCurrentCardIndex] intValue];
+        cardMax = [(NSNumber *)[[NSUserDefaults standardUserDefaults]
+                                         objectForKey:keyCurrentCardMax] intValue];
+    } else {
+        deckPath = @"";
+        currentCardIndex = 0;
+        currentTag = @"";
+        cardMax = 0;
+    } 
 }
 
 @end

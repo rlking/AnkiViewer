@@ -44,7 +44,7 @@
     [swipeRecognizerRight setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [[self view] addGestureRecognizer:swipeRecognizerRight];
     
-    [[Deck getInstance] setDeck:[[Deck getDecks] objectAtIndex:0]];
+    [[Deck getInstance] loadData];
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];

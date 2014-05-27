@@ -32,8 +32,11 @@ NSArray *decks;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   decks = [Deck getDecks];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    decks = [Deck getDecks];
+    [self.tableViewDecks reloadData];
 }
 
 - (void)didReceiveMemoryWarning

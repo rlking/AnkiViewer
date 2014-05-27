@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DeckViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewDecks;
 
 @end

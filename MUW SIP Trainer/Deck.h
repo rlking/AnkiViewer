@@ -29,6 +29,7 @@
 - (void)setNextCard;
 - (void)setPreviousCard;
 // + (FMDatabase*)openDatabase;
+- (void)loadData;
 
 @end
 
