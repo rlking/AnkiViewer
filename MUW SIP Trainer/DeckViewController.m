@@ -8,8 +8,6 @@
 
 #import "DeckViewController.h"
 #import "Deck.h"
-#import "MainViewController.h"
-#import "SettingsViewController.h"
 
 @interface DeckViewController ()
 

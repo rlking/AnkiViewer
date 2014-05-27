@@ -7,9 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import "FMDatabase.h"
 #import "Deck.h"
-#import "SettingsViewController.h"
+
+NSString * const keyHideAnswer = @"keyHideAnswer";
 
 @interface MainViewController ()
 
@@ -52,6 +52,21 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     [self setCard];
+    [self handleHideAnswer];
+}
+
+-(void) handleHideAnswer {
+    bool hideAnswer = [[NSUserDefaults standardUserDefaults]
+                       boolForKey:keyHideAnswer];
+    
+    // hide/show answer button
+    if(hideAnswer) {
+        [_buttonShowAnswer setHidden:NO];
+        [_webViewCardBack setHidden:YES];
+    } else {
+        [_buttonShowAnswer setHidden:YES];
+        [_webViewCardBack setHidden:NO];
+    }
 }
 
 -(void)setCard {
@@ -77,21 +92,7 @@
     [_webView loadHTMLString:front baseURL:url];
     [_webViewCardBack loadHTMLString:back baseURL:url];
     
-    [self handleShowAnswer];
-}
-
--(void) handleShowAnswer {
-//    // hide/show answer button
-//    SettingsViewController *settingsVC =
-//    [self.tabBarController viewControllers][1];
-//    
-//    if(!settingsVC.switchAnswer || [settingsVC.switchAnswer isOn]) {
-//        [_buttonShowAnswer setHidden:NO];
-//        [_webViewCardBack setHidden:YES];
-//    } else {
-//        [_buttonShowAnswer setHidden:YES];
-//        [_webViewCardBack setHidden:NO];
-//    }
+    [self handleHideAnswer];
 }
 
 -(void)handleSwipeFromLeft:(UISwipeGestureRecognizer *)recognizer {

@@ -7,16 +7,10 @@
 //
 
 #import "SettingsViewController.h"
-#import "MainViewController.h"
-#import "Deck.h"
 
 @interface SettingsViewController ()
 
 @end
-
-NSArray *tags;
-NSArray *cards;
-
 
 @implementation SettingsViewController
 
@@ -32,17 +26,14 @@ NSArray *cards;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [_switchAnswer addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)setState:(id)sender {
     if(sender == _switchAnswer) {
-        MainViewController *mainVC =
-        [self.tabBarController viewControllers][0];
-        
-        [mainVC handleShowAnswer];
-        }
+        [[NSUserDefaults standardUserDefaults]
+         setBool:_switchAnswer.isOn forKey:keyHideAnswer];
+    }
 }
 
 

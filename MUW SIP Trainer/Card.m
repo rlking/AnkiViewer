@@ -7,7 +7,6 @@
 //
 
 #import "Card.h"
-#import "MainViewController.h"
 
 @implementation Card
 

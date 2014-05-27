@@ -7,7 +7,6 @@
 //
 
 #import "TagsTableTableViewController.h"
-#import "MainViewController.h"
 #import "Deck.h"
 
 @interface TagsTableTableViewController ()

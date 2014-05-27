@@ -7,7 +7,6 @@
 //
 
 #import "CardsTableViewController.h"
-#import "MainViewController.h"
 #import "Deck.h"
 
 @interface CardsTableViewController ()

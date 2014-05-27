@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FMDatabase.h"
 
 @interface MainViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
@@ -16,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 -(void)setCard;
--(void) handleShowAnswer;
 
 @end
+
+extern NSString * const keyHideAnswer;
