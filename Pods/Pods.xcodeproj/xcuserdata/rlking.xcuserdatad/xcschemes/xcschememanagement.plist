@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MUW SIP Trainer-FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MUW SIP Trainer-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MUW SIP Trainer-SSZipArchive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MUW SIP Trainer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>12C8039BDD0F4459A95A549D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29A4CC316EF04724B600F3EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E260BC0ECC44F939967CDB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6934230044F412F99869960</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

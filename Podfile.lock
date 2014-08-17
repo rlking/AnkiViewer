@@ -1,0 +1,20 @@
+PODS:
+  - FMDB (2.3):
+    - FMDB/standard
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - MBProgressHUD (0.9)
+  - SSZipArchive (0.3.1)
+
+DEPENDENCIES:
+  - FMDB (= 2.3)
+  - MBProgressHUD (= 0.9)
+  - SSZipArchive (= 0.3.1)
+
+SPEC CHECKSUMS:
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  SSZipArchive: 6dc0ea3fe4b55574bee23c9f01d7c0f8437d59ef
+
+COCOAPODS: 0.33.1

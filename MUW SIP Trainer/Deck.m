@@ -18,7 +18,7 @@ NSString *deckPath;
 @synthesize currentTag;
 @synthesize  cardMax;
 
-// get singelton
+// get singleton
 + (Deck *)getInstance {
     if (instance == nil) {
         instance = [[super allocWithZone:NULL] init];
@@ -302,6 +302,11 @@ NSString * const keyCurrentCardIndex = @"keyCurrentCardIndex";
 NSString * const keyCurrentTag = @"keyCurrentTag";
 NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
 
+/**
+ *
+ * Persist current state. I.e. deck, card index etc.
+ *
+ */
 -(void)saveData
 {
     [[NSUserDefaults standardUserDefaults]
@@ -319,6 +324,12 @@ NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+/**
+ *
+ * Load persisted state. I.e. deck, card index etc.
+ * Used to restore state after app was closed by ios.
+ *
+ */
 -(void)loadData
 {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:keyCurrentDeck])

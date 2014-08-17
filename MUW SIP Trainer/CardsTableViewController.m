@@ -34,6 +34,10 @@ NSArray *cards;
 -(void) viewWillAppear:(BOOL)animated {
     cards = [[Deck getInstance] getCardsSimpleInCategory:[Deck getInstance].currentTag];
     [self.tableView reloadData];
+    
+    // scroll to selected card
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[Deck getInstance].currentCardIndex inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 

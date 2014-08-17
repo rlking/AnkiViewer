@@ -31,9 +31,19 @@ NSArray *tags;
     [super viewDidLoad];
 }
 
--(void) viewDidAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
     tags = [[Deck getInstance] getTags];
     [self.tableView reloadData];
+    
+    // get index of current tag
+    NSInteger tagIndex = 0;
+    tagIndex = [tags indexOfObject:[Deck getInstance].currentTag];
+    if (tagIndex == NSNotFound) {
+        tagIndex = 0;
+    }
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:tagIndex inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 - (void)didReceiveMemoryWarning
