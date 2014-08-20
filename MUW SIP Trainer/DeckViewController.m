@@ -8,6 +8,7 @@
 
 #import "DeckViewController.h"
 #import "Deck.h"
+#import "MBProgressHud.h"
 
 @interface DeckViewController ()
 
@@ -60,7 +61,24 @@ NSArray *decks;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[Deck getInstance] setDeck:[decks objectAtIndex:indexPath.row]];
+    UIView *modalView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //modalView.backgroundColor = [UIColor whiteColor];
+    //modalView.alpha = 0.5f;
+    
+    UIWindow* mainWindow = [UIApplication sharedApplication].keyWindow;
+    [mainWindow addSubview:modalView];
+
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
+    hud.labelText = @"Lade Deck ...";
+    hud.userInteractionEnabled = NO;
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [[Deck getInstance] setDeck:[decks objectAtIndex:indexPath.row]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:modalView animated:YES];
+            [modalView removeFromSuperview];
+        });
+    });
 }
 
 @end

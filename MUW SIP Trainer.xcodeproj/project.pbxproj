@@ -38,6 +38,7 @@
 		80822131192EA76800543300 /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 8082212B192EA76800543300 /* magnifying_glass.png */; };
 		808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221331931F67E00543300 /* TagsTableTableViewController.m */; };
 		808221371931FAA400543300 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221361931FAA400543300 /* CardsTableViewController.m */; };
+		8087B9BC19A53D8700807100 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8087B9BB19A53D8700807100 /* Utils.m */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -111,6 +112,8 @@
 		808221331931F67E00543300 /* TagsTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTableTableViewController.m; sourceTree = "<group>"; };
 		808221351931FAA400543300 /* CardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsTableViewController.h; sourceTree = "<group>"; };
 		808221361931FAA400543300 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
+		8087B9BA19A53D8700807100 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8087B9BB19A53D8700807100 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				808220EE192A22E600543300 /* SearchViewController.m */,
 				802FA0AC1910D5E100127976 /* SettingsViewController.h */,
 				802FA0AD1910D5E100127976 /* SettingsViewController.m */,
+				8087B9BA19A53D8700807100 /* Utils.h */,
+				8087B9BB19A53D8700807100 /* Utils.m */,
 			);
 			name = project;
 			path = "MUW SIP Trainer";
@@ -456,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				808221371931FAA400543300 /* CardsTableViewController.m in Sources */,
+				8087B9BC19A53D8700807100 /* Utils.m in Sources */,
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
 				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
