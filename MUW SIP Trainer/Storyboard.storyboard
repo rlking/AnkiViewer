@@ -101,8 +101,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="KGc-OR-PUh" kind="relationship" relationship="viewControllers" id="2cQ-OM-BWJ"/>
-                        <segue destination="Uu9-FV-cyu" kind="relationship" relationship="viewControllers" id="fGM-ma-MMO"/>
-                        <segue destination="iee-Vo-Yoi" kind="relationship" relationship="viewControllers" id="p9R-9N-rha"/>
+                        <segue destination="0cq-3A-I7t" kind="relationship" relationship="viewControllers" id="E3A-aK-hfe"/>
                         <segue destination="ku4-5H-HbU" kind="relationship" relationship="viewControllers" id="uLI-pe-gHX"/>
                     </connections>
                 </tabBarController>
@@ -123,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TQW-Ql-jah">
-                                <rect key="frame" x="0.0" y="56" width="320" height="244"/>
+                                <rect key="frame" x="0.0" y="276" width="320" height="243"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -131,25 +130,32 @@
                                     <outlet property="delegate" destination="iee-Vo-Yoi" id="UIO-ct-Ei0"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deck auswählen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-DN-CqF">
-                                <rect key="frame" x="20" y="27" width="191" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oL-13-J3t">
+                                <rect key="frame" x="0.0" y="108" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <inset key="contentEdgeInsets" minX="21" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Deck hinzufügen">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Uu9-FV-cyu" kind="push" id="jiA-h3-00j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Decks" image="folder.png" id="FaI-j8-1wQ"/>
+                    <navigationItem key="navigationItem" title="Decks" id="f10-63-qwL"/>
                     <connections>
                         <outlet property="tableViewDecks" destination="TQW-Ql-jah" id="4NG-Ri-bES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66y-5v-cVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="1360"/>
+            <point key="canvasLocation" x="531" y="642"/>
         </scene>
         <!--Search View Controller - Suche-->
         <scene sceneID="jKN-Jv-lkv">
@@ -192,6 +198,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Suche" image="magnifying_glass.png" id="GyL-eg-ay1"/>
+                    <navigationItem key="navigationItem" id="6Mi-go-hna"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonGo" destination="kaa-15-JT0" id="xdV-nP-3gq"/>
@@ -201,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSJ-3w-cED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="536"/>
+            <point key="canvasLocation" x="1046" y="652"/>
         </scene>
         <!--Navigation Controller - Sortierung-->
         <scene sceneID="H4d-9U-cjA">
@@ -289,13 +296,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnR-a6-KV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationBar contentMode="scaleToFill" id="gw6-nI-jna">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Optionen" id="shR-FV-hSv"/>
-                    </items>
-                </navigationBar>
             </objects>
             <point key="canvasLocation" x="1287" y="-311"/>
         </scene>
@@ -335,6 +335,22 @@
                 </navigationBar>
             </objects>
             <point key="canvasLocation" x="1783" y="-311"/>
+        </scene>
+        <!--Navigation Controller - Decks-->
+        <scene sceneID="Jqr-No-2Y4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="0cq-3A-I7t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Decks" image="folder.png" id="P9R-pH-xmo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bnk-Eg-TLj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iee-Vo-Yoi" kind="relationship" relationship="rootViewController" id="y1R-xL-cR7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wmy-0l-dv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="642"/>
         </scene>
         <!--Cards Table View Controller - Karten-->
         <scene sceneID="4Vs-c6-zZc">
