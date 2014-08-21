@@ -15,7 +15,7 @@
 @property (nonatomic) NSURLConnection *download;
 @property (nonatomic) NSOutputStream *streamAPKG;
 @property (nonatomic) NSString *apkgPath;
-@property (nonatomic) NSUInteger totalBytes;
+@property (nonatomic) long long totalBytes;
 @property (nonatomic) NSUInteger receivedBytes;
 - (IBAction)goClicked:(id)sender;
 
@@ -90,7 +90,7 @@
             self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
                                                              message:@"Warte auf Server"
                                                             delegate:self
-                                                   cancelButtonTitle:@"Cancel"
+                                                   cancelButtonTitle:@"Abbrechen"
                                                    otherButtonTitles: nil];
             [self.alertView show];
         }
@@ -105,11 +105,11 @@
             NSLog(@"error writing to stream");
         }
         
-        NSString *progress = [NSString stringWithFormat:@"%lu / %lu kB   progress: %.2f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes];
+        NSString *progress = [NSString stringWithFormat:@"%tu / %lld kB   progress: %.2f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes];
         
         self.alertView.message = progress;
         
-        NSLog(@"%lu / %lu kB   progress: %2.0f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) (self.receivedBytes / self.totalBytes) * 100);
+        NSLog(@"%tu / %lld kB   progress: %2.0f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) (self.receivedBytes / self.totalBytes) * 100);
     }
 }
 

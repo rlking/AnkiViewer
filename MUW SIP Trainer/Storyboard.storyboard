@@ -118,20 +118,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cL7-v2-ZeI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Oz-3e-Jkd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TQW-Ql-jah">
-                                <rect key="frame" x="0.0" y="276" width="320" height="243"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="iee-Vo-Yoi" id="yh6-Tw-1Jx"/>
-                                    <outlet property="delegate" destination="iee-Vo-Yoi" id="UIO-ct-Ei0"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oL-13-J3t">
-                                <rect key="frame" x="0.0" y="108" width="320" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-TW-7RA">
+                                <rect key="frame" x="0.0" y="99" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -141,14 +132,30 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Uu9-FV-cyu" kind="push" id="jiA-h3-00j"/>
+                                    <segue destination="Uu9-FV-cyu" kind="push" id="wiL-01-oHZ"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TQW-Ql-jah">
+                                <rect key="frame" x="0.0" y="268" width="320" height="248"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iee-Vo-Yoi" id="yh6-Tw-1Jx"/>
+                                    <outlet property="delegate" destination="iee-Vo-Yoi" id="UIO-ct-Ei0"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wähle Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vig-Y1-02K">
+                                <rect key="frame" x="20" y="239" width="226" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Decks" id="f10-63-qwL"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableViewDecks" destination="TQW-Ql-jah" id="4NG-Ri-bES"/>
                     </connections>
@@ -157,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="531" y="642"/>
         </scene>
-        <!--Search View Controller - Suche-->
+        <!--Search View Controller - Deck hinzufügen-->
         <scene sceneID="jKN-Jv-lkv">
             <objects>
                 <viewController id="Uu9-FV-cyu" customClass="SearchViewController" sceneMemberID="viewController">
@@ -170,7 +177,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdx-fA-qHC">
-                                <rect key="frame" x="10" y="58" width="300" height="450"/>
+                                <rect key="frame" x="10" y="124" width="300" height="395"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -178,13 +185,13 @@
                                 </connections>
                             </webView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gh-VN-f8X">
-                                <rect key="frame" x="10" y="20" width="252" height="30"/>
+                                <rect key="frame" x="10" y="80" width="252" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-15-JT0">
-                                <rect key="frame" x="270" y="19" width="30" height="30"/>
+                                <rect key="frame" x="270" y="80" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,7 +205,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Suche" image="magnifying_glass.png" id="GyL-eg-ay1"/>
-                    <navigationItem key="navigationItem" id="6Mi-go-hna"/>
+                    <navigationItem key="navigationItem" title="Deck hinzufügen" id="6Mi-go-hna"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonGo" destination="kaa-15-JT0" id="xdV-nP-3gq"/>
@@ -340,6 +347,7 @@
         <scene sceneID="Jqr-No-2Y4">
             <objects>
                 <navigationController definesPresentationContext="YES" id="0cq-3A-I7t" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Decks" image="folder.png" id="P9R-pH-xmo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bnk-Eg-TLj">
                         <autoresizingMask key="autoresizingMask"/>

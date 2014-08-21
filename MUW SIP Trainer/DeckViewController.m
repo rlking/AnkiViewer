@@ -69,7 +69,7 @@ NSArray *decks;
     [mainWindow addSubview:modalView];
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
-    hud.labelText = @"Lade Deck ...";
+    hud.labelText = @"Öffne Deck ...";
     hud.userInteractionEnabled = NO;
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
