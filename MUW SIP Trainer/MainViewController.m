@@ -33,6 +33,8 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
 {
     [super viewDidLoad];
     
+    _label.text = @"";
+    
     UISwipeGestureRecognizer *swipeRecognizerLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromLeft:)];
     [swipeRecognizerLeft setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     [[self view] addGestureRecognizer:swipeRecognizerLeft];
@@ -74,14 +76,17 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
 }
 
 -(void)setCard {
+    Card *card = [[Deck getInstance] getCardForIndex:[Deck getInstance].currentCardIndex inCategory:[Deck getInstance].currentTag];
+    if(!card) {
+        return;
+    }
+    
     // set label cards i.e. 5 / 433
     NSMutableString *cardOfCards = [[NSMutableString alloc] initWithString:@""];
     [cardOfCards appendFormat:@"%d", (int)[Deck getInstance].currentCardIndex + 1];
     [cardOfCards appendString:@" / "];
     [cardOfCards appendFormat:@"%d", (int)[Deck getInstance].cardMax];
     [_label setText:cardOfCards];
-    
-    Card *card = [[Deck getInstance] getCardForIndex:[Deck getInstance].currentCardIndex inCategory:[Deck getInstance].currentTag];
     
     // get base url for images
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

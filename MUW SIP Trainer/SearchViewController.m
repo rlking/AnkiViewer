@@ -71,7 +71,7 @@
         if([response.suggestedFilename rangeOfString:@".apkg"].location != NSNotFound) {
             self.totalBytes = response.expectedContentLength;
             
-            // create path in Document dir with filename
+            // create path in document dir with filename
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             self.apkgPath = [paths objectAtIndex:0];
             self.apkgPath = [self.apkgPath stringByAppendingString:@"/"];
@@ -105,11 +105,11 @@
             NSLog(@"error writing to stream");
         }
         
-        NSString *progress = [NSString stringWithFormat:@"%tu / %lld kB   progress: %.2f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes];
+        NSString *progress = [NSString stringWithFormat:@"%tu / %lld kB   %.2f%%", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes];
         
         self.alertView.message = progress;
         
-        NSLog(@"%tu / %lld kB   progress: %2.0f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) (self.receivedBytes / self.totalBytes) * 100);
+//        NSLog(@"%tu / %lld kB   progress: %2.0f ", self.receivedBytes / 1024, self.totalBytes / 1024, (double) (self.receivedBytes / self.totalBytes) * 100);
     }
 }
 

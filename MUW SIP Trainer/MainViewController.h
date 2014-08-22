@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController <UIGestureRecognizerDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIWebView *webViewCardBack;
 @property (weak, nonatomic) IBOutlet UILabel *label;

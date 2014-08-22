@@ -49,7 +49,10 @@ NSString *deckPath;
     @try
     {
         resultCard = [database executeQuery:queryCard];
-        [resultCard next];
+        bool next = [resultCard next];
+        if(!next) {
+            return nil;
+        }
         
         // magic ascii separator used by anki for front and back of the card
         NSArray *frontAndBack = [[resultCard stringForColumn:@"flds"]componentsSeparatedByString:[NSString stringWithFormat:@"%c", 31]];
