@@ -43,7 +43,9 @@ NSArray *tags;
     }
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:tagIndex inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    if (indexPath.row < [self.tableView numberOfRowsInSection:indexPath.section]) {
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +67,7 @@ NSArray *tags;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    static NSString *simpleTableIdentifier = @"TagTableItem";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     

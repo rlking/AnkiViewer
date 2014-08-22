@@ -37,7 +37,9 @@ NSArray *cards;
     
     // scroll to selected card
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[Deck getInstance].currentCardIndex inSection:0];
-    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    if (indexPath.row < [self.tableView numberOfRowsInSection:indexPath.section]) {
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    }
 }
 
 
@@ -59,7 +61,7 @@ NSArray *cards;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    static NSString *simpleTableIdentifier = @"CardTableItem";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
