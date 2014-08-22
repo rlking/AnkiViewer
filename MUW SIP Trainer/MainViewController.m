@@ -13,10 +13,7 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
 
 @interface MainViewController ()
 
-- (IBAction)previous:(id)sender;
-- (IBAction)next:(id)sender;
-- (IBAction)showAnswer:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *buttonShowAnswer;
+@property (weak, nonatomic) IBOutlet UILabel *labelWhiteBG;
 
 @end
 
@@ -44,6 +41,12 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
     [swipeRecognizerRight setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [[self view] addGestureRecognizer:swipeRecognizerRight];
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAnswer:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.labelWhiteBG addGestureRecognizer:tapGestureRecognizer];
+    self.labelWhiteBG.userInteractionEnabled = YES;
+    
+    
     [[Deck getInstance] loadData];
     
     [[_webView scrollView] setBounces:NO];
@@ -64,10 +67,8 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
     
     // hide/show answer button
     if(hideAnswer) {
-        [_buttonShowAnswer setHidden:NO];
         [_webViewCardBack setHidden:YES];
     } else {
-        [_buttonShowAnswer setHidden:YES];
         [_webViewCardBack setHidden:NO];
     }
 }
