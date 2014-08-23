@@ -14,6 +14,7 @@
 
 @property (nonatomic) NSInteger currentCardIndex;
 @property (nonatomic) NSString *currentTag;
+@property (nonatomic) NSString *currentDeck;
 @property (nonatomic) NSInteger cardMax;
 
 + (Deck *)getInstance;

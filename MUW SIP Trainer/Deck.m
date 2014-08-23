@@ -10,10 +10,12 @@
 #import "SSZipArchive.h"
 
 static Deck *instance = nil;
-NSString *deckPath;
+// ../Documents/deck/
+static NSString *deckPath;
 
 @implementation Deck
 
+@synthesize currentDeck;
 @synthesize currentCardIndex;
 @synthesize currentTag;
 @synthesize  cardMax;
@@ -21,6 +23,10 @@ NSString *deckPath;
 // get singleton
 + (Deck *)getInstance {
     if (instance == nil) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentPath = [paths objectAtIndex:0];
+        deckPath = [NSString stringWithFormat:@"%@/deck/",documentPath];
+        
         instance = [[super allocWithZone:NULL] init];
     }
     return instance;
@@ -195,6 +201,9 @@ NSString *deckPath;
     return database;
 }
 
+/**
+ * @return array of absolute paths to decks
+ */
 + (NSArray *) getDecks {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath = [paths objectAtIndex:0];
@@ -212,10 +221,11 @@ NSString *deckPath;
     return apkgs;
 }
 
+/**
+ * @param deck absolute path to deck
+ */
 - (void) setDeck:(NSString *) deck {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [paths objectAtIndex:0];
-    deckPath = [NSString stringWithFormat:@"%@/deck/",documentPath];
+    self.currentDeck = deck;
     
     // delete old files
     [[NSFileManager defaultManager] removeItemAtPath:deckPath error:nil];
@@ -313,7 +323,7 @@ NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
 -(void)saveData
 {
     [[NSUserDefaults standardUserDefaults]
-     setObject:deckPath forKey:keyCurrentDeck];
+     setObject:currentDeck forKey:keyCurrentDeck];
     
     [[NSUserDefaults standardUserDefaults]
      setObject:currentTag forKey:keyCurrentTag];
@@ -337,7 +347,7 @@ NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
 {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:keyCurrentDeck])
     {
-        deckPath = [[NSUserDefaults standardUserDefaults]
+        currentDeck = [[NSUserDefaults standardUserDefaults]
                     objectForKey:keyCurrentDeck];
         currentTag = [[NSUserDefaults standardUserDefaults]
                      objectForKey:keyCurrentTag];
@@ -346,7 +356,7 @@ NSString * const keyCurrentCardMax = @"keyCurrentCardMax";
         cardMax = [(NSNumber *)[[NSUserDefaults standardUserDefaults]
                                          objectForKey:keyCurrentCardMax] intValue];
     } else {
-        deckPath = @"";
+        currentDeck = @"";
         currentCardIndex = 0;
         currentTag = @"";
         cardMax = 0;

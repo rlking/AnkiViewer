@@ -36,6 +36,18 @@ NSArray *decks;
 -(void) viewWillAppear:(BOOL)animated {
     decks = [Deck getDecks];
     [self.tableViewDecks reloadData];
+    
+    // get index of current deck
+    NSInteger deckIndex = 0;
+    deckIndex = [decks indexOfObject:[Deck getInstance].currentDeck];
+    if (deckIndex == NSNotFound) {
+        deckIndex = -1;
+    }
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:deckIndex inSection:0];
+    if (indexPath.row < [self.tableViewDecks numberOfRowsInSection:indexPath.section]) {
+        [self.tableViewDecks selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+    }
 }
 
 - (void)didReceiveMemoryWarning
