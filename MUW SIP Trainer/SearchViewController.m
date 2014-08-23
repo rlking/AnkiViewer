@@ -151,6 +151,7 @@
 
 - (IBAction)goClicked:(id)sender {
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.textFieldWeb.text]]];
+    [self.view endEditing:YES];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 @end
