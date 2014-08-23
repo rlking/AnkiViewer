@@ -291,7 +291,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Wähle Karte" image="ic_older_arrow_holo_light.png">
+                                <state key="normal" title="Karte wählen" image="ic_older_arrow_holo_light.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
