@@ -39,12 +39,17 @@
     NSString *urlString = @"https://ankiweb.net/shared/decks/sip";
     [self.textFieldWeb setText:urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -58,6 +63,8 @@
         [req setHTTPMethod:@"Head"];
         self.clickedLink = [[NSURLConnection alloc] initWithRequest:req delegate:self];
         [self.clickedLink start];
+        
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     }
     return YES;
 }
@@ -93,6 +100,7 @@
                                                    cancelButtonTitle:@"Abbrechen"
                                                    otherButtonTitles: nil];
             [self.alertView show];
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         }
     }
 }
@@ -116,6 +124,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     if(connection == self.download) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         [self.streamAPKG close];
         self.receivedBytes = 0;
         self.totalBytes = 0;
@@ -126,9 +135,11 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     //handle error
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self.download cancel];
     [self.streamAPKG close];
     if([[NSFileManager defaultManager] removeItemAtPath: self.apkgPath error: nil]) {
@@ -140,5 +151,6 @@
 
 - (IBAction)goClicked:(id)sender {
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.textFieldWeb.text]]];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 @end
