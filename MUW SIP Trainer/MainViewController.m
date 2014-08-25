@@ -10,6 +10,7 @@
 #import "Deck.h"
 
 NSString * const keyHideAnswer = @"keyHideAnswer";
+UIAlertView *tip;
 
 @interface MainViewController ()
 
@@ -53,6 +54,28 @@ NSString * const keyHideAnswer = @"keyHideAnswer";
     
     [[_webView scrollView] setBounces:NO];
     [[_webViewCardBack scrollView] setBounces:NO];
+    
+    
+    bool dontShowTip = [[NSUserDefaults standardUserDefaults]
+                    boolForKey:@"dontShowTip"];
+    if(!dontShowTip) {
+        tip = [UIAlertView new];
+        tip.message = @"Füge zuerst ein Deck aus der Anki Websuche hinzu. Es können auch Links bspw. aus Dropbox verwendet werden.\n\nWechsle zwischen den Karten in dem du mit dem Finger nach links/rechts streichst.\n\nZeige die Antwort mit einem Klick auf das Antwortfeld.";
+        [tip addButtonWithTitle:@"OK"];
+        [tip addButtonWithTitle:@"Nicht mehr zeigen"];
+        tip.delegate = self;
+        [tip show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 1) {
+        [[NSUserDefaults standardUserDefaults]
+         setBool:YES forKey:@"dontShowTip"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    [alertView removeFromSuperview];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
