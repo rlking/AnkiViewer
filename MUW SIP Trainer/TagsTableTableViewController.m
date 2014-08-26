@@ -38,9 +38,6 @@ NSArray *tags;
     // get index of current tag
     NSInteger tagIndex = 0;
     tagIndex = [tags indexOfObject:[Deck getInstance].currentTag];
-    if (tagIndex == NSNotFound) {
-        tagIndex = 0;
-    }
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:tagIndex inSection:0];
     if (indexPath.row < [self.tableView numberOfRowsInSection:indexPath.section]) {
