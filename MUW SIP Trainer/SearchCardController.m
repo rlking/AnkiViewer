@@ -96,7 +96,8 @@
     [sizingCell layoutIfNeeded];
     
     CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    // without +1 some items have a line missing?!
+    return size.height + 1;
 }
 
 
@@ -119,6 +120,9 @@
                 [NSString stringWithFormat: @"%@>", text]
                                                withString: @" "];
     } // while //
+    
+    html = [html stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
+    
     return html;
 }
 
