@@ -10,8 +10,8 @@
 
 @interface Card : NSObject
 
-@property (weak, nonatomic) NSString *front;
-@property (weak, nonatomic) NSString *back;
+@property (strong, nonatomic) NSString *front;
+@property (strong, nonatomic) NSString *back;
 
 -(id) init;
 

@@ -80,40 +80,6 @@ static NSString *deckPath;
     return card;
 }
 
-
-- (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category {
-    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
-    [queryCard appendString:category];
-    [queryCard appendString:@"%' order by sfld desc limit 1 offset "];
-    [queryCard appendFormat:@"%d", (int)index];
-    
-    FMDatabase *database = [Deck openDatabase];
-    FMResultSet *resultCard;
-    Card* card;
-    
-    @try
-    {
-        resultCard = [database executeQuery:queryCard];
-        [resultCard next];
-        
-        NSString *sfld = [resultCard stringForColumn:@"sfld"];
-        
-        card = [Card alloc];
-        card.front = sfld;
-        
-    }
-    @catch (NSException *exception)
-    {
-        [NSException raise:@"could not execute query" format:nil];
-    }
-    @finally {
-        [resultCard close];
-        [database close];
-    }
-    
-    return card;
-}
-
 - (NSArray *) getCardsSimpleInCategory:(NSString *) category {
     NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select substr(sfld, 0, 35) 'sfld' from notes where tags like '%"];
     [queryCard appendString:category];
@@ -130,6 +96,44 @@ static NSString *deckPath;
         while([resultCard hasAnotherRow]) {
             NSString *sfld = [resultCard stringForColumn:@"sfld"];
             [cards addObject:sfld];
+            [resultCard next];
+        }
+    }
+    @catch (NSException *exception)
+    {
+        [NSException raise:@"could not execute query" format:nil];
+    }
+    @finally {
+        [resultCard close];
+        [database close];
+    }
+    
+    return cards;
+}
+
+- (NSArray *) getCardsSimpleForSearch:(NSString *) searchString {
+    NSMutableString *queryCard = [[NSMutableString alloc] initWithString:@"select flds, sfld from notes where flds like '%"];
+    [queryCard appendString:searchString];
+    [queryCard appendString:@"%' order by flds desc"];
+    
+    FMDatabase *database = [Deck openDatabase];
+    FMResultSet *resultCard;
+    NSMutableArray *cards = [NSMutableArray array];
+    
+    @try
+    {
+        resultCard = [database executeQuery:queryCard];
+        [resultCard next];
+        while([resultCard hasAnotherRow]) {
+            NSString *sfld = [resultCard stringForColumn:@"sfld"];
+            // magic ascii separator used by anki for front and back of the card
+            NSArray *frontAndBack = [[resultCard stringForColumn:@"flds"]componentsSeparatedByString:[NSString stringWithFormat:@"%c", 31]];
+            
+            Card *card = [Card alloc];
+            card.front = sfld;
+            card.back = frontAndBack[1];
+            
+            [cards addObject:card];
             [resultCard next];
         }
     }

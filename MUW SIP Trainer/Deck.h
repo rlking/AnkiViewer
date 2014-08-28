@@ -22,8 +22,8 @@
 - (void) setDeck:(NSString *) deck;
 - (NSArray *) getTags;
 - (void) setTag:(NSString *) tag;
+- (NSArray *) getCardsSimpleForSearch:(NSString *) searchString;
 - (Card *) getCardForIndex:(NSInteger) index inCategory:(NSString *) category;
-- (Card *) getCardSimpleForIndex:(NSInteger) index inCategory:(NSString *) category;
 - (NSArray *) getCardsSimpleInCategory:(NSString *) category;
 - (NSInteger) getMaxCardForCategory: (NSString *) category;
 // - (NSDictionary *) getMediaMapping;

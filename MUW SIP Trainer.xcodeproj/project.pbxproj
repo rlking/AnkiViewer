@@ -39,9 +39,11 @@
 		808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221331931F67E00543300 /* TagsTableTableViewController.m */; };
 		808221371931FAA400543300 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221361931FAA400543300 /* CardsTableViewController.m */; };
 		8087B9BC19A53D8700807100 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8087B9BB19A53D8700807100 /* Utils.m */; };
+		808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 808CAB9719AE1AEF00E356EF /* CardSearchCell.m */; };
 		809B778419A6AC2F00951C7D /* ic_older_arrow_holo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778319A6AC2F00951C7D /* ic_older_arrow_holo_light.png */; };
 		809B778819AB47C300951C7D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778619AB47C300951C7D /* Default.png */; };
 		809B778A19AB48A900951C7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778919AB48A900951C7D /* Default-568h@2x.png */; };
+		809B778D19ACC06300951C7D /* SearchCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B778C19ACC06300951C7D /* SearchCardController.m */; };
 		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
 		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
 		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
@@ -117,9 +119,13 @@
 		808221361931FAA400543300 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
 		8087B9BA19A53D8700807100 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		8087B9BB19A53D8700807100 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		808CAB9619AE1AEF00E356EF /* CardSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSearchCell.h; sourceTree = "<group>"; };
+		808CAB9719AE1AEF00E356EF /* CardSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSearchCell.m; sourceTree = "<group>"; };
 		809B778319A6AC2F00951C7D /* ic_older_arrow_holo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_older_arrow_holo_light.png; path = resources/ic_older_arrow_holo_light.png; sourceTree = SOURCE_ROOT; };
 		809B778619AB47C300951C7D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/Default.png; sourceTree = SOURCE_ROOT; };
 		809B778919AB48A900951C7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		809B778B19ACC06300951C7D /* SearchCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCardController.h; sourceTree = "<group>"; };
+		809B778C19ACC06300951C7D /* SearchCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCardController.m; sourceTree = "<group>"; };
 		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 				802FA0AD1910D5E100127976 /* SettingsViewController.m */,
 				8087B9BA19A53D8700807100 /* Utils.h */,
 				8087B9BB19A53D8700807100 /* Utils.m */,
+				809B778B19ACC06300951C7D /* SearchCardController.h */,
+				809B778C19ACC06300951C7D /* SearchCardController.m */,
+				808CAB9619AE1AEF00E356EF /* CardSearchCell.h */,
+				808CAB9719AE1AEF00E356EF /* CardSearchCell.m */,
 			);
 			name = project;
 			path = "MUW SIP Trainer";
@@ -477,11 +487,13 @@
 				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
 				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
 				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
+				809B778D19ACC06300951C7D /* SearchCardController.m in Sources */,
 				80822125192B7C9A00543300 /* DeckViewController.m in Sources */,
 				802FA45719167FC700127976 /* Card.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,
+				808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */,
 				808220EF192A22E600543300 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
