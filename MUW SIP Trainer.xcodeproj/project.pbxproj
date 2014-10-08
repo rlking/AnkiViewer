@@ -27,6 +27,7 @@
 		802FA4531915A81800127976 /* page_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4511915A81800127976 /* page_empty.png */; };
 		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
 		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
+		803C485E19E5DE89004B1B01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 803C485D19E5DE89004B1B01 /* README.md */; };
 		808220EF192A22E600543300 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchViewController.m */; };
 		808220F1192AC41100543300 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 808220F0192AC41100543300 /* libz.dylib */; };
 		80822125192B7C9A00543300 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822124192B7C9A00543300 /* DeckViewController.m */; };
@@ -102,6 +103,7 @@
 		802FA45619167FC700127976 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		803C485D19E5DE89004B1B01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		808220ED192A22E600543300 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		808220EE192A22E600543300 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		808220F0192AC41100543300 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -252,6 +254,7 @@
 		802FA088190FD68B00127976 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				803C485D19E5DE89004B1B01 /* README.md */,
 				809C3E5819217CF900552B21 /* icon */,
 				802FA0AF19158EC700127976 /* images */,
 			);
@@ -492,6 +495,7 @@
 				802FA45719167FC700127976 /* Card.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */,
+				803C485E19E5DE89004B1B01 /* README.md in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,
 				808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */,
 				808220EF192A22E600543300 /* SearchViewController.m in Sources */,
