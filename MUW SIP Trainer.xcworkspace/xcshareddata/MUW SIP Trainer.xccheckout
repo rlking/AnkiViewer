@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EFCB4FDB-57A9-4D39-B9C0-876A75C6E2C2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MUW SIP Trainer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>89F6993B65E847E0F741C99652FBD2D323E33BDF</key>
+		<string>github.com:rlking/MUWSIPTrainer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MUW SIP Trainer.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>89F6993B65E847E0F741C99652FBD2D323E33BDF</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:rlking/MUWSIPTrainer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>89F6993B65E847E0F741C99652FBD2D323E33BDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89F6993B65E847E0F741C99652FBD2D323E33BDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MUW%20SIP%20Trainer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
