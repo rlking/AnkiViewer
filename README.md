@@ -7,7 +7,3 @@ Features:
  - Sortieren nach Tags
  - Suchen nach Karten
 
-
-<img src="https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-1.png" alt="alt text" style="height:200">
-<img src="https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-2.png" alt="alt text" style="height:200">
-<img src="https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-3.png" alt="alt text" style="height:200">
