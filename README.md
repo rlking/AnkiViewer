@@ -8,6 +8,4 @@ Features:
  - Suchen nach Karten
 
 
-![image1](https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-1.png "image1")
-![image2](https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-2.png "image2")
-![image3](https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-3.png "image3")
+ \centerline{\includegraphics[height=2in]{https://github.com/rlking/MUWSIPTrainer/blob/development/marketing/release4-1.png}}
