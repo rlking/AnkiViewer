@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/SSZipArchive" "${PODS_ROOT}/Headers/Public/SSZipArchive/minizip"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/SSZipArchive" -isystem "${PODS_ROOT}/Headers/Public/SSZipArchive/minizip"
+OTHER_LDFLAGS = -ObjC -l"Pods-MUW SIP Trainer-FMDB" -l"Pods-MUW SIP Trainer-MBProgressHUD" -l"Pods-MUW SIP Trainer-SSZipArchive" -l"sqlite3" -l"z" -framework "CoreGraphics"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

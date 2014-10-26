@@ -75,7 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E56032AA1284358ADF1F359 /* Pods-MUW SIP Trainer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.xcconfig"; path = "Pods/Pods-MUW SIP Trainer.xcconfig"; sourceTree = "<group>"; };
 		802FA056190FD5B700127976 /* MUW SIP Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MUW SIP Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA059190FD5B700127976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		802FA05B190FD5B700127976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,7 +143,9 @@
 		809C3E7E19217CF900552B21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		809C3E7F19217CF900552B21 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.debug.xcconfig"; sourceTree = "<group>"; };
 		A39798C38255475D8F50E341 /* libPods-MUW SIP Trainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MUW SIP Trainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CA5AC717B96FC1C25DA110B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */,
+				FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		802FA04D190FD5B700127976 = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +191,7 @@
 				802FA05F190FD5B700127976 /* project */,
 				802FA058190FD5B700127976 /* Frameworks */,
 				802FA057190FD5B700127976 /* Products */,
-				4E56032AA1284358ADF1F359 /* Pods-MUW SIP Trainer.xcconfig */,
+				6CA5AC717B96FC1C25DA110B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -460,7 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-MUW SIP Trainer-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */ = {
@@ -605,13 +615,13 @@
 		};
 		802FA083190FD5B700127976 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E56032AA1284358ADF1F359 /* Pods-MUW SIP Trainer.xcconfig */;
+			baseConfigurationReference = 9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
 				INFOPLIST_FILE = "MUW SIP Trainer/MUW SIP Trainer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -620,13 +630,13 @@
 		};
 		802FA084190FD5B700127976 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E56032AA1284358ADF1F359 /* Pods-MUW SIP Trainer.xcconfig */;
+			baseConfigurationReference = FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MUW SIP Trainer/MUW SIP Trainer-Prefix.pch";
 				INFOPLIST_FILE = "MUW SIP Trainer/MUW SIP Trainer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

@@ -12,6 +12,7 @@
 
 @property (nonatomic) UIAlertView *alertView;
 @property (nonatomic) NSURLConnection *clickedLink;
+@property (nonatomic) NSURLConnection *directURL;
 @property (nonatomic) NSURLConnection *download;
 @property (nonatomic) NSOutputStream *streamAPKG;
 @property (nonatomic) NSString *apkgPath;
@@ -55,7 +56,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
     if(navigationType == UIWebViewNavigationTypeLinkClicked) {
-        //NSLog(@"%@", [requestedURL absoluteString]);
+        NSLog(@"link clicked: %@", request);
         
         // start urlconnection to get head information only (for filename, size)
         NSURL *requestedURL = [request URL];
@@ -65,43 +66,63 @@
         [self.clickedLink start];
         
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    } else if(navigationType == UIWebViewNavigationTypeOther) {
+        NSLog(@"other: %@", request);
     }
     return YES;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"%@ %lld", response.suggestedFilename, response.expectedContentLength);
-    NSLog(@"%@", [response.URL absoluteString]);
+    //NSLog(@"%@", response);
     
-    if(connection == self.clickedLink) {
-        if([response.suggestedFilename rangeOfString:@".apkg"].location != NSNotFound) {
-            self.totalBytes = response.expectedContentLength;
-            
-            // create path in document dir with filename
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            self.apkgPath = [paths objectAtIndex:0];
-            self.apkgPath = [self.apkgPath stringByAppendingString:@"/"];
-            self.apkgPath = [self.apkgPath stringByAppendingString: response.suggestedFilename];
-            
-            // open stream
-            self.streamAPKG = [[NSOutputStream alloc] initToFileAtPath:self.apkgPath append:NO];
-            [self.streamAPKG open];
-            
-            // start download
-            NSURLRequest *request = [NSURLRequest requestWithURL:response.URL];
-            self.download = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
-            [self.download start];
-            
-            // display progress with cancel button
-            self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
-                                                             message:@"Warte auf Server"
-                                                            delegate:self
-                                                   cancelButtonTitle:@"Abbrechen"
-                                                   otherButtonTitles: nil];
-            [self.alertView show];
-            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    BOOL isAPKG = [response.suggestedFilename rangeOfString:@".apkg"].location != NSNotFound &&
+    [[[(NSHTTPURLResponse*)response allHeaderFields] valueForKey:@"Content-Type"] isEqualToString:@"application/octet-stream"];
+    BOOL startDownload = NO;
+    
+    if(connection == self.directURL) {
+        if(!isAPKG) {
+            // if entered url is not a direct download link load it in webview
+            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.textFieldWeb.text]]];
+        } else {
+            startDownload = YES;
         }
+    } else if(connection == self.clickedLink) {
+        if(isAPKG) {
+            // stop loading, because dropbox i.e. does some really weird redirects? that would trigger
+            // multiple downloads
+            [self.webView stopLoading];
+            startDownload = YES;
+        }
+    }
+    
+    // start download progress
+    if(startDownload) {
+        self.totalBytes = response.expectedContentLength;
+        
+        // create path in document dir with filename
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        self.apkgPath = [paths objectAtIndex:0];
+        self.apkgPath = [self.apkgPath stringByAppendingString:@"/"];
+        self.apkgPath = [self.apkgPath stringByAppendingString: response.suggestedFilename];
+        
+        // open stream
+        self.streamAPKG = [[NSOutputStream alloc] initToFileAtPath:self.apkgPath append:NO];
+        [self.streamAPKG open];
+        
+        // start download
+        NSURLRequest *request = [NSURLRequest requestWithURL:response.URL];
+        self.download = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+        [self.download start];
+        
+        // display progress with cancel button
+        self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
+                                                    message:@"Warte auf Server"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Abbrechen"
+                                          otherButtonTitles: nil];
+        [self.alertView show];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     }
 }
 
@@ -150,7 +171,19 @@
 }
 
 - (IBAction)goClicked:(id)sender {
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.textFieldWeb.text]]];
+    // if an url is entered, we send a head request to check
+    // if it is a direct apkg download link
+    //  yes: directly download it
+    //  no: load the url in the webview
+    
+
+    // start urlconnection to get head information only (for filename, size)
+    NSURL *requestedURL = [NSURL URLWithString:self.textFieldWeb.text];
+    NSMutableURLRequest * req = [NSMutableURLRequest requestWithURL:requestedURL];
+    [req setHTTPMethod:@"Head"];
+    self.directURL = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    [self.directURL start];
+
     [self.view endEditing:YES];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
