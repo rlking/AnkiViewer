@@ -134,7 +134,7 @@
             NSLog(@"error writing to stream");
         }
         
-        NSString *progress = [NSString stringWithFormat:@"%tu / %lld kB   %.2f%%", self.receivedBytes / 1024, self.totalBytes / 1024, (double) self.receivedBytes / self.totalBytes];
+        NSString *progress = [NSString stringWithFormat:@"%tu / %lld kB   %d%%", self.receivedBytes / 1024, self.totalBytes / 1024, (int)(((double) self.receivedBytes / self.totalBytes) * 100)];
         
         self.alertView.message = progress;
         
