@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3492BB5C37DC50C8AEC3D1A4"
+               BlueprintIdentifier = "DA7C4FD4C034D2DFA9CABCB7"
                BuildableName = "libPods-MUW SIP Trainer-FMDB.a"
                BlueprintName = "Pods-MUW SIP Trainer-FMDB"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -3,9 +3,9 @@
 
 target "MUW SIP Trainer" do
 
-pod 'SSZipArchive', '0.3.1'
+pod 'SSZipArchive', '0.3.2'
 pod 'MBProgressHUD', '0.9'
-pod 'FMDB', '2.3'
+pod 'FMDB', '2.4'
 
 
 end

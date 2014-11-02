@@ -52,7 +52,7 @@ THE SOFTWARE.
 
 ## SSZipArchive
 
-Copyright (c) 2010-2013 Sam Soffes, http://soff.es
+Copyright (c) 2010-2014 Sam Soffes, http://soff.es
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
