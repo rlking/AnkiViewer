@@ -5,6 +5,13 @@
 //  Created by Philipp König on 04.05.14.
 //  Copyright (c) 2014 Philipp König. All rights reserved.
 //
+//
+//
+//  Deck files i.e. *.apkg files are saved in Documents folder
+//
+//  The one current active deck is extracted to ../Documents/deck/
+//
+//
 
 #import "Deck.h"
 #import "SSZipArchive.h"
@@ -223,6 +230,20 @@ static NSString *deckPath;
     }
     
     return apkgs;
+}
+
+/**
+ *  delete given deck
+ *
+ * @param deck absolute path to deck
+ */
++ (void) deleteDeck:(NSString *) deck {
+    NSError *errorMsg;
+    bool success = [[NSFileManager defaultManager] removeItemAtPath:deck error:&errorMsg];
+    
+    if(!success) {
+        NSLog(@"could not delete deck %@ because %@", deck, errorMsg);
+    }
 }
 
 /**

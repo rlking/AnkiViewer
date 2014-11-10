@@ -90,4 +90,27 @@ NSArray *decks;
     });
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(editingStyle == UITableViewCellEditingStyleDelete) {
+        // delete data
+        [Deck deleteDeck:[decks objectAtIndex:indexPath.row]];
+        // delete data row
+        [(NSMutableArray *)decks removeObjectAtIndex:indexPath.row];
+        // delete ui row
+        [self.tableViewDecks deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    }
+    
+}
+
+- (IBAction)touchUp:(UIButton *)sender {
+    if([self.tableViewDecks isEditing]) {
+        [self.tableViewDecks setEditing:NO animated:YES];
+        [self.buttonEdit setTitle:@"Bearbeiten" forState:UIControlStateNormal];
+    } else {
+        [self.tableViewDecks setEditing:YES animated:YES];
+        [self.buttonEdit setTitle:@"Fertig" forState:UIControlStateNormal];
+    }
+}
+
 @end

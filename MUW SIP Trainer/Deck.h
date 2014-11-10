@@ -20,6 +20,7 @@
 + (Deck *)getInstance;
 + (NSArray *) getDecks;
 - (void) setDeck:(NSString *) deck;
++ (void) deleteDeck:(NSString *) deck;
 - (NSArray *) getTags;
 - (void) setTag:(NSString *) tag;
 - (NSArray *) getCardsSimpleForSearch:(NSString *) searchString;

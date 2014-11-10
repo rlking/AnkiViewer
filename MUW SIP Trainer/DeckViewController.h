@@ -10,5 +10,6 @@
 
 @interface DeckViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewDecks;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEdit;
 
 @end

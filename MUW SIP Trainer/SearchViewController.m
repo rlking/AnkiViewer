@@ -68,6 +68,7 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     } else if(navigationType == UIWebViewNavigationTypeOther) {
         NSLog(@"other: %@", request);
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     }
     return YES;
 }
