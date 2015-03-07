@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 Philipp König. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "SearchDeckController.h"
+#import "Deck.h"
 
-@interface SearchViewController ()
+@interface SearchDeckController ()
 
 @property (nonatomic) UIAlertView *alertView;
 @property (nonatomic) NSURLConnection *clickedLink;
@@ -22,7 +23,7 @@
 
 @end
 
-@implementation SearchViewController
+@implementation SearchDeckController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -150,7 +151,15 @@
         [self.streamAPKG close];
         self.receivedBytes = 0;
         self.totalBytes = 0;
-        [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+
+        // if deck count = 1, it is the first downloaded deck, and will be automatically opened
+        if ([Deck getDecks].count == 1) {
+            self.alertView.message = @"sneakyly open first deck :O";
+        } else {
+            [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+        }
+        
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
