@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
+		802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05B190FD5B700127976 /* CoreGraphics.framework */; };
+		802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
+		802FA064190FD5B700127976 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 802FA062190FD5B700127976 /* InfoPlist.strings */; };
+		802FA066190FD5B700127976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA065190FD5B700127976 /* main.m */; };
+		802FA06A190FD5B700127976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA069190FD5B700127976 /* AppDelegate.m */; };
+		802FA06C190FD5B700127976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802FA06B190FD5B700127976 /* Images.xcassets */; };
+		802FA073190FD5B700127976 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA072190FD5B700127976 /* XCTest.framework */; };
+		802FA074190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
+		802FA075190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
+		802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802FA08B190FD73C00127976 /* Storyboard.storyboard */; };
+		802FA0A3190FDA8200127976 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0A2190FDA8200127976 /* MainViewController.m */; };
+		802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA0A4190FDC3900127976 /* libsqlite3.dylib */; };
+		802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0AD1910D5E100127976 /* SettingsViewController.m */; };
+		802FA44E1915A6E500127976 /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA44C1915A6E500127976 /* cog_02@2x.png */; };
+		802FA44F1915A6E500127976 /* cog_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA44D1915A6E500127976 /* cog_02.png */; };
+		802FA4521915A81800127976 /* page_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4501915A81800127976 /* page_empty@2x.png */; };
+		802FA4531915A81800127976 /* page_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4511915A81800127976 /* page_empty.png */; };
+		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
+		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
+		803C485E19E5DE89004B1B01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 803C485D19E5DE89004B1B01 /* README.md */; };
+		808220EF192A22E600543300 /* SearchDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchDeckController.m */; };
+		808220F1192AC41100543300 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 808220F0192AC41100543300 /* libz.dylib */; };
+		80822125192B7C9A00543300 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822124192B7C9A00543300 /* DeckViewController.m */; };
+		8082212C192EA76800543300 /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80822126192EA76800543300 /* folder@2x.png */; };
+		8082212D192EA76800543300 /* globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80822127192EA76800543300 /* globe@2x.png */; };
+		8082212E192EA76800543300 /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80822128192EA76800543300 /* magnifying_glass@2x.png */; };
+		8082212F192EA76800543300 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 80822129192EA76800543300 /* folder.png */; };
+		80822130192EA76800543300 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 8082212A192EA76800543300 /* globe.png */; };
+		80822131192EA76800543300 /* magnifying_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 8082212B192EA76800543300 /* magnifying_glass.png */; };
+		808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221331931F67E00543300 /* TagsTableTableViewController.m */; };
+		808221371931FAA400543300 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808221361931FAA400543300 /* CardsTableViewController.m */; };
+		8087B9BC19A53D8700807100 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8087B9BB19A53D8700807100 /* Utils.m */; };
+		808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 808CAB9719AE1AEF00E356EF /* CardSearchCell.m */; };
+		809B778419A6AC2F00951C7D /* ic_older_arrow_holo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778319A6AC2F00951C7D /* ic_older_arrow_holo_light.png */; };
+		809B778819AB47C300951C7D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778619AB47C300951C7D /* Default.png */; };
+		809B778A19AB48A900951C7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809B778919AB48A900951C7D /* Default-568h@2x.png */; };
+		809B778D19ACC06300951C7D /* SearchCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B778C19ACC06300951C7D /* SearchCardController.m */; };
+		809C3E9119217CF900552B21 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7119217CF900552B21 /* Icon-40.png */; };
+		809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7219217CF900552B21 /* Icon-40@2x.png */; };
+		809C3E9319217CF900552B21 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7319217CF900552B21 /* Icon-60.png */; };
+		809C3E9419217CF900552B21 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7419217CF900552B21 /* Icon-60@2x.png */; };
+		809C3E9519217CF900552B21 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7519217CF900552B21 /* Icon-72.png */; };
+		809C3E9619217CF900552B21 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7619217CF900552B21 /* Icon-72@2x.png */; };
+		809C3E9719217CF900552B21 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7719217CF900552B21 /* Icon-76.png */; };
+		809C3E9819217CF900552B21 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7819217CF900552B21 /* Icon-76@2x.png */; };
+		809C3E9919217CF900552B21 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7919217CF900552B21 /* Icon-Small-50.png */; };
+		809C3E9A19217CF900552B21 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7A19217CF900552B21 /* Icon-Small-50@2x.png */; };
+		809C3E9B19217CF900552B21 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7B19217CF900552B21 /* Icon-Small.png */; };
+		809C3E9C19217CF900552B21 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7C19217CF900552B21 /* Icon-Small@2x.png */; };
+		809C3E9D19217CF900552B21 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7D19217CF900552B21 /* Icon.png */; };
+		809C3E9E19217CF900552B21 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7E19217CF900552B21 /* Icon@2x.png */; };
+		809C3E9F19217CF900552B21 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7F19217CF900552B21 /* iTunesArtwork.png */; };
+		809C3EA019217CF900552B21 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */; };
+		96CEDF19E1B3BBB70F79C6FD /* libPods-AnkiViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		802FA076190FD5B700127976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 802FA04E190FD5B700127976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 802FA055190FD5B700127976;
+			remoteInfo = "MUW SIP Trainer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnkiViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA056190FD5B700127976 /* AnkiViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnkiViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA059190FD5B700127976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		802FA05B190FD5B700127976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		802FA05D190FD5B700127976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		802FA061190FD5B700127976 /* AnkiViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnkiViewer-Info.plist"; sourceTree = "<group>"; };
+		802FA063190FD5B700127976 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		802FA065190FD5B700127976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		802FA067190FD5B700127976 /* AnkiViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnkiViewer-Prefix.pch"; sourceTree = "<group>"; };
+		802FA068190FD5B700127976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		802FA069190FD5B700127976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		802FA06B190FD5B700127976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		802FA071190FD5B700127976 /* AnkiViewer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnkiViewer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA072190FD5B700127976 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		802FA08B190FD73C00127976 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		802FA0A1190FDA8200127976 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		802FA0A2190FDA8200127976 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		802FA0A4190FDC3900127976 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		802FA0AC1910D5E100127976 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		802FA0AD1910D5E100127976 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		802FA44C1915A6E500127976 /* cog_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog_02@2x.png"; path = "resources/cog_02@2x.png"; sourceTree = SOURCE_ROOT; };
+		802FA44D1915A6E500127976 /* cog_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cog_02.png; path = resources/cog_02.png; sourceTree = SOURCE_ROOT; };
+		802FA4501915A81800127976 /* page_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "page_empty@2x.png"; path = "resources/page_empty@2x.png"; sourceTree = SOURCE_ROOT; };
+		802FA4511915A81800127976 /* page_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page_empty.png; path = resources/page_empty.png; sourceTree = SOURCE_ROOT; };
+		802FA45519167FC700127976 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		802FA45619167FC700127976 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		803C485D19E5DE89004B1B01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		808220ED192A22E600543300 /* SearchDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDeckController.h; sourceTree = "<group>"; };
+		808220EE192A22E600543300 /* SearchDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDeckController.m; sourceTree = "<group>"; };
+		808220F0192AC41100543300 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		80822123192B7C9A00543300 /* DeckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckViewController.h; sourceTree = "<group>"; };
+		80822124192B7C9A00543300 /* DeckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckViewController.m; sourceTree = "<group>"; };
+		80822126192EA76800543300 /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder@2x.png"; path = "resources/folder@2x.png"; sourceTree = SOURCE_ROOT; };
+		80822127192EA76800543300 /* globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "globe@2x.png"; path = "resources/globe@2x.png"; sourceTree = SOURCE_ROOT; };
+		80822128192EA76800543300 /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "magnifying_glass@2x.png"; path = "resources/magnifying_glass@2x.png"; sourceTree = SOURCE_ROOT; };
+		80822129192EA76800543300 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder.png; path = resources/folder.png; sourceTree = SOURCE_ROOT; };
+		8082212A192EA76800543300 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe.png; path = resources/globe.png; sourceTree = SOURCE_ROOT; };
+		8082212B192EA76800543300 /* magnifying_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magnifying_glass.png; path = resources/magnifying_glass.png; sourceTree = SOURCE_ROOT; };
+		808221321931F67E00543300 /* TagsTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTableTableViewController.h; sourceTree = "<group>"; };
+		808221331931F67E00543300 /* TagsTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTableTableViewController.m; sourceTree = "<group>"; };
+		808221351931FAA400543300 /* CardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsTableViewController.h; sourceTree = "<group>"; };
+		808221361931FAA400543300 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
+		8087B9BA19A53D8700807100 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8087B9BB19A53D8700807100 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		808CAB9619AE1AEF00E356EF /* CardSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSearchCell.h; sourceTree = "<group>"; };
+		808CAB9719AE1AEF00E356EF /* CardSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSearchCell.m; sourceTree = "<group>"; };
+		809B778319A6AC2F00951C7D /* ic_older_arrow_holo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_older_arrow_holo_light.png; path = resources/ic_older_arrow_holo_light.png; sourceTree = SOURCE_ROOT; };
+		809B778619AB47C300951C7D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/Default.png; sourceTree = SOURCE_ROOT; };
+		809B778919AB48A900951C7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		809B778B19ACC06300951C7D /* SearchCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCardController.h; sourceTree = "<group>"; };
+		809B778C19ACC06300951C7D /* SearchCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCardController.m; sourceTree = "<group>"; };
+		809C3E7119217CF900552B21 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		809C3E7219217CF900552B21 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		809C3E7319217CF900552B21 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		809C3E7419217CF900552B21 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		809C3E7519217CF900552B21 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		809C3E7619217CF900552B21 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		809C3E7719217CF900552B21 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		809C3E7819217CF900552B21 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		809C3E7919217CF900552B21 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		809C3E7A19217CF900552B21 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		809C3E7B19217CF900552B21 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		809C3E7C19217CF900552B21 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		809C3E7D19217CF900552B21 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		809C3E7E19217CF900552B21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		809C3E7F19217CF900552B21 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.debug.xcconfig"; sourceTree = "<group>"; };
+		A39798C38255475D8F50E341 /* libPods-MUW SIP Trainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MUW SIP Trainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnkiViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnkiViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer.release.xcconfig"; sourceTree = "<group>"; };
+		FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		802FA053190FD5B700127976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808220F1192AC41100543300 /* libz.dylib in Frameworks */,
+				802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */,
+				802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */,
+				802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */,
+				802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */,
+				96CEDF19E1B3BBB70F79C6FD /* libPods-AnkiViewer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06E190FD5B700127976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA073190FD5B700127976 /* XCTest.framework in Frameworks */,
+				802FA075190FD5B700127976 /* UIKit.framework in Frameworks */,
+				802FA074190FD5B700127976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CA5AC717B96FC1C25DA110B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */,
+				FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */,
+				A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */,
+				D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		802FA04D190FD5B700127976 = {
+			isa = PBXGroup;
+			children = (
+				802FA088190FD68B00127976 /* resources */,
+				802FA05F190FD5B700127976 /* project */,
+				802FA058190FD5B700127976 /* Frameworks */,
+				802FA057190FD5B700127976 /* Products */,
+				6CA5AC717B96FC1C25DA110B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		802FA057190FD5B700127976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				802FA056190FD5B700127976 /* AnkiViewer.app */,
+				802FA071190FD5B700127976 /* AnkiViewer.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		802FA058190FD5B700127976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808220F0192AC41100543300 /* libz.dylib */,
+				802FA0A4190FDC3900127976 /* libsqlite3.dylib */,
+				802FA059190FD5B700127976 /* Foundation.framework */,
+				802FA05B190FD5B700127976 /* CoreGraphics.framework */,
+				802FA05D190FD5B700127976 /* UIKit.framework */,
+				802FA072190FD5B700127976 /* XCTest.framework */,
+				A39798C38255475D8F50E341 /* libPods-MUW SIP Trainer.a */,
+				616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		802FA05F190FD5B700127976 /* project */ = {
+			isa = PBXGroup;
+			children = (
+				802FA45419167F9300127976 /* data */,
+				802FA068190FD5B700127976 /* AppDelegate.h */,
+				802FA069190FD5B700127976 /* AppDelegate.m */,
+				802FA06B190FD5B700127976 /* Images.xcassets */,
+				802FA060190FD5B700127976 /* Supporting Files */,
+				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
+				808221351931FAA400543300 /* CardsTableViewController.h */,
+				808221361931FAA400543300 /* CardsTableViewController.m */,
+				808221321931F67E00543300 /* TagsTableTableViewController.h */,
+				808221331931F67E00543300 /* TagsTableTableViewController.m */,
+				80822123192B7C9A00543300 /* DeckViewController.h */,
+				80822124192B7C9A00543300 /* DeckViewController.m */,
+				802FA0A1190FDA8200127976 /* MainViewController.h */,
+				802FA0A2190FDA8200127976 /* MainViewController.m */,
+				808220ED192A22E600543300 /* SearchDeckController.h */,
+				808220EE192A22E600543300 /* SearchDeckController.m */,
+				802FA0AC1910D5E100127976 /* SettingsViewController.h */,
+				802FA0AD1910D5E100127976 /* SettingsViewController.m */,
+				8087B9BA19A53D8700807100 /* Utils.h */,
+				8087B9BB19A53D8700807100 /* Utils.m */,
+				809B778B19ACC06300951C7D /* SearchCardController.h */,
+				809B778C19ACC06300951C7D /* SearchCardController.m */,
+				808CAB9619AE1AEF00E356EF /* CardSearchCell.h */,
+				808CAB9719AE1AEF00E356EF /* CardSearchCell.m */,
+			);
+			name = project;
+			path = source;
+			sourceTree = "<group>";
+		};
+		802FA060190FD5B700127976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				802FA061190FD5B700127976 /* AnkiViewer-Info.plist */,
+				802FA062190FD5B700127976 /* InfoPlist.strings */,
+				802FA065190FD5B700127976 /* main.m */,
+				802FA067190FD5B700127976 /* AnkiViewer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		802FA088190FD68B00127976 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				803C485D19E5DE89004B1B01 /* README.md */,
+				809C3E5819217CF900552B21 /* icon */,
+				802FA0AF19158EC700127976 /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		802FA0AF19158EC700127976 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				809B778919AB48A900951C7D /* Default-568h@2x.png */,
+				809B778619AB47C300951C7D /* Default.png */,
+				809B778319A6AC2F00951C7D /* ic_older_arrow_holo_light.png */,
+				80822126192EA76800543300 /* folder@2x.png */,
+				80822127192EA76800543300 /* globe@2x.png */,
+				80822128192EA76800543300 /* magnifying_glass@2x.png */,
+				80822129192EA76800543300 /* folder.png */,
+				8082212A192EA76800543300 /* globe.png */,
+				8082212B192EA76800543300 /* magnifying_glass.png */,
+				802FA4501915A81800127976 /* page_empty@2x.png */,
+				802FA4511915A81800127976 /* page_empty.png */,
+				802FA44C1915A6E500127976 /* cog_02@2x.png */,
+				802FA44D1915A6E500127976 /* cog_02.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		802FA45419167F9300127976 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				802FA45519167FC700127976 /* Card.h */,
+				802FA45619167FC700127976 /* Card.m */,
+				802FA45B19168E3900127976 /* Deck.h */,
+				802FA45C19168E3900127976 /* Deck.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		809C3E5819217CF900552B21 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				809C3E7019217CF900552B21 /* ios7 */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		809C3E7019217CF900552B21 /* ios7 */ = {
+			isa = PBXGroup;
+			children = (
+				809C3E7119217CF900552B21 /* Icon-40.png */,
+				809C3E7219217CF900552B21 /* Icon-40@2x.png */,
+				809C3E7319217CF900552B21 /* Icon-60.png */,
+				809C3E7419217CF900552B21 /* Icon-60@2x.png */,
+				809C3E7519217CF900552B21 /* Icon-72.png */,
+				809C3E7619217CF900552B21 /* Icon-72@2x.png */,
+				809C3E7719217CF900552B21 /* Icon-76.png */,
+				809C3E7819217CF900552B21 /* Icon-76@2x.png */,
+				809C3E7919217CF900552B21 /* Icon-Small-50.png */,
+				809C3E7A19217CF900552B21 /* Icon-Small-50@2x.png */,
+				809C3E7B19217CF900552B21 /* Icon-Small.png */,
+				809C3E7C19217CF900552B21 /* Icon-Small@2x.png */,
+				809C3E7D19217CF900552B21 /* Icon.png */,
+				809C3E7E19217CF900552B21 /* Icon@2x.png */,
+				809C3E7F19217CF900552B21 /* iTunesArtwork.png */,
+				809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */,
+			);
+			path = ios7;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		802FA055190FD5B700127976 /* AnkiViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewer" */;
+			buildPhases = (
+				FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */,
+				802FA052190FD5B700127976 /* Sources */,
+				802FA053190FD5B700127976 /* Frameworks */,
+				802FA054190FD5B700127976 /* Resources */,
+				6A546457549547B0A6926DB8 /* Copy Pods Resources */,
+				A20DCDEA594B04FE64B5F92B /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnkiViewer;
+			productName = "MUW SIP Trainer";
+			productReference = 802FA056190FD5B700127976 /* AnkiViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		802FA070190FD5B700127976 /* AnkiViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewerTests" */;
+			buildPhases = (
+				802FA06D190FD5B700127976 /* Sources */,
+				802FA06E190FD5B700127976 /* Frameworks */,
+				802FA06F190FD5B700127976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				802FA077190FD5B700127976 /* PBXTargetDependency */,
+			);
+			name = AnkiViewerTests;
+			productName = "MUW SIP TrainerTests";
+			productReference = 802FA071190FD5B700127976 /* AnkiViewer.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		802FA04E190FD5B700127976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Philipp König";
+				TargetAttributes = {
+					802FA055190FD5B700127976 = {
+						DevelopmentTeam = A35MN7XB26;
+					};
+					802FA070190FD5B700127976 = {
+						TestTargetID = 802FA055190FD5B700127976;
+					};
+				};
+			};
+			buildConfigurationList = 802FA051190FD5B700127976 /* Build configuration list for PBXProject "AnkiViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 802FA04D190FD5B700127976;
+			productRefGroup = 802FA057190FD5B700127976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				802FA055190FD5B700127976 /* AnkiViewer */,
+				802FA070190FD5B700127976 /* AnkiViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		802FA054190FD5B700127976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802FA4521915A81800127976 /* page_empty@2x.png in Resources */,
+				802FA4531915A81800127976 /* page_empty.png in Resources */,
+				809C3E9519217CF900552B21 /* Icon-72.png in Resources */,
+				809C3E9E19217CF900552B21 /* Icon@2x.png in Resources */,
+				802FA44F1915A6E500127976 /* cog_02.png in Resources */,
+				802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */,
+				809C3E9F19217CF900552B21 /* iTunesArtwork.png in Resources */,
+				809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */,
+				809C3E9319217CF900552B21 /* Icon-60.png in Resources */,
+				809C3E9B19217CF900552B21 /* Icon-Small.png in Resources */,
+				80822131192EA76800543300 /* magnifying_glass.png in Resources */,
+				809C3EA019217CF900552B21 /* iTunesArtwork@2x.png in Resources */,
+				809C3E9919217CF900552B21 /* Icon-Small-50.png in Resources */,
+				809B778A19AB48A900951C7D /* Default-568h@2x.png in Resources */,
+				8082212F192EA76800543300 /* folder.png in Resources */,
+				802FA44E1915A6E500127976 /* cog_02@2x.png in Resources */,
+				8082212D192EA76800543300 /* globe@2x.png in Resources */,
+				809C3E9719217CF900552B21 /* Icon-76.png in Resources */,
+				809C3E9A19217CF900552B21 /* Icon-Small-50@2x.png in Resources */,
+				809C3E9D19217CF900552B21 /* Icon.png in Resources */,
+				8082212C192EA76800543300 /* folder@2x.png in Resources */,
+				809B778419A6AC2F00951C7D /* ic_older_arrow_holo_light.png in Resources */,
+				809C3E9119217CF900552B21 /* Icon-40.png in Resources */,
+				80822130192EA76800543300 /* globe.png in Resources */,
+				809C3E9619217CF900552B21 /* Icon-72@2x.png in Resources */,
+				809C3E9419217CF900552B21 /* Icon-60@2x.png in Resources */,
+				809B778819AB47C300951C7D /* Default.png in Resources */,
+				802FA064190FD5B700127976 /* InfoPlist.strings in Resources */,
+				809C3E9C19217CF900552B21 /* Icon-Small@2x.png in Resources */,
+				8082212E192EA76800543300 /* magnifying_glass@2x.png in Resources */,
+				802FA06C190FD5B700127976 /* Images.xcassets in Resources */,
+				809C3E9819217CF900552B21 /* Icon-76@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06F190FD5B700127976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A546457549547B0A6926DB8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A20DCDEA594B04FE64B5F92B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		802FA052190FD5B700127976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808221371931FAA400543300 /* CardsTableViewController.m in Sources */,
+				8087B9BC19A53D8700807100 /* Utils.m in Sources */,
+				802FA06A190FD5B700127976 /* AppDelegate.m in Sources */,
+				802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */,
+				802FA0A3190FDA8200127976 /* MainViewController.m in Sources */,
+				809B778D19ACC06300951C7D /* SearchCardController.m in Sources */,
+				80822125192B7C9A00543300 /* DeckViewController.m in Sources */,
+				802FA45719167FC700127976 /* Card.m in Sources */,
+				802FA066190FD5B700127976 /* main.m in Sources */,
+				808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */,
+				803C485E19E5DE89004B1B01 /* README.md in Sources */,
+				802FA45D19168E3900127976 /* Deck.m in Sources */,
+				808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */,
+				808220EF192A22E600543300 /* SearchDeckController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802FA06D190FD5B700127976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		802FA077190FD5B700127976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 802FA055190FD5B700127976 /* AnkiViewer */;
+			targetProxy = 802FA076190FD5B700127976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		802FA062190FD5B700127976 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				802FA063190FD5B700127976 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		802FA080190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		802FA081190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		802FA083190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/AnkiViewer-Prefix.pch";
+				INFOPLIST_FILE = "source/AnkiViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = AnkiViewer;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		802FA084190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/AnkiViewer-Prefix.pch";
+				INFOPLIST_FILE = "source/AnkiViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = AnkiViewer;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		802FA086190FD5B700127976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/AnkiViewer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
+				PRODUCT_NAME = AnkiViewer;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		802FA087190FD5B700127976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MUW SIP Trainer/AnkiViewer-Prefix.pch";
+				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
+				PRODUCT_NAME = AnkiViewer;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		802FA051190FD5B700127976 /* Build configuration list for PBXProject "AnkiViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA080190FD5B700127976 /* Debug */,
+				802FA081190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA083190FD5B700127976 /* Debug */,
+				802FA084190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802FA086190FD5B700127976 /* Debug */,
+				802FA087190FD5B700127976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 802FA04E190FD5B700127976 /* Project object */;
+}

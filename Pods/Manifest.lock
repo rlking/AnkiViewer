@@ -1,6 +1,6 @@
 PODS:
   - FMDB (2.4):
-    - FMDB/standard
+    - FMDB/standard (= 2.4)
   - FMDB/common (2.4)
   - FMDB/standard (2.4):
     - FMDB/common
@@ -13,8 +13,8 @@ DEPENDENCIES:
   - SSZipArchive (= 0.3.2)
 
 SPEC CHECKSUMS:
-  FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  SSZipArchive: 11299a4e89821bd4085b12f25edaa85853e0051c
+  FMDB: d274d9ff773415735022ac57bfba9f6002f9fed8
+  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  SSZipArchive: 11801759495fa4efb7512ef652eb0042d68305d7
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.39.0

@@ -4,22 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MUW SIP Trainer-FMDB.xcscheme</key>
+		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MUW SIP Trainer-MBProgressHUD.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MUW SIP Trainer-SSZipArchive.xcscheme</key>
+		<key>Pods-AnkiViewer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MUW SIP Trainer.xcscheme</key>
+		<key>SSZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C6CE8924349F0F95AF3ECA56</key>
+		<key>323805A2A1BE01A13BD0A2791071BA64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCEA46B2C46299ACCE8AC772</key>
+		<key>6ACC50019509D37EA7B9E15594156A82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA7C4FD4C034D2DFA9CABCB7</key>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDBB8A4D34590D51FC8E003C</key>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
