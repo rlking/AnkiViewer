@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AnkiViewer.xcodeproj">
+      location = "group:/Users/rlking/workspace/SIP2/Anki Viewer.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

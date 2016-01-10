@@ -76,18 +76,18 @@
 
 /* Begin PBXFileReference section */
 		616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnkiViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		802FA056190FD5B700127976 /* AnkiViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnkiViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA056190FD5B700127976 /* Anki Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anki Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA059190FD5B700127976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		802FA05B190FD5B700127976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		802FA05D190FD5B700127976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		802FA061190FD5B700127976 /* AnkiViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnkiViewer-Info.plist"; sourceTree = "<group>"; };
+		802FA061190FD5B700127976 /* Anki Viewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Anki Viewer-Info.plist"; sourceTree = "<group>"; };
 		802FA063190FD5B700127976 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		802FA065190FD5B700127976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		802FA067190FD5B700127976 /* AnkiViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnkiViewer-Prefix.pch"; sourceTree = "<group>"; };
+		802FA067190FD5B700127976 /* Anki Viewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anki Viewer-Prefix.pch"; sourceTree = "<group>"; };
 		802FA068190FD5B700127976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		802FA069190FD5B700127976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		802FA06B190FD5B700127976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		802FA071190FD5B700127976 /* AnkiViewer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnkiViewer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FA071190FD5B700127976 /* Anki Viewer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anki Viewer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA072190FD5B700127976 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		802FA08B190FD73C00127976 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		802FA0A1190FDA8200127976 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -203,8 +203,8 @@
 		802FA057190FD5B700127976 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				802FA056190FD5B700127976 /* AnkiViewer.app */,
-				802FA071190FD5B700127976 /* AnkiViewer.xctest */,
+				802FA056190FD5B700127976 /* Anki Viewer.app */,
+				802FA071190FD5B700127976 /* Anki Viewer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,10 +259,10 @@
 		802FA060190FD5B700127976 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				802FA061190FD5B700127976 /* AnkiViewer-Info.plist */,
+				802FA061190FD5B700127976 /* Anki Viewer-Info.plist */,
 				802FA062190FD5B700127976 /* InfoPlist.strings */,
 				802FA065190FD5B700127976 /* main.m */,
-				802FA067190FD5B700127976 /* AnkiViewer-Prefix.pch */,
+				802FA067190FD5B700127976 /* Anki Viewer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,9 +342,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		802FA055190FD5B700127976 /* AnkiViewer */ = {
+		802FA055190FD5B700127976 /* Anki Viewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewer" */;
+			buildConfigurationList = 802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki Viewer" */;
 			buildPhases = (
 				FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */,
 				802FA052190FD5B700127976 /* Sources */,
@@ -357,14 +357,14 @@
 			);
 			dependencies = (
 			);
-			name = AnkiViewer;
+			name = "Anki Viewer";
 			productName = "MUW SIP Trainer";
-			productReference = 802FA056190FD5B700127976 /* AnkiViewer.app */;
+			productReference = 802FA056190FD5B700127976 /* Anki Viewer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		802FA070190FD5B700127976 /* AnkiViewerTests */ = {
+		802FA070190FD5B700127976 /* Anki ViewerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewerTests" */;
+			buildConfigurationList = 802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki ViewerTests" */;
 			buildPhases = (
 				802FA06D190FD5B700127976 /* Sources */,
 				802FA06E190FD5B700127976 /* Frameworks */,
@@ -375,9 +375,9 @@
 			dependencies = (
 				802FA077190FD5B700127976 /* PBXTargetDependency */,
 			);
-			name = AnkiViewerTests;
+			name = "Anki ViewerTests";
 			productName = "MUW SIP TrainerTests";
-			productReference = 802FA071190FD5B700127976 /* AnkiViewer.xctest */;
+			productReference = 802FA071190FD5B700127976 /* Anki Viewer.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +397,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 802FA051190FD5B700127976 /* Build configuration list for PBXProject "AnkiViewer" */;
+			buildConfigurationList = 802FA051190FD5B700127976 /* Build configuration list for PBXProject "Anki Viewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -409,8 +409,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				802FA055190FD5B700127976 /* AnkiViewer */,
-				802FA070190FD5B700127976 /* AnkiViewerTests */,
+				802FA055190FD5B700127976 /* Anki Viewer */,
+				802FA070190FD5B700127976 /* Anki ViewerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -546,7 +546,7 @@
 /* Begin PBXTargetDependency section */
 		802FA077190FD5B700127976 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 802FA055190FD5B700127976 /* AnkiViewer */;
+			target = 802FA055190FD5B700127976 /* Anki Viewer */;
 			targetProxy = 802FA076190FD5B700127976 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -642,10 +642,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "source/AnkiViewer-Prefix.pch";
-				INFOPLIST_FILE = "source/AnkiViewer-Info.plist";
+				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
+				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = AnkiViewer;
+				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -657,10 +657,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "source/AnkiViewer-Prefix.pch";
-				INFOPLIST_FILE = "source/AnkiViewer-Info.plist";
+				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
+				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = AnkiViewer;
+				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -676,13 +676,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MUW SIP Trainer/AnkiViewer-Prefix.pch";
+				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
-				PRODUCT_NAME = AnkiViewer;
+				PRODUCT_NAME = "Anki Viewer";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -698,9 +698,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MUW SIP Trainer/AnkiViewer-Prefix.pch";
+				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "MUW SIP TrainerTests/MUW SIP TrainerTests-Info.plist";
-				PRODUCT_NAME = AnkiViewer;
+				PRODUCT_NAME = "Anki Viewer";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -709,7 +709,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		802FA051190FD5B700127976 /* Build configuration list for PBXProject "AnkiViewer" */ = {
+		802FA051190FD5B700127976 /* Build configuration list for PBXProject "Anki Viewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				802FA080190FD5B700127976 /* Debug */,
@@ -718,7 +718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewer" */ = {
+		802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki Viewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				802FA083190FD5B700127976 /* Debug */,
@@ -727,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "AnkiViewerTests" */ = {
+		802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki ViewerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				802FA086190FD5B700127976 /* Debug */,
