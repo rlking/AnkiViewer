@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "802FA055190FD5B700127976"
-               BuildableName = "AnkiViewer.app"
+               BuildableName = "Anki Viewer.app"
                BlueprintName = "Anki Viewer"
                ReferencedContainer = "container:Anki Viewer.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "802FA055190FD5B700127976"
-            BuildableName = "AnkiViewer.app"
+            BuildableName = "Anki Viewer.app"
             BlueprintName = "Anki Viewer"
             ReferencedContainer = "container:Anki Viewer.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "802FA055190FD5B700127976"
-            BuildableName = "AnkiViewer.app"
+            BuildableName = "Anki Viewer.app"
             BlueprintName = "Anki Viewer"
             ReferencedContainer = "container:Anki Viewer.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "802FA055190FD5B700127976"
-            BuildableName = "AnkiViewer.app"
+            BuildableName = "Anki Viewer.app"
             BlueprintName = "Anki Viewer"
             ReferencedContainer = "container:Anki Viewer.xcodeproj">
          </BuildableReference>
