@@ -70,24 +70,7 @@ NSArray *decks;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIView *modalView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //modalView.backgroundColor = [UIColor whiteColor];
-    //modalView.alpha = 0.5f;
-    
-    UIWindow* mainWindow = [UIApplication sharedApplication].keyWindow;
-    [mainWindow addSubview:modalView];
-
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
-    hud.labelText = @"Öffne Deck ...";
-    hud.userInteractionEnabled = NO;
-    
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        [[Deck getInstance] setDeck:[decks objectAtIndex:indexPath.row]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:modalView animated:YES];
-            [modalView removeFromSuperview];
-        });
-    });
+    [DeckViewController openDeck:[decks objectAtIndex:indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,6 +94,28 @@ NSArray *decks;
         [self.tableViewDecks setEditing:YES animated:YES];
         [self.buttonEdit setTitle:@"Fertig" forState:UIControlStateNormal];
     }
+}
+
+
++ (void)openDeck:(NSString *)absolutePath {
+    UIView *modalView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //modalView.backgroundColor = [UIColor whiteColor];
+    //modalView.alpha = 0.5f;
+    
+    UIWindow* mainWindow = [UIApplication sharedApplication].keyWindow;
+    [mainWindow addSubview:modalView];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
+    hud.labelText = @"Öffne Deck ...";
+    hud.userInteractionEnabled = NO;
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [[Deck getInstance] setDeck:absolutePath];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:modalView animated:YES];
+            [modalView removeFromSuperview];
+        });
+    });
 }
 
 @end

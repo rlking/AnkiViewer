@@ -8,6 +8,7 @@
 
 #import "SearchDeckController.h"
 #import "Deck.h"
+#import "DeckViewController.h"
 
 @interface SearchDeckController ()
 
@@ -154,7 +155,8 @@
 
         // if deck count = 1, it is the first downloaded deck, and will be automatically opened
         if ([Deck getDecks].count == 1) {
-            self.alertView.message = @"sneakyly open first deck :O";
+            [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+            [DeckViewController openDeck:self.apkgPath];
         } else {
             [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
         }

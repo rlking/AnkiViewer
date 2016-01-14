@@ -10,4 +10,6 @@
 
 @interface SearchCardController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
++ (NSString *)flattenHtml: (NSString *) html;
+
 @end

@@ -8,6 +8,9 @@
 
 #import "MainViewController.h"
 #import "Deck.h"
+#import "SearchCardController.h"
+
+@import AVFoundation;
 
 NSString * const keyHideAnswer = @"keyHideAnswer";
 UIAlertView *tip;
@@ -153,5 +156,13 @@ UIAlertView *tip;
 
 - (IBAction)showAnswer:(id)sender {
     [_webViewCardBack setHidden:NO];
+    
+    /*
+    Card *card = [[Deck getInstance] getCardForIndex:[Deck getInstance].currentCardIndex inCategory:[Deck getInstance].currentTag];
+    AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc]init];
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:[SearchCardController flattenHtml:card.front]];
+    [utterance setRate:0.50f];
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"de-DE"];
+    [synthesizer speakUtterance:utterance];*/
 }
 @end
