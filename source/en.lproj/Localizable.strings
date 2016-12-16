@@ -1,0 +1,16 @@
+/*
+ Translation.strings
+ Anki Viewer
+ 
+ Created by Philipp König on 15.12.16.
+ Copyright © 2016 Philipp König. All rights reserved.
+ */
+
+"Bearbeiten" = "Edit";
+"Fertig" = "Done";
+"FirstHint" = "First, go to Decks and add a deck from the anki websearch. You can also use links, like Dropbox.\n\nBy swiping left or right with your finger, you can switch between cards.\n\nShow the answer by tapping on the answer area.";
+"Nicht mehr zeigen" = "Don't show again";
+"OK" = "OK";
+"Abbrechen" = "Cancel";
+"opendeck" = "Opening deck ...";
+"waitforserver" = "Waiting for server";

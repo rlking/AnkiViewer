@@ -12,4 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableViewDecks;
 @property (weak, nonatomic) IBOutlet UIButton *buttonEdit;
 
+
+- (void)asyncLoadDeck: (NSString *) absPath;
+
 @end

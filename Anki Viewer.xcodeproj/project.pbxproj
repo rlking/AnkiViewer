@@ -17,7 +17,6 @@
 		802FA073190FD5B700127976 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA072190FD5B700127976 /* XCTest.framework */; };
 		802FA074190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
 		802FA075190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
-		802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802FA08B190FD73C00127976 /* Storyboard.storyboard */; };
 		802FA0A3190FDA8200127976 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0A2190FDA8200127976 /* MainViewController.m */; };
 		802FA0A5190FDC3900127976 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA0A4190FDC3900127976 /* libsqlite3.dylib */; };
 		802FA0AE1910D5E100127976 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA0AD1910D5E100127976 /* SettingsViewController.m */; };
@@ -28,6 +27,8 @@
 		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
 		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
 		803C485E19E5DE89004B1B01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 803C485D19E5DE89004B1B01 /* README.md */; };
+		8071314F1E0319E40038A718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 807131511E0319E40038A718 /* Localizable.strings */; };
+		807131531E0425A30038A718 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807131551E0425A30038A718 /* Storyboard.storyboard */; };
 		808220EF192A22E600543300 /* SearchDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchDeckController.m */; };
 		808220F1192AC41100543300 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 808220F0192AC41100543300 /* libz.dylib */; };
 		80822125192B7C9A00543300 /* DeckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80822124192B7C9A00543300 /* DeckViewController.m */; };
@@ -89,7 +90,6 @@
 		802FA06B190FD5B700127976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		802FA071190FD5B700127976 /* Anki Viewer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anki Viewer.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA072190FD5B700127976 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		802FA08B190FD73C00127976 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		802FA0A1190FDA8200127976 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		802FA0A2190FDA8200127976 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		802FA0A4190FDC3900127976 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -104,6 +104,11 @@
 		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		803C485D19E5DE89004B1B01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		807131481E0315150038A718 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		807131501E0319E40038A718 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		807131521E0319E80038A718 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		807131541E0425A30038A718 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		807131561E0425C70038A718 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		808220ED192A22E600543300 /* SearchDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDeckController.h; sourceTree = "<group>"; };
 		808220EE192A22E600543300 /* SearchDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDeckController.m; sourceTree = "<group>"; };
 		808220F0192AC41100543300 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -232,7 +237,7 @@
 				802FA069190FD5B700127976 /* AppDelegate.m */,
 				802FA06B190FD5B700127976 /* Images.xcassets */,
 				802FA060190FD5B700127976 /* Supporting Files */,
-				802FA08B190FD73C00127976 /* Storyboard.storyboard */,
+				807131551E0425A30038A718 /* Storyboard.storyboard */,
 				808221351931FAA400543300 /* CardsTableViewController.h */,
 				808221361931FAA400543300 /* CardsTableViewController.m */,
 				808221321931F67E00543300 /* TagsTableTableViewController.h */,
@@ -241,6 +246,7 @@
 				80822124192B7C9A00543300 /* DeckViewController.m */,
 				802FA0A1190FDA8200127976 /* MainViewController.h */,
 				802FA0A2190FDA8200127976 /* MainViewController.m */,
+				807131511E0319E40038A718 /* Localizable.strings */,
 				808220ED192A22E600543300 /* SearchDeckController.h */,
 				808220EE192A22E600543300 /* SearchDeckController.m */,
 				802FA0AC1910D5E100127976 /* SettingsViewController.h */,
@@ -403,6 +409,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 802FA04D190FD5B700127976;
 			productRefGroup = 802FA057190FD5B700127976 /* Products */;
@@ -425,7 +432,7 @@
 				809C3E9519217CF900552B21 /* Icon-72.png in Resources */,
 				809C3E9E19217CF900552B21 /* Icon@2x.png in Resources */,
 				802FA44F1915A6E500127976 /* cog_02.png in Resources */,
-				802FA08C190FD73C00127976 /* Storyboard.storyboard in Resources */,
+				807131531E0425A30038A718 /* Storyboard.storyboard in Resources */,
 				809C3E9F19217CF900552B21 /* iTunesArtwork.png in Resources */,
 				809C3E9219217CF900552B21 /* Icon-40@2x.png in Resources */,
 				809C3E9319217CF900552B21 /* Icon-60.png in Resources */,
@@ -442,6 +449,7 @@
 				809C3E9D19217CF900552B21 /* Icon.png in Resources */,
 				8082212C192EA76800543300 /* folder@2x.png in Resources */,
 				809B778419A6AC2F00951C7D /* ic_older_arrow_holo_light.png in Resources */,
+				8071314F1E0319E40038A718 /* Localizable.strings in Resources */,
 				809C3E9119217CF900552B21 /* Icon-40.png in Resources */,
 				80822130192EA76800543300 /* globe.png in Resources */,
 				809C3E9619217CF900552B21 /* Icon-72@2x.png in Resources */,
@@ -556,8 +564,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				802FA063190FD5B700127976 /* en */,
+				807131481E0315150038A718 /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		807131511E0319E40038A718 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807131501E0319E40038A718 /* de */,
+				807131521E0319E80038A718 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		807131551E0425A30038A718 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807131541E0425A30038A718 /* de */,
+				807131561E0425C70038A718 /* en */,
+			);
+			name = Storyboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -567,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -607,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -641,10 +670,12 @@
 			baseConfigurationReference = A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -656,10 +687,12 @@
 			baseConfigurationReference = D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

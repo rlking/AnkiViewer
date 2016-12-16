@@ -60,9 +60,9 @@ UIAlertView *tip;
                     boolForKey:@"dontShowTip"];
     if(!dontShowTip) {
         tip = [UIAlertView new];
-        tip.message = @"Füge zuerst ein Deck aus der Anki Websuche hinzu. Es können auch Links bspw. aus Dropbox verwendet werden.\n\nWechsle zwischen den Karten in dem du mit dem Finger nach links/rechts streichst.\n\nZeige die Antwort mit einem Klick auf das Antwortfeld.";
-        [tip addButtonWithTitle:@"OK"];
-        [tip addButtonWithTitle:@"Nicht mehr zeigen"];
+        tip.message = NSLocalizedString(@"FirstHint", nil);
+        [tip addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+        [tip addButtonWithTitle:NSLocalizedString(@"Nicht mehr zeigen", nil)];
         tip.delegate = self;
         [tip show];
     }

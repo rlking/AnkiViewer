@@ -1,0 +1,11 @@
+/* 
+  Translation.strings
+  Anki Viewer
+
+  Created by Philipp König on 15.12.16.
+  Copyright © 2016 Philipp König. All rights reserved.
+*/
+
+"Bearbeiten" = "Bearbeiten";
+"Fertig" = "Fertig";
+"FirstHint" = "Füge zuerst ein Deck aus der Anki Websuche hinzu. Es können auch Links bspw. aus Dropbox verwendet werden.\n\nWechsle zwischen den Karten in dem du mit dem Finger nach links/rechts streichst.\n\nZeige die Antwort mit einem Klick auf das Antwortfeld.";

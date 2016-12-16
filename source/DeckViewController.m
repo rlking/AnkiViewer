@@ -70,24 +70,7 @@ NSArray *decks;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIView *modalView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //modalView.backgroundColor = [UIColor whiteColor];
-    //modalView.alpha = 0.5f;
-    
-    UIWindow* mainWindow = [UIApplication sharedApplication].keyWindow;
-    [mainWindow addSubview:modalView];
-
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
-    hud.labelText = @"Öffne Deck ...";
-    hud.userInteractionEnabled = NO;
-    
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        [[Deck getInstance] setDeck:[decks objectAtIndex:indexPath.row]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:modalView animated:YES];
-            [modalView removeFromSuperview];
-        });
-    });
+    [self asyncLoadDeck:[decks objectAtIndex:indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,11 +89,32 @@ NSArray *decks;
 - (IBAction)touchUp:(UIButton *)sender {
     if([self.tableViewDecks isEditing]) {
         [self.tableViewDecks setEditing:NO animated:YES];
-        [self.buttonEdit setTitle:@"Bearbeiten" forState:UIControlStateNormal];
+        [self.buttonEdit setTitle:NSLocalizedString(@"Bearbeiten", nil) forState:UIControlStateNormal];
     } else {
         [self.tableViewDecks setEditing:YES animated:YES];
-        [self.buttonEdit setTitle:@"Fertig" forState:UIControlStateNormal];
+        [self.buttonEdit setTitle:NSLocalizedString(@"Fertig", nil) forState:UIControlStateNormal];
     }
+}
+
+- (void)asyncLoadDeck: (NSString *) absPath {
+    UIView *modalView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //modalView.backgroundColor = [UIColor whiteColor];
+    //modalView.alpha = 0.5f;
+    
+    UIWindow* mainWindow = [UIApplication sharedApplication].keyWindow;
+    [mainWindow addSubview:modalView];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:modalView animated:YES];
+    hud.labelText = NSLocalizedString(@"opendeck", nil);
+    hud.userInteractionEnabled = NO;
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [[Deck getInstance] setDeck: absPath];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:modalView animated:YES];
+            [modalView removeFromSuperview];
+        });
+    });
 }
 
 @end

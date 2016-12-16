@@ -8,6 +8,8 @@
 
 #import "SearchDeckController.h"
 #import "Deck.h"
+#import "DeckViewController.h"
+
 
 @interface SearchDeckController ()
 
@@ -119,9 +121,9 @@
         
         // display progress with cancel button
         self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
-                                                    message:@"Warte auf Server"
+                                                    message:NSLocalizedString(@"waitforserver", nil)
                                                    delegate:self
-                                          cancelButtonTitle:@"Abbrechen"
+                                          cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
                                           otherButtonTitles: nil];
         [self.alertView show];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
@@ -152,14 +154,16 @@
         self.receivedBytes = 0;
         self.totalBytes = 0;
 
+        
+        [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+        
         // if deck count = 1, it is the first downloaded deck, and will be automatically opened
         if ([Deck getDecks].count == 1) {
-            self.alertView.message = @"sneakyly open first deck :O";
-        } else {
-            [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
+            DeckViewController *dvc;
+            dvc = (DeckViewController *)[self.navigationController topViewController];
+            [dvc asyncLoadDeck:self.apkgPath];
         }
-        
-        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
