@@ -675,7 +675,7 @@
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -692,7 +692,7 @@
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer-eu.kingcastle.MUW-SIP-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
