@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Philipp König. All rights reserved.
 //
 
+
+#import <WebKit/WebKit.h>
 #import "SearchDeckController.h"
 #import "Deck.h"
 #import "DeckViewController.h"
@@ -13,6 +15,7 @@
 
 @interface SearchDeckController ()
 
+@property (nonatomic) WKWebView *webView;
 @property (nonatomic) UIAlertView *alertView;
 @property (nonatomic) NSURLConnection *clickedLink;
 @property (nonatomic) NSURLConnection *directURL;
@@ -42,38 +45,44 @@
     
     NSString *urlString = @"https://ankiweb.net/shared/decks/sip";
     [self.textFieldWeb setText:urlString];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    
+    WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:theConfiguration];
+    self.webView.navigationDelegate = self;
+    NSURL *nsurl=[NSURL URLWithString:urlString];
+    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+    [self.webView loadRequest:nsrequest];
+    [self.viewContainer addSubview:self.webView];
+    
+ 
+    //[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+
+    NSLog(@"%@", [[navigationAction request] URL]);
+    
+    NSString *string = [[[navigationAction request] URL] absoluteString];
+    // anki web is a form button with hidden data as post request
+    // we hijack the following get request
+    if ([string rangeOfString:@"downloadDeck"].location != NSNotFound && [[[navigationAction request] HTTPMethod] isEqualToString:@"GET"]) {
+        decisionHandler(WKNavigationActionPolicyCancel);
+        
+        NSMutableURLRequest * req = [NSMutableURLRequest requestWithURL:[[navigationAction request] URL]];
+        [req setHTTPMethod:@"Head"];
+        self.directURL = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+        [self.directURL start];
+        NSLog(@"%@", @"sending head request");
+    } else {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    
-    if(navigationType == UIWebViewNavigationTypeLinkClicked) {
-        NSLog(@"link clicked: %@", request);
-        
-        // start urlconnection to get head information only (for filename, size)
-        NSURL *requestedURL = [request URL];
-        NSMutableURLRequest * req = [NSMutableURLRequest requestWithURL:requestedURL];
-        [req setHTTPMethod:@"Head"];
-        self.clickedLink = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-        [self.clickedLink start];
-        
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    } else if(navigationType == UIWebViewNavigationTypeOther) {
-        NSLog(@"other: %@", request);
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    }
-    return YES;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -184,7 +193,15 @@
     self.totalBytes = 0;
 }
 
+
 - (IBAction)goClicked:(id)sender {
+    // if copied url is a dropbox link with https://www.dropbox.com/,,,,/xxx.apkg?dl=0
+    // replace dl=0 with dl=1 to start download immediately
+    NSString *urlString = self.textFieldWeb.text;
+    urlString = [urlString stringByReplacingOccurrencesOfString:@"dl=0" withString:@"dl=1"];
+    NSURL *requestedURL = [NSURL URLWithString:urlString];
+    
+    
     // if an url is entered, we send a head request to check
     // if it is a direct apkg download link
     //  yes: directly download it
@@ -192,7 +209,6 @@
     
 
     // start urlconnection to get head information only (for filename, size)
-    NSURL *requestedURL = [NSURL URLWithString:self.textFieldWeb.text];
     NSMutableURLRequest * req = [NSMutableURLRequest requestWithURL:requestedURL];
     [req setHTTPMethod:@"Head"];
     self.directURL = [[NSURLConnection alloc] initWithRequest:req delegate:self];

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '62ACBC85DBD52D0AE9D143C2A163D6B9'
-               BlueprintName = 'SSZipArchive'
+               BlueprintIdentifier = '53A04DA44AB6E30799F0A89DCAD65410'
+               BlueprintName = 'Pods-Anki Viewer'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSSZipArchive.a'>
+               BuildableName = 'libPods-Anki Viewer.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

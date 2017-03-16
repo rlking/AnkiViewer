@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		418EBD29BF011A3730C3446D /* libPods-Anki Viewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 006F1CF714BBC224570D9608 /* libPods-Anki Viewer.a */; };
 		802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA059190FD5B700127976 /* Foundation.framework */; };
 		802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05B190FD5B700127976 /* CoreGraphics.framework */; };
 		802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FA05D190FD5B700127976 /* UIKit.framework */; };
@@ -62,7 +63,7 @@
 		809C3E9E19217CF900552B21 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7E19217CF900552B21 /* Icon@2x.png */; };
 		809C3E9F19217CF900552B21 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E7F19217CF900552B21 /* iTunesArtwork.png */; };
 		809C3EA019217CF900552B21 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */; };
-		96CEDF19E1B3BBB70F79C6FD /* libPods-AnkiViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */; };
+		F2BA210DC84516D3F1FBC974 /* libPods-Anki ViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B609DE2274504245AF60CD7 /* libPods-Anki ViewerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnkiViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		006F1CF714BBC224570D9608 /* libPods-Anki Viewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Anki Viewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B609DE2274504245AF60CD7 /* libPods-Anki ViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Anki ViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF742B4D8058BD3D2DFD386 /* Pods-Anki ViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anki ViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anki ViewerTests/Pods-Anki ViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		802FA056190FD5B700127976 /* Anki Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anki Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802FA059190FD5B700127976 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		802FA05B190FD5B700127976 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,11 +152,9 @@
 		809C3E7E19217CF900552B21 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		809C3E7F19217CF900552B21 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		809C3E8019217CF900552B21 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.debug.xcconfig"; sourceTree = "<group>"; };
-		A39798C38255475D8F50E341 /* libPods-MUW SIP Trainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MUW SIP Trainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnkiViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer.debug.xcconfig"; sourceTree = "<group>"; };
-		D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnkiViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer.release.xcconfig"; sourceTree = "<group>"; };
-		FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUW SIP Trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MUW SIP Trainer/Pods-MUW SIP Trainer.release.xcconfig"; sourceTree = "<group>"; };
+		95BBB525FF462C79BF88C96B /* Pods-Anki ViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anki ViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anki ViewerTests/Pods-Anki ViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8EDBCCB00A6642354D41875 /* Pods-Anki Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anki Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anki Viewer/Pods-Anki Viewer.debug.xcconfig"; sourceTree = "<group>"; };
+		FCFE683F237523A3E2922A3E /* Pods-Anki Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anki Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anki Viewer/Pods-Anki Viewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +167,7 @@
 				802FA05C190FD5B700127976 /* CoreGraphics.framework in Frameworks */,
 				802FA05E190FD5B700127976 /* UIKit.framework in Frameworks */,
 				802FA05A190FD5B700127976 /* Foundation.framework in Frameworks */,
-				96CEDF19E1B3BBB70F79C6FD /* libPods-AnkiViewer.a in Frameworks */,
+				418EBD29BF011A3730C3446D /* libPods-Anki Viewer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,19 +178,20 @@
 				802FA073190FD5B700127976 /* XCTest.framework in Frameworks */,
 				802FA075190FD5B700127976 /* UIKit.framework in Frameworks */,
 				802FA074190FD5B700127976 /* Foundation.framework in Frameworks */,
+				F2BA210DC84516D3F1FBC974 /* libPods-Anki ViewerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6CA5AC717B96FC1C25DA110B /* Pods */ = {
+		0CE7E6764F5A67A728A1A7C9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9FFD5DBDE6CCA8A842BED42F /* Pods-MUW SIP Trainer.debug.xcconfig */,
-				FA66B4BA805192B519FBF544 /* Pods-MUW SIP Trainer.release.xcconfig */,
-				A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */,
-				D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */,
+				C8EDBCCB00A6642354D41875 /* Pods-Anki Viewer.debug.xcconfig */,
+				FCFE683F237523A3E2922A3E /* Pods-Anki Viewer.release.xcconfig */,
+				6AF742B4D8058BD3D2DFD386 /* Pods-Anki ViewerTests.debug.xcconfig */,
+				95BBB525FF462C79BF88C96B /* Pods-Anki ViewerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -201,7 +203,7 @@
 				802FA05F190FD5B700127976 /* project */,
 				802FA058190FD5B700127976 /* Frameworks */,
 				802FA057190FD5B700127976 /* Products */,
-				6CA5AC717B96FC1C25DA110B /* Pods */,
+				0CE7E6764F5A67A728A1A7C9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,8 +225,8 @@
 				802FA05B190FD5B700127976 /* CoreGraphics.framework */,
 				802FA05D190FD5B700127976 /* UIKit.framework */,
 				802FA072190FD5B700127976 /* XCTest.framework */,
-				A39798C38255475D8F50E341 /* libPods-MUW SIP Trainer.a */,
-				616769F8C3FD6A757794CA40 /* libPods-AnkiViewer.a */,
+				006F1CF714BBC224570D9608 /* libPods-Anki Viewer.a */,
+				5B609DE2274504245AF60CD7 /* libPods-Anki ViewerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -352,12 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802FA082190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki Viewer" */;
 			buildPhases = (
-				FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */,
+				B56820E12D6EC47E01465726 /* [CP] Check Pods Manifest.lock */,
 				802FA052190FD5B700127976 /* Sources */,
 				802FA053190FD5B700127976 /* Frameworks */,
 				802FA054190FD5B700127976 /* Resources */,
-				6A546457549547B0A6926DB8 /* Copy Pods Resources */,
-				A20DCDEA594B04FE64B5F92B /* Embed Pods Frameworks */,
+				572C7C18AD78953281F6D033 /* [CP] Embed Pods Frameworks */,
+				D3945A7748F273C759F1CF9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802FA085190FD5B700127976 /* Build configuration list for PBXNativeTarget "Anki ViewerTests" */;
 			buildPhases = (
+				77311DDF4C09745323825EDA /* [CP] Check Pods Manifest.lock */,
 				802FA06D190FD5B700127976 /* Sources */,
 				802FA06E190FD5B700127976 /* Frameworks */,
 				802FA06F190FD5B700127976 /* Resources */,
+				B88ECDEEFBEE7F20DCE919B9 /* [CP] Embed Pods Frameworks */,
+				3D987FF2E7C0CF48B1C21290 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,7 +397,7 @@
 		802FA04E190FD5B700127976 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Philipp König";
 				TargetAttributes = {
 					802FA055190FD5B700127976 = {
@@ -473,49 +478,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6A546457549547B0A6926DB8 /* Copy Pods Resources */ = {
+		3D987FF2E7C0CF48B1C21290 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anki ViewerTests/Pods-Anki ViewerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A20DCDEA594B04FE64B5F92B /* Embed Pods Frameworks */ = {
+		572C7C18AD78953281F6D033 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnkiViewer/Pods-AnkiViewer-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anki Viewer/Pods-Anki Viewer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDBF3F2139DE4EEBA52A51AD /* Check Pods Manifest.lock */ = {
+		77311DDF4C09745323825EDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B56820E12D6EC47E01465726 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B88ECDEEFBEE7F20DCE919B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anki ViewerTests/Pods-Anki ViewerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3945A7748F273C759F1CF9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anki Viewer/Pods-Anki Viewer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -604,14 +654,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -624,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,20 +700,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -667,14 +727,14 @@
 		};
 		802FA083190FD5B700127976 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5D2422C5ACF1D001E9FF96F /* Pods-AnkiViewer.debug.xcconfig */;
+			baseConfigurationReference = C8EDBCCB00A6642354D41875 /* Pods-Anki Viewer.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -684,14 +744,14 @@
 		};
 		802FA084190FD5B700127976 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4DC7EC34A7DA0B7E73C5AD1 /* Pods-AnkiViewer.release.xcconfig */;
+			baseConfigurationReference = FCFE683F237523A3E2922A3E /* Pods-Anki Viewer.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/Anki Viewer-Prefix.pch";
 				INFOPLIST_FILE = "source/Anki Viewer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.kingcastle.MUW-SIP-Trainer";
 				PRODUCT_NAME = "Anki Viewer";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -701,6 +761,7 @@
 		};
 		802FA086190FD5B700127976 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF742B4D8058BD3D2DFD386 /* Pods-Anki ViewerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -723,6 +784,7 @@
 		};
 		802FA087190FD5B700127976 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95BBB525FF462C79BF88C96B /* Pods-Anki ViewerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MUW SIP Trainer.app/MUW SIP Trainer";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DeckViewController.h"
 
 @implementation AppDelegate
 
@@ -44,6 +45,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    NSLog(@"openUrl called !!!!!");
+    DeckViewController *dvc;
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    NSArray *viewControllers = navigationController.viewControllers;
+    for (UIViewController *anVC in viewControllers) {
+        if ([anVC isKindOfClass:[DeckViewController class]]) {
+            dvc = (DeckViewController *)anVC;
+            [navigationController popToViewController:anVC animated:YES];
+            NSLog(@"found dvc");
+            break;
+        }
+            }
+    
+    [dvc asyncLoadDeck:url.absoluteString];
+    return true;
 }
 
 @end
