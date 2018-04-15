@@ -1,33 +1,33 @@
 
 /* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "3BS-HJ-Paa"; */
-"3BS-HJ-Paa.normalTitle" = "Bearbeiten";
+"3BS-HJ-Paa.normalTitle" = "Edit";
 
 /* Class = "UILabel"; text = "back"; ObjectID = "4WQ-Ch-Ngs"; */
-"4WQ-Ch-Ngs.text" = "zurück";
+"4WQ-Ch-Ngs.text" = "back";
 
 /* Class = "UINavigationItem"; title = "Add deck"; ObjectID = "6Mi-go-hna"; */
-"6Mi-go-hna.title" = "Deck hinzufügen";
+"6Mi-go-hna.title" = "Add deck";
 
 /* Class = "UIButton"; normalTitle = "Search card"; ObjectID = "8I0-WD-gke"; */
-"8I0-WD-gke.normalTitle" = "Karte suchen";
+"8I0-WD-gke.normalTitle" = "Search card";
 
 /* Class = "UITabBarItem"; title = "Search"; ObjectID = "GyL-eg-ay1"; */
-"GyL-eg-ay1.title" = "Suche";
+"GyL-eg-ay1.title" = "Search";
 
 /* Class = "UIButton"; normalTitle = "Go"; ObjectID = "OIi-Cn-WH5"; */
-"OIi-Cn-WH5.normalTitle" = "Los";
+"OIi-Cn-WH5.normalTitle" = "Go";
 
 /* Class = "UITabBarItem"; title = "Decks"; ObjectID = "P9R-pH-xmo"; */
 "P9R-pH-xmo.title" = "Decks";
 
 /* Class = "UINavigationItem"; title = "Sorting"; ObjectID = "RnO-0W-TWB"; */
-"RnO-0W-TWB.title" = "Sortierung";
+"RnO-0W-TWB.title" = "Sorting";
 
 /* Class = "UILabel"; text = "CHOOSE DECK ..."; ObjectID = "Vig-Y1-02K"; */
-"Vig-Y1-02K.text" = "WÄHLE DECK ...";
+"Vig-Y1-02K.text" = "CHOOSE DECK ...";
 
 /* Class = "UIButton"; normalTitle = "Add deck"; ObjectID = "Vki-TW-7RA"; */
-"Vki-TW-7RA.normalTitle" = "Deck hinzufügen";
+"Vki-TW-7RA.normalTitle" = "Add deck";
 
 /* Class = "UILabel"; text = "front"; ObjectID = "WO8-Fy-dVj"; */
 "WO8-Fy-dVj.text" = "front";
@@ -36,34 +36,34 @@
 "Ycb-cP-2cw.title" = "Tags";
 
 /* Class = "UIButton"; normalTitle = "Sort by tag"; ObjectID = "aDT-UA-H33"; */
-"aDT-UA-H33.normalTitle" = "Sortiere nach Tag";
+"aDT-UA-H33.normalTitle" = "Sort by tag";
 
 /* Class = "UINavigationItem"; title = "Search card"; ObjectID = "deb-BI-DEc"; */
-"deb-BI-DEc.title" = "Suche Karte";
+"deb-BI-DEc.title" = "Search card";
 
 /* Class = "UIButton"; normalTitle = "Choose card"; ObjectID = "eSc-bn-ATX"; */
-"eSc-bn-ATX.normalTitle" = "Wähle Karte";
+"eSc-bn-ATX.normalTitle" = "Choose card";
 
 /* Class = "UINavigationItem"; title = "Decks"; ObjectID = "f10-63-qwL"; */
 "f10-63-qwL.title" = "Decks";
 
 /* Class = "UILabel"; text = "Hide answer"; ObjectID = "fej-ct-IQP"; */
-"fej-ct-IQP.text" = "Antwort verstecken";
+"fej-ct-IQP.text" = "Hide answer";
 
 /* Class = "UITabBarItem"; title = "Card"; ObjectID = "gcY-Id-nEi"; */
-"gcY-Id-nEi.title" = "Karte";
+"gcY-Id-nEi.title" = "Card";
 
 /* Class = "UINavigationItem"; title = "Cards"; ObjectID = "j56-qZ-fAN"; */
-"j56-qZ-fAN.title" = "Karten";
+"j56-qZ-fAN.title" = "Cards";
 
 /* Class = "UIButton"; normalTitle = "Go"; ObjectID = "kaa-15-JT0"; */
-"kaa-15-JT0.normalTitle" = "Los";
+"kaa-15-JT0.normalTitle" = "Go";
 
 /* Class = "UILabel"; text = "index"; ObjectID = "sJS-5y-owd"; */
-"sJS-5y-owd.text" = "Index";
+"sJS-5y-owd.text" = "index";
 
 /* Class = "UITabBarItem"; title = "Sorting"; ObjectID = "vUw-ba-jJu"; */
-"vUw-ba-jJu.title" = "Sortierung";
+"vUw-ba-jJu.title" = "Sorting";
 
 /* Class = "UINavigationItem"; title = "Tags"; ObjectID = "zfb-RL-lMd"; */
 "zfb-RL-lMd.title" = "Tags";
