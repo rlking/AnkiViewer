@@ -3,9 +3,9 @@
 
 target "Anki Viewer" do
 
-pod 'SSZipArchive', '0.3.2'
+pod 'SSZipArchive', '2.0.6'
 pod 'MBProgressHUD', '0.9'
-pod 'FMDB', '2.4'
+pod 'FMDB', '~> 2.7'
 
 
 end

@@ -14,6 +14,3 @@
 "Abbrechen" = "Abbrechen";
 "opendeck" = "Öffne Deck ...";
 "waitforserver" = "Warte auf Server";
-
-
-//NSLocalizedString(@"opendeck", nil)

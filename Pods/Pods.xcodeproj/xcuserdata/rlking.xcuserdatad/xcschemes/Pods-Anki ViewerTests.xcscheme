@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BC9965C18AFF0590C44BF1AED8F109EE'
-               BlueprintName = 'Pods-Anki ViewerTests'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Anki ViewerTests.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BC9965C18AFF0590C44BF1AED8F109EE"
+               BlueprintName = "Pods-Anki ViewerTests"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-Anki ViewerTests.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
