@@ -10,7 +10,7 @@
 #import "Deck.h"
 
 NSString * const keyHideAnswer = @"keyHideAnswer";
-UIAlertView *tip;
+UIAlertController *tip;
 
 @interface MainViewController ()
 
@@ -59,24 +59,21 @@ UIAlertView *tip;
     bool dontShowTip = [[NSUserDefaults standardUserDefaults]
                     boolForKey:@"dontShowTip"];
     if(!dontShowTip) {
-        tip = [UIAlertView new];
-        tip.message = NSLocalizedString(@"FirstHint", nil);
-        [tip addButtonWithTitle:NSLocalizedString(@"OK", nil)];
-        [tip addButtonWithTitle:NSLocalizedString(@"Nicht mehr zeigen", nil)];
-        tip.delegate = self;
-        [tip show];
+        tip = [UIAlertController alertControllerWithTitle:@"" message:NSLocalizedString(@"FirstHint", nil) preferredStyle:UIAlertControllerStyleAlert];
+        [tip addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:nil]];
+        [tip addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Nicht mehr zeigen", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [[NSUserDefaults standardUserDefaults]
+             setBool:YES forKey:@"dontShowTip"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self presentViewController:tip animated:YES completion:nil];
+        });
     }
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if(buttonIndex == 1) {
-        [[NSUserDefaults standardUserDefaults]
-         setBool:YES forKey:@"dontShowTip"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-    
-    [alertView removeFromSuperview];
-}
+
 
 -(void) viewWillAppear:(BOOL)animated {
     [self setCard];

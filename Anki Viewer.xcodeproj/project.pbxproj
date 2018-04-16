@@ -27,7 +27,6 @@
 		802FA4531915A81800127976 /* page_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 802FA4511915A81800127976 /* page_empty.png */; };
 		802FA45719167FC700127976 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45619167FC700127976 /* Card.m */; };
 		802FA45D19168E3900127976 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 802FA45C19168E3900127976 /* Deck.m */; };
-		803C485E19E5DE89004B1B01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 803C485D19E5DE89004B1B01 /* README.md */; };
 		8071314F1E0319E40038A718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 807131511E0319E40038A718 /* Localizable.strings */; };
 		807131531E0425A30038A718 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807131551E0425A30038A718 /* Storyboard.storyboard */; };
 		808220EF192A22E600543300 /* SearchDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 808220EE192A22E600543300 /* SearchDeckController.m */; };
@@ -110,7 +109,6 @@
 		802FA45619167FC700127976 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		802FA45B19168E3900127976 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		802FA45C19168E3900127976 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
-		803C485D19E5DE89004B1B01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		807131521E0319E80038A718 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		808220ED192A22E600543300 /* SearchDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDeckController.h; sourceTree = "<group>"; };
 		808220EE192A22E600543300 /* SearchDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDeckController.m; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 		802FA088190FD68B00127976 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				803C485D19E5DE89004B1B01 /* README.md */,
 				809C3E5819217CF900552B21 /* icon */,
 				802FA0AF19158EC700127976 /* images */,
 			);
@@ -528,7 +525,6 @@
 				802FA45719167FC700127976 /* Card.m in Sources */,
 				802FA066190FD5B700127976 /* main.m in Sources */,
 				808221341931F67E00543300 /* TagsTableTableViewController.m in Sources */,
-				803C485E19E5DE89004B1B01 /* README.md in Sources */,
 				802FA45D19168E3900127976 /* Deck.m in Sources */,
 				808CAB9819AE1AEF00E356EF /* CardSearchCell.m in Sources */,
 				808220EF192A22E600543300 /* SearchDeckController.m in Sources */,
@@ -684,6 +680,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8EDBCCB00A6642354D41875 /* Pods-Anki Viewer.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -701,6 +699,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCFE683F237523A3E2922A3E /* Pods-Anki Viewer.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = A35MN7XB26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

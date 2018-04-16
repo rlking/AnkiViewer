@@ -16,7 +16,7 @@
 @interface SearchDeckController ()
 
 @property (nonatomic) WKWebView *webView;
-@property (nonatomic) UIAlertView *alertView;
+@property (nonatomic) UIAlertController *alertView;
 @property (nonatomic) NSURLConnection *clickedLink;
 @property (nonatomic) NSURLConnection *directURL;
 @property (nonatomic) NSURLConnection *download;
@@ -129,12 +129,13 @@
         [self.download start];
         
         // display progress with cancel button
-        self.alertView =[[UIAlertView alloc ] initWithTitle:response.suggestedFilename
-                                                    message:NSLocalizedString(@"waitforserver", nil)
-                                                   delegate:self
-                                          cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
-                                          otherButtonTitles: nil];
-        [self.alertView show];
+        
+        _alertView = [UIAlertController alertControllerWithTitle:response.suggestedFilename message:NSLocalizedString(@"waitforserver", nil) preferredStyle:UIAlertControllerStyleAlert];
+        [_alertView addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Abbrechen", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self cancelDialog];
+        }]];
+
+        [self presentViewController:_alertView animated:YES completion:nil];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     }
 }
@@ -155,34 +156,7 @@
     }
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    if(connection == self.download) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        [self.streamAPKG close];
-        self.receivedBytes = 0;
-        self.totalBytes = 0;
-
-        
-        [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
-        [self.navigationController popViewControllerAnimated:YES];
-        
-        // if deck count = 1, it is the first downloaded deck, and will be automatically opened
-        if ([Deck getDecks].count == 1) {
-            DeckViewController *dvc;
-            dvc = (DeckViewController *)[self.navigationController topViewController];
-            [dvc asyncLoadDeck:self.apkgPath];
-        }
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    //handle error
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)cancelDialog{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self.download cancel];
     [self.streamAPKG close];
@@ -193,6 +167,32 @@
     self.totalBytes = 0;
 }
 
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    if(connection == self.download) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [self.streamAPKG close];
+        self.receivedBytes = 0;
+        self.totalBytes = 0;
+
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self.navigationController popViewControllerAnimated:YES];
+            
+            // if deck count = 1, it is the first downloaded deck, and will be automatically opened
+            if ([Deck getDecks].count == 1) {
+                DeckViewController *dvc;
+                dvc = (DeckViewController *)[self.navigationController topViewController];
+                [dvc asyncLoadDeck:self.apkgPath];
+            }
+        }];
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    //handle error
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
 
 - (IBAction)goClicked:(id)sender {
     // if copied url is a dropbox link with https://www.dropbox.com/,,,,/xxx.apkg?dl=0

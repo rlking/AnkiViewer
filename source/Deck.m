@@ -77,7 +77,7 @@ static NSString *deckPath;
     }
     @catch (NSException *exception)
     {
-        [NSException raise:@"could not execute query" format:nil];
+        [NSException raise:@"could not execute query" format:@""];
     }
     @finally {
         [resultCard close];
@@ -108,7 +108,7 @@ static NSString *deckPath;
     }
     @catch (NSException *exception)
     {
-        [NSException raise:@"could not execute query" format:nil];
+        [NSException raise:@"could not execute query" format:@""];
     }
     @finally {
         [resultCard close];
@@ -146,7 +146,7 @@ static NSString *deckPath;
     }
     @catch (NSException *exception)
     {
-        [NSException raise:@"could not execute query" format:nil];
+        [NSException raise:@"could not execute query" format:@""];
     }
     @finally {
         [resultCard close];
@@ -174,7 +174,7 @@ static NSString *deckPath;
     }
     @catch (NSException *exception)
     {
-        [NSException raise:@"could not execute query" format:nil];
+        [NSException raise:@"could not execute query" format:@""];
     }
     @finally {
         [resultCount close];
@@ -201,7 +201,7 @@ static NSString *deckPath;
         database = [FMDatabase databaseWithPath:[deckPath stringByAppendingString: @"collection.anki2"]];
         if (![database open])
         {
-            [NSException raise:@"could not open db" format:nil];
+            [NSException raise:@"could not open db" format:@""];
         }
     }
     @catch (NSException *e)
@@ -296,7 +296,7 @@ static NSString *deckPath;
     }
     @catch (NSException *exception)
     {
-        [NSException raise:@"could not execute query tags" format:nil];
+        [NSException raise:@"could not execute query tags" format:@""];
     }
     @finally {
         [result close];
