@@ -87,10 +87,11 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    //NSLog(@"%@", response);
+    NSLog(@"%@", response);
     
-    BOOL isAPKG = [response.suggestedFilename rangeOfString:@".apkg"].location != NSNotFound &&
-    [[[(NSHTTPURLResponse*)response allHeaderFields] valueForKey:@"Content-Type"] isEqualToString:@"application/octet-stream"];
+    BOOL isAPKG = [response.suggestedFilename rangeOfString:@".apkg"].location != NSNotFound;
+    /*&&
+    [[[(NSHTTPURLResponse*)response allHeaderFields] valueForKey:@"Content-Type"] isEqualToString:@"application/octet-stream"]*/
     BOOL startDownload = NO;
     
     if(connection == self.directURL) {
@@ -198,7 +199,8 @@
     // if copied url is a dropbox link with https://www.dropbox.com/,,,,/xxx.apkg?dl=0
     // replace dl=0 with dl=1 to start download immediately
     NSString *urlString = self.textFieldWeb.text;
-    urlString = [urlString stringByReplacingOccurrencesOfString:@"dl=0" withString:@"dl=1"];
+    urlString = [urlString stringByReplacingOccurrencesOfString:@"www.dropbox.com" withString:@"dl.dropboxusercontent.com"];
+    urlString = [urlString stringByReplacingOccurrencesOfString:@"dl=0" withString:@"dl=1&raw=1"];
     NSURL *requestedURL = [NSURL URLWithString:urlString];
     
     
