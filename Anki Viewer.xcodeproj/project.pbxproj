@@ -402,9 +402,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Philipp König";
 				TargetAttributes = {
-					802FA055190FD5B700127976 = {
-						DevelopmentTeam = A35MN7XB26;
-					};
 					802FA070190FD5B700127976 = {
 						TestTargetID = 802FA055190FD5B700127976;
 					};

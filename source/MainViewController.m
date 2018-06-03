@@ -14,7 +14,6 @@ UIAlertController *tip;
 
 @interface MainViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *labelWhiteBG;
 
 @end
 

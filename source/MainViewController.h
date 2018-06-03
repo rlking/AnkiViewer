@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIWebView *webViewCardBack;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *labelWhiteBG;
 
 -(void)setCard;
 
