@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kFb-SB-Fvy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kFb-SB-Fvy">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -226,6 +226,7 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Sorting" image="cog_02.png" id="vUw-ba-jJu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0vI-Yt-ecl">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -244,28 +245,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6K-ff-G1q">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-ct-IQP">
                                 <rect key="frame" x="0.0" y="307" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgP-3o-IpZ">
-                                <rect key="frame" x="251" y="316" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hide answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-ct-IQP">
-                                <rect key="frame" x="33" y="307" width="199" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-UA-H33">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgP-3o-IpZ">
+                                <rect key="frame" x="251" y="316" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-UA-H33">
                                 <rect key="frame" x="0.0" y="108" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EcI-uL-1ZT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -276,10 +271,12 @@
                                     <segue destination="XEj-Rs-0ul" kind="show" id="g0p-HN-Frl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-bn-ATX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-bn-ATX">
                                 <rect key="frame" x="0.0" y="159" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H5n-Ea-v0j"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -290,10 +287,12 @@
                                     <segue destination="fkX-Dc-sFh" kind="show" id="Ssm-eP-SJF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-WD-gke">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-WD-gke">
                                 <rect key="frame" x="0.0" y="210" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HDh-u4-4So"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -306,6 +305,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aDT-UA-H33" firstAttribute="leading" secondItem="eSc-bn-ATX" secondAttribute="leading" id="0QG-ab-tL4"/>
+                            <constraint firstItem="PRU-uo-OGD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fej-ct-IQP" secondAttribute="bottom" constant="118" id="2Id-Mx-LfC"/>
+                            <constraint firstItem="8I0-WD-gke" firstAttribute="leading" secondItem="fej-ct-IQP" secondAttribute="leading" id="3jS-xU-RiK"/>
+                            <constraint firstItem="eSc-bn-ATX" firstAttribute="top" secondItem="aDT-UA-H33" secondAttribute="bottom" constant="1" id="Fbf-b4-Rf3"/>
+                            <constraint firstItem="eSc-bn-ATX" firstAttribute="trailing" secondItem="8I0-WD-gke" secondAttribute="trailing" id="IVL-jS-dD0"/>
+                            <constraint firstItem="MgP-3o-IpZ" firstAttribute="top" secondItem="8I0-WD-gke" secondAttribute="bottom" constant="56" id="IX9-oY-3Oj"/>
+                            <constraint firstItem="8I0-WD-gke" firstAttribute="trailing" secondItem="fej-ct-IQP" secondAttribute="trailing" id="LwI-dz-e7i"/>
+                            <constraint firstItem="fej-ct-IQP" firstAttribute="top" secondItem="8I0-WD-gke" secondAttribute="bottom" constant="47" id="OCv-5Y-LXN"/>
+                            <constraint firstItem="aDT-UA-H33" firstAttribute="trailing" secondItem="eSc-bn-ATX" secondAttribute="trailing" id="ORx-eK-VmY"/>
+                            <constraint firstItem="8I0-WD-gke" firstAttribute="top" secondItem="eSc-bn-ATX" secondAttribute="bottom" constant="1" id="QBM-bo-dQg"/>
+                            <constraint firstItem="fej-ct-IQP" firstAttribute="centerY" secondItem="MgP-3o-IpZ" secondAttribute="centerY" id="SZI-gz-YdW"/>
+                            <constraint firstItem="MgP-3o-IpZ" firstAttribute="leading" secondItem="PRU-uo-OGD" secondAttribute="leading" constant="251" id="XpK-gE-uRZ"/>
+                            <constraint firstItem="aDT-UA-H33" firstAttribute="top" secondItem="PRU-uo-OGD" secondAttribute="top" constant="44" id="pAi-Uc-uRq"/>
+                            <constraint firstItem="eSc-bn-ATX" firstAttribute="leading" secondItem="8I0-WD-gke" secondAttribute="leading" id="qJv-EK-Anz"/>
+                            <constraint firstItem="aDT-UA-H33" firstAttribute="leading" secondItem="g8R-Bg-TtL" secondAttribute="leading" id="rMF-bV-z0c"/>
+                            <constraint firstAttribute="trailing" secondItem="aDT-UA-H33" secondAttribute="trailing" id="ueQ-8C-vVM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PRU-uo-OGD"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -318,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnR-a6-KV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.2173913043482" y="-253.53260869565216"/>
+            <point key="canvasLocation" x="1863.75" y="-254.57746478873239"/>
         </scene>
         <!--Search card-->
         <scene sceneID="v1f-kk-NhR">
@@ -442,6 +459,7 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Decks" image="folder.png" id="P9R-pH-xmo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bnk-Eg-TLj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
