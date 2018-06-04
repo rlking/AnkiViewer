@@ -14,6 +14,9 @@
 /* Class = "UITabBarItem"; title = "Search"; ObjectID = "GyL-eg-ay1"; */
 "GyL-eg-ay1.title" = "Suche";
 
+/* Class = "UIButton"; normalTitle = "        Hide answer"; ObjectID = "O6H-15-Yb0"; */
+"O6H-15-Yb0.normalTitle" = "        Antwort verstecken";
+
 /* Class = "UIButton"; normalTitle = "Go"; ObjectID = "OIi-Cn-WH5"; */
 "OIi-Cn-WH5.normalTitle" = "Los";
 
@@ -47,9 +50,6 @@
 /* Class = "UINavigationItem"; title = "Decks"; ObjectID = "f10-63-qwL"; */
 "f10-63-qwL.title" = "Decks";
 
-/* Class = "UILabel"; text = "Hide answer"; ObjectID = "fej-ct-IQP"; */
-"fej-ct-IQP.text" = "Antwort verstecken";
-
 /* Class = "UITabBarItem"; title = "Card"; ObjectID = "gcY-Id-nEi"; */
 "gcY-Id-nEi.title" = "Karte";
 
@@ -60,7 +60,7 @@
 "kaa-15-JT0.normalTitle" = "Los";
 
 /* Class = "UILabel"; text = "index"; ObjectID = "sJS-5y-owd"; */
-"sJS-5y-owd.text" = "Index";
+"sJS-5y-owd.text" = "index";
 
 /* Class = "UITabBarItem"; title = "Sorting"; ObjectID = "vUw-ba-jJu"; */
 "vUw-ba-jJu.title" = "Sortierung";
