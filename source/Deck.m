@@ -132,12 +132,14 @@ static NSString *deckPath;
         resultCard = [database executeQuery:queryCard];
         [resultCard next];
         while([resultCard hasAnotherRow]) {
-            NSString *sfld = [resultCard stringForColumn:@"sfld"];
+            //NSString *sfld = [resultCard stringForColumn:@"sfld"];
+            //NSLog(@"%@", sfld);
+            
             // magic ascii separator used by anki for front and back of the card
             NSArray *frontAndBack = [[resultCard stringForColumn:@"flds"]componentsSeparatedByString:[NSString stringWithFormat:@"%c", 31]];
             
             Card *card = [Card alloc];
-            card.front = sfld;
+            card.front = frontAndBack[0];
             card.back = frontAndBack[1];
             
             [cards addObject:card];

@@ -72,8 +72,9 @@
 
 - (void)configureBasicCell:(CardSearchCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Card *card = [self.cards objectAtIndex:indexPath.row];
-    cell.titleLabel.text = card.front;
+    cell.titleLabel.text = [SearchCardController flattenHtml:card.front];
     cell.subtitleLabel.text = [SearchCardController flattenHtml:card.back];
+    //NSLog(@"%@ ----- %@", card.front, card.back);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
